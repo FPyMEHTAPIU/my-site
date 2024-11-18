@@ -18,7 +18,6 @@
 }
 
 .mi-selected {
-    border-radius: 50px;
     background: var(--Primary);
 }
 
@@ -42,6 +41,10 @@
     gap: 24px;
 }
 
+.arrow {
+    gap: 16px;
+}
+
 .vertical-arrow {
     display: flex;
     width: 24px;
@@ -52,13 +55,13 @@
 }
 
 .horizontal-arrow {
-    display: inline-flex;
-    padding: 16px 40px;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 5px 0;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    border-radius: 16px;
-    background: var(--Primary);
+    flex-shrink: 0;
 }
 
 .button-small {

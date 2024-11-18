@@ -1,0 +1,96 @@
+*:active {
+    -webkit-filter: brightness(0.8);
+}
+
+.menu-item {
+    display: inline-flex;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.mi-selected {
+    padding: 8px 20px;
+    background: var(--Primary);
+}
+
+.text-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 50px;
+}
+
+.tb-selected {
+    color: var(--Primary);
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+}
+
+.arrow {
+    gap: 16px;
+}
+
+.vertical-arrow {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    padding: 0 3px 0 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.button-primary {
+    display: flex;
+    width: 345px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--Primary);
+}
+
+.button-primary:active, .button-small:active {
+    color: var(--Button-click-green);
+}
+
+.button-primary:disabled, .button-secondary:disabled, .button-small:disabled {
+    background: var(--Light);
+}
+
+.button-secondary {
+    display: flex;
+    width: 345px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--Secondary);
+}
+
+.button-secondary:active {
+    background: var(--Button-click-blue);
+}
+
+.button-small {
+    display: flex;
+    width: 335px;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: var(--Primary);
+}
