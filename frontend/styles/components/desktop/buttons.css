@@ -1,0 +1,112 @@
+*:active {
+    -webkit-filter: brightness(0.8);
+}
+
+.menu-item:hover, .text-button:hover {
+    cursor: pointer;
+    color: var(--Primary);
+}
+
+.menu-item {
+    display: inline-flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.mi-selected {
+    border-radius: 50px;
+    background: var(--Primary);
+}
+
+.text-button {
+    display: inline-flex;
+    padding: 10px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 50px;
+}
+
+.tb-selected {
+    color: var(--Primary);
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.vertical-arrow {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-arrow {
+    display: inline-flex;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: var(--Primary);
+}
+
+.button-small {
+    display: inline-flex;
+    padding: 16px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: var(--Primary);
+}
+
+.button-small:hover, .button-primary:hover {
+    box-shadow: -1px 5px 14px 0 #0C5F11;
+}
+
+.button-small:active, .button-primary:active {
+    background: var(--Button-click-green)
+}
+
+.button-small:disabled, .button-primary:disabled, .button-secondary:disabled {
+    background: var(--Light);
+}
+
+.button-primary {
+    display: inline-flex;
+    padding: 24px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: var(--Primary);
+}
+
+.button-secondary {
+    display: inline-flex;
+    padding: 24px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    background: var(--Secondary);
+}
+
+.button-secondary:hover {
+    box-shadow: -1px 5px 14px 0 #0C115F;
+}
+
+.button-secondary:active {
+    background: var(--Button-click-blue);
+}

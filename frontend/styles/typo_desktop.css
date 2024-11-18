@@ -1,0 +1,36 @@
+h1 {
+    color: var(--Primary);
+    font-family: "Tomorrow", sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 116px; /* 120.833% */
+    text-transform: capitalize;
+}
+
+h2 {
+    color: var(--Primary);
+    font-family: "Tomorrow", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.body-default {
+    color: white;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.body-small {
+    color: white;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

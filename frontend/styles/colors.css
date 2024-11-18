@@ -1,0 +1,20 @@
+:root {
+    --Primary: #31D93C;
+    --Secondary: #5831D9;
+
+    --Button-click-green: #0FB019;
+    --Button-click-blue: #4C24CD;
+    --Error: #B83731;
+
+    --Black: #161616;
+    --Dark: #262626;
+    --Dark-1: #2E2E2E;
+    --Medium: #5F5F5F;
+    --Light: #CDCDCD;
+
+    --Gradient: linear-gradient(90deg, rgba(35, 39, 35, 0.80) 0%, rgba(27, 52, 28, 0.80) 100%);
+    --Scrollbar: #224925;
+
+    --Input-stroke-green: rgba(49, 217, 60, 0.28);
+    --Input-stroke-red: rgba(184, 55, 49, 0.28);
+}
