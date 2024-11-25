@@ -21,6 +21,31 @@ const Footer = () => {
         }
     }, []);
 
+    const SocialLinks = () => {
+        return (
+            <div className="social-block">
+                <a href="https://www.linkedin.com/in/mykolasaveliev/" target="_blank">
+                    <img
+                        src={isMobile || isTablet ? "./linkedin24.svg" : "./linkedin48.svg"}
+                        alt="linkedin"
+                    />
+                </a>
+                <a href="mailto:kolya59264@gmail.com" target="_blank">
+                    <img
+                        src={isMobile || isTablet ? "./gmail24.svg" : "./gmail48.svg"}
+                        alt="gmail"
+                    />
+                </a>
+                <a href="https://github.com/FPyMEHTAPIU" target="_blank">
+                    <img
+                        src={isMobile || isTablet ? "./github24.svg" : "./github48.svg"}
+                        alt="github"
+                    />
+                </a>
+            </div>
+        );
+    };
+
     return (
         <footer>
             <div className="footer-container">
@@ -62,26 +87,7 @@ const Footer = () => {
                         </a>
                     </div>
                 }
-                <div className="social-block">
-                    <a href="https://www.linkedin.com/in/mykolasaveliev/" target="_blank">
-                        <img
-                            src={ isMobile || isTablet ? "./linkedin24.svg" : "./linkedin48.svg"}
-                            alt="linkedin"
-                        />
-                    </a>
-                    <a href="mailto:kolya59264@gmail.com" target="_blank">
-                        <img
-                            src={ isMobile || isTablet ? "./gmail24.svg" : "./gmail48.svg"}
-                            alt="gmail"
-                        />
-                    </a>
-                    <a href="https://github.com/FPyMEHTAPIU" target="_blank">
-                        <img
-                            src={ isMobile || isTablet ? "./github24.svg" : "./github48.svg"}
-                            alt="github"
-                        />
-                    </a>
-                </div>
+                {SocialLinks()}
             </div>
             <p className={ isMobile ? "body-small" : "body-default" }>
                 Designed by&nbsp;

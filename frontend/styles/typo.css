@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/fonts/RobotoMono-Regular.ttf") format("truetype");
+}
+
 h1 {
     color: var(--Primary);
     font-family: "Tomorrow", sans-serif;
