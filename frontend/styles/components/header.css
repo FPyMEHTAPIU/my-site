@@ -1,0 +1,21 @@
+.header-container {
+    display: flex;
+    width: 375px;
+    padding: 16px 40px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 24px;
+    border: 1px solid var(--Medium);
+    background: var(--Gradient);
+    backdrop-filter: blur(10px);
+}
+
+@media (min-width: 1440px) {
+    .header-container {
+        display: inline-flex;
+        padding: 20px 40px;
+        justify-content: center;
+        gap: 36px;
+        border-radius: 30px;
+    }
+}
