@@ -1,0 +1,37 @@
+.control-block {
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    fill: #D9FFD0;
+    opacity: 0.3;
+}
+
+.dot-next-prev {
+    opacity: 0.7;
+}
+
+.dot-filled {
+    fill: var(--Primary);
+    opacity: 1;
+}
+
+@media (min-width: 1440px) {
+    .control-block {
+        display: inline-flex;
+        height: 24px;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+    }
+
+    .dot {
+        width: 24px;
+        height: 24px;
+    }
+}
