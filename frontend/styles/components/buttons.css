@@ -1,0 +1,180 @@
+*:active {
+    -webkit-filter: brightness(0.8);
+}
+
+.menu-item {
+    display: inline-flex;
+    padding: 8px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    color: white;
+}
+
+.mi-selected {
+    padding: 8px 20px;
+    background: var(--Primary);
+}
+
+.text-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 50px;
+}
+
+.tb-selected {
+    color: var(--Primary);
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.button-primary {
+    display: flex;
+    width: 345px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: var(--Primary);
+}
+
+.button-primary:active, .button-small:active {
+    color: var(--Button-click-green);
+}
+
+.button-primary:disabled, .button-secondary:disabled, .button-small:disabled {
+    background: var(--Light);
+}
+
+.button-secondary {
+    display: flex;
+    width: 345px;
+    padding: 20px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: var(--Secondary);
+}
+
+.button-secondary:active {
+    background: var(--Button-click-blue);
+}
+
+.button-small {
+    display: flex;
+    width: 335px;
+    padding: 18px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: var(--Primary);
+}
+
+.tab {
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 1px solid var(--Medium);
+    background: var(--Dark-1);
+}
+
+.tab:active {
+    background: var(--Primary);
+}
+
+.skill {
+    display: inline-flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Dark);
+}
+
+@media (min-width: 1440px) {
+    .menu-item:hover, .text-button:hover {
+        cursor: pointer;
+        color: var(--Primary);
+    }
+
+    .menu-item {
+        padding: 10px 30px;
+    }
+
+    .text-button {
+        padding: 10px 24px;
+        justify-content: center;
+    }
+
+    .read-more {
+        gap: 24px;
+    }
+
+    .vertical-arrow {
+        width: 24px;
+        height: 24px;
+        padding: 0 5px;
+    }
+
+    .horizontal-arrow {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        padding: 5px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-primary {
+        display: inline-flex;
+        padding: 24px 40px;
+        border-radius: 16px;
+    }
+
+    .button-secondary {
+        display: inline-flex;
+        padding: 24px 40px;
+        border-radius: 16px;
+    }
+
+    .button-small {
+        display: inline-flex;
+        padding: 16px 40px;
+        border-radius: 16px;
+    }
+
+    .button-small:hover, .button-primary:hover {
+        box-shadow: -1px 5px 14px 0 #0C5F11;
+    }
+
+    .button-secondary:hover {
+        box-shadow: -1px 5px 14px 0 #0C115F;
+    }
+
+    .tab {
+        padding: 8px 20px;
+    }
+
+    .tab:hover {
+        background: var(--Gradient);
+    }
+
+    .skill {
+        padding: 16px 40px;
+        border-radius: 16px;
+    }
+}

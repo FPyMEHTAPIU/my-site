@@ -34,3 +34,17 @@ h2 {
     font-weight: 400;
     line-height: normal;
 }
+
+@media (min-width: 1440px) {
+    .h1 {
+        font-size: 96px;
+    }
+
+    .h2 {
+        font-size: 48px;
+    }
+
+    .body-small {
+        font-size: 24px;
+    }
+}
