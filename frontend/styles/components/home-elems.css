@@ -1,0 +1,54 @@
+.content-container {
+    display: flex;
+    width: 345px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 0 15px 24px;
+}
+
+.greeting {
+    display: flex;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--Primary);
+    width: fit-content;
+}
+
+#my-photo {
+    width: 345px;
+    height: 428px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+#infinite-line {
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+    align-items: center;
+    gap: 22px;
+    background: var(--Primary);
+    margin: 48px 0;
+}
+
+.skills-block-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}

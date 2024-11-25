@@ -1,24 +1,13 @@
 import { useState, useEffect } from "react";
+import Methods from "@/components/methods";
 
 const Footer = () => {
+    const ListenResize:any  = Methods;
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const updateView = () => {
-                const width = window.innerWidth;
-                setIsMobile(width < 720);
-                setIsTablet(width >= 720 && width < 1440);
-            };
-
-            updateView();
-            window.addEventListener('resize', updateView);
-
-            return () => {
-                window.removeEventListener('resize', updateView);
-            };
-        }
+        ListenResize(setIsMobile, setIsTablet);
     }, []);
 
     const SocialLinks = () => {

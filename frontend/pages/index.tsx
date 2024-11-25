@@ -1,7 +1,113 @@
+import React, {useEffect, useState} from "react";
+import Methods from "@/components/methods";
+
+type SkillRowsProps = {
+    rows: string[][];
+};
+
+const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
+    'React Native', 'Node.js', 'Next.js', 'PostgreSQL', 'HTML', 'CSS',
+    'C', 'C++', 'C#', 'Qt', 'Git', 'Linux', 'Docker', 'Figma', 'Postman',
+    'Bash', 'CMake'];
+
 const Index = () => {
+    const [containerWidth, setContainerWidth] = useState<number>(0);
+    const [skillGap, setSkillGap] = useState<number>(0);
+
+    useEffect(() => {
+        const screenWidth:number = window.innerWidth;
+        setContainerWidth(screenWidth < 720 ? 345 :
+            (screenWidth > 1440 ? window.innerWidth : 690 ));
+        setSkillGap(screenWidth < 1440 ? 10 : 24);
+    }, [window.innerWidth])
+
+    const FillSkills = () => {
+        const SkillRows: React.FC<SkillRowsProps> = ({ rows }) => {
+            return (
+                <div className="skills-block-home">
+                    {rows.map((row, rowIndex) => (
+                        <div key={rowIndex} className="skills-row">
+                            {row.map((skill, skillIndex) => (
+                                <div key={skillIndex} className="skill">
+                                    <p className="body-default">{skill}</p>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            );
+        };
+
+        const calculateSkillWidth = (skill: string): number => {
+            return skill.length * 30;
+        };
+
+        const arrangeSkills = (
+            skills: string[],
+            containerWidth: number,
+            gap: number
+        ): string[][] => {
+            const rows: string[][] = [];
+            let currentRow: string[] = [];
+            let currentRowWidth = 0;
+
+            skills.forEach((skill) => {
+                const skillWidth = calculateSkillWidth(skill);
+                if (currentRowWidth + skillWidth + (currentRow.length > 0 ? gap : 0) <= containerWidth) {
+                    currentRow.push(skill);
+                    currentRowWidth += skillWidth + (currentRow.length > 1 ? gap : 0);
+                } else {
+                    rows.push(currentRow);
+                    currentRow = [skill];
+                    currentRowWidth = skillWidth;
+                }
+            });
+
+            if (currentRow.length > 0) {
+                rows.push(currentRow);
+            }
+
+            return rows;
+        };
+
+        const rows = arrangeSkills(skills, containerWidth, skillGap);
+
+        return (
+            <SkillRows rows={rows} />
+        );
+    }
+
     return (
         <main>
-            <p>Hello World!</p>
+            <div className="content-container">
+                <div className="greeting">
+                    <p className="body-small black">
+                        Hi there! I'm Nick!
+                    </p>
+                </div>
+                <h1>A Full-Stack Developer</h1>
+                <p className="body-default">
+                    with experience in mobile app
+                    development with React Native and software development using
+                    C/C++. My background includes game development, and I've
+                    worked on various software projects such as developing an
+                    image editor, 3D modelling, implementing sorting algorithms,
+                    and creating my own library.
+                </p>
+                <p className="body-default">
+                    At my free time I play the guitar, recording videos and play computer games.
+                </p>
+                <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
+            </div>
+            <div id="infinite-line">
+                <p className="body-default black">Lorem Ipsum</p>
+                <p className="body-default black">Lorem Ipsum</p>
+                <p className="body-default black">Lorem Ipsum</p>
+            </div>
+            <h1 style={{justifySelf: "center", marginBottom: 24}}>
+                My Skills
+            </h1>
+            {FillSkills()}
         </main>
     );
 };
