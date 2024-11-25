@@ -1,7 +1,10 @@
-.header-container {
+header {
+    position: sticky;
+    margin: 40px 15px 48px 15px;
     display: flex;
-    width: 375px;
+    width: 345px;
     padding: 16px 40px;
+    justify-self: center;
     justify-content: space-between;
     align-items: center;
     border-radius: 24px;
@@ -11,7 +14,7 @@
 }
 
 @media (min-width: 1440px) {
-    .header-container {
+    header {
         display: inline-flex;
         padding: 20px 40px;
         justify-content: center;
