@@ -30,10 +30,10 @@ const Footer = () => {
                             <a href="/" className="text-button">
                                 <p className="body-default">Home</p>
                             </a>
-                            <a href="/" className="text-button">
+                            <a href="/work" className="text-button">
                                 <p className="body-default">Work</p>
                             </a>
-                            <a href="/" className="text-button">
+                            <a href="/contact" className="text-button">
                                 <p className="body-default">Contact</p>
                             </a>
                         </div>
@@ -47,16 +47,16 @@ const Footer = () => {
                         <a href="/" className="text-button">
                             <p className="body-default">Home</p>
                         </a>
-                        <a href="/" className="text-button">
+                        <a href="/work" className="text-button">
                             <p className="body-default">Work</p>
                         </a>
-                        <a href="/" className="text-button">
+                        <a href="/contact" className="text-button">
                             <p className="body-default">Contact</p>
                         </a>
                         <a href="/" className="text-button">
                             <p className="body-default">Download CV</p>
                             <img
-                                src={ isMobile || isTablet ? "./download16.svg" : "./download24.svg"}
+                                src={ isTablet ? "./download16.svg" : "./download24.svg"}
                                 alt="download"
                             />
                         </a>

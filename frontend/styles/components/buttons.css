@@ -3,14 +3,27 @@
 }
 
 .menu-item {
-    display: inline-flex;
-    padding: 8px 0;
+    display: flex;
+    padding: 8px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 50px;
-    color: white;
     text-decoration: none;
+}
+
+.menu-item-selected, .menu-item:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background: var(--Primary);
+}
+
+.menu-item:hover, .text-button:hover {
+    cursor: pointer;
+    color: var(--Primary);
 }
 
 .mi-selected {
@@ -24,7 +37,6 @@
     gap: 10px;
     color: white;
     border-radius: 50px;
-    text-decoration: none;
 }
 
 .tb-selected {
@@ -108,11 +120,6 @@
 }
 
 @media (min-width: 1440px) {
-    .menu-item:hover, .text-button:hover {
-        cursor: pointer;
-        color: var(--Primary);
-    }
-
     .menu-item {
         padding: 10px 30px;
     }
