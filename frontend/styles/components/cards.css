@@ -1,0 +1,172 @@
+/* Project cards */
+
+.project-card {
+    display: flex;
+    width: 309px;
+    height: 405px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: var(--Dark);
+}
+
+.project-card image {
+    flex: 1 0 0;
+    align-self: stretch;
+    border-radius: 16px;
+    background: lightgray 50% / cover no-repeat;
+    box-shadow: 0 11px 25px 1px rgba(0, 0, 0, 0.13);
+}
+
+.content-block {
+    display: flex;
+    padding: 24px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.skills-block {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+/* Vertical cards (images) */
+
+.vertical-card-container {
+    width: 375px;
+    height: 496px;
+    flex-shrink: 0;
+}
+
+.vertical-card {
+    width: 345px;
+    height: 457px;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: lightgray 50% / cover no-repeat;
+}
+
+/* Horizontal cards (with tabs) */
+
+.horizontal-card-container {
+    display: flex;
+    width: 375px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.tabs-block {
+    display: flex;
+    padding-left: 15px;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.horizontal-card-block {
+    display: flex;
+    width: 375px;
+    height: 252px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.horizontal-card {
+    width: 345px;
+    height: 209px;
+    border-radius: 16px;
+}
+
+@media (min-width: 720px) {
+    .project-card {
+        width: 335px;
+    }
+
+    .vertical-card-container {
+        display: flex;
+        width: 494px;
+        padding: 0 20px;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .vertical-card {
+        width: 217px;
+        height: 460px;
+    }
+
+    .horizontal-card-container {
+        width: 494px;
+        padding: 0 20px;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .tabs-block {
+        padding-left: 0;
+    }
+
+    .horizontal-card {
+        height: 275px;
+        align-self: stretch;
+    }
+}
+
+@media (min-width: 1440px) {
+    .project-card {
+        width: 520px;
+        border-radius: 40px;
+    }
+
+    .content-block {
+        padding: 40px 24px;
+        gap: 24px;
+    }
+
+    .vertical-card-container {
+        display: flex;
+        width: 1070px;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .vertical-card {
+        height: 1086px;
+        flex: 1 0 0;
+        border-radius: 24px;
+    }
+
+    .horizontal-card-container {
+        width: 1070px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .tabs-block {
+        padding: 0 110px;
+        gap: 16px;
+    }
+
+    .horizontal-card-block {
+        gap: 30px;
+        align-self: stretch;
+    }
+
+    .horizontal-card {
+        height: 515px;
+        flex: 1 0 0;
+        border-radius: 24px;
+    }
+}
