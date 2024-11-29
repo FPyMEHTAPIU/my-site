@@ -2,13 +2,17 @@ import { useState, useEffect } from "react";
 import Methods from "@/components/methods";
 
 const Footer = () => {
-    const ListenResize:any  = Methods;
+    const ListenResize:any = Methods();
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(0);
 
     useEffect(() => {
+        if (typeof window !== 'undefined')
+            setWindowWidth(window.innerWidth);
         ListenResize(setIsMobile, setIsTablet);
-    }, []);
+        console.log(isMobile);
+    }, [windowWidth]);
 
     const SocialLinks = () => {
         return (

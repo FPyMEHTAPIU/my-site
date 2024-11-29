@@ -11,7 +11,7 @@ const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'Bash', 'CMake'];
 
 const Index = () => {
-    const [containerWidth, setContainerWidth] = useState<number>(0);
+   /* const [containerWidth, setContainerWidth] = useState<number>(0);
     const [skillGap, setSkillGap] = useState<number>(0);
 
     useEffect(() => {
@@ -75,7 +75,7 @@ const Index = () => {
         return (
             <SkillRows rows={rows} />
         );
-    }
+    }*/
 
     return (
         <main>
@@ -107,7 +107,7 @@ const Index = () => {
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Skills
             </h1>
-            {FillSkills()}
+            {/*FillSkills()*/}
         </main>
     );
 };
