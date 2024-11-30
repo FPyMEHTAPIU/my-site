@@ -10,21 +10,29 @@ const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
 const Index = () => {
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [skillGap, setSkillGap] = useState<number>(0);
-    const [windowWidth, setWindowWidth] = useState<number>(0);
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
-        if (typeof window !== 'undefined')
-        {
-            setWindowWidth(window.innerWidth);
-            setContainerWidth(windowWidth < 720 ? 345 :
-                (windowWidth > 1440 ? window.innerWidth : 690 ));
-            setSkillGap(windowWidth < 1440 ? 10 : 24);
-        }
-        setIsMobile(windowWidth < 720);
-        setIsTablet(windowWidth > 720 && windowWidth < 1440);
-    }, [windowWidth])
+        if (typeof window === 'undefined') return;
+
+        const updateDimensions = () => {
+            const width = window.innerWidth;
+            setContainerWidth(
+                width < 720 ? 345 : width > 1440 ? width : 690
+            );
+            setSkillGap(width < 1440 ? 10 : 24);
+            setIsMobile(width < 720);
+            setIsTablet(width >= 720 && width < 1440);
+        };
+
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+
+        return () => {
+            window.removeEventListener('resize', updateDimensions);
+        };
+    }, [])
 
     const GreetingBlock = () => {
         return (
@@ -87,9 +95,22 @@ const Index = () => {
                 My Skills
             </h1>
             {FillSkills(skills, containerWidth, skillGap)}
+            { isMobile ?
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Projects
             </h1>
+                :
+            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', alignSelf: 'stretch'}}>
+                <h1 style={{justifySelf: "center", marginBottom: 24}}>
+                    My Projects
+                </h1>
+                <a className="button-primary" href='./work'>
+                    <p className="body-small black">All projects</p>
+                    <img src='' alt="arrow right"/>
+                </a>
+            </div>
+        }
+
             <div style={{justifyItems: "center"}}>
                 {Card('FdF', './FDF.png', ['C', 'Makefile', 'MLX42 Library'])}
                 <div className="control-block">
@@ -101,10 +122,12 @@ const Index = () => {
                     <button className="dot"/>
                 </div>
             </div>
+            { isMobile ?
             <a className="button-primary" href='./work'>
                 <p className="body-small black">All projects</p>
                 <img src='' alt="arrow right"/>
             </a>
+            : <></>}
             <div style={{
                 display: 'flex',
                 width: 345,
@@ -112,7 +135,7 @@ const Index = () => {
                 alignItems: 'center',
                 gap: 16,
                 marginBottom: 24,
-                marginTop: 48
+                marginTop: isMobile ? 48 : 0
             }}>
                 <h1>Get In Touch</h1>
                 <p className="body-default" style={{textAlign: 'center'}}>
