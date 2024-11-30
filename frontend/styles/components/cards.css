@@ -11,7 +11,7 @@
     background: var(--Dark);
 }
 
-.project-card image {
+.project-card img {
     flex: 1 0 0;
     align-self: stretch;
     border-radius: 16px;

@@ -1,7 +1,3 @@
-*:active {
-    -webkit-filter: brightness(0.8);
-}
-
 .menu-item {
     display: flex;
     padding: 8px 20px;
@@ -24,6 +20,10 @@
 .menu-item:hover, .text-button:hover {
     cursor: pointer;
     color: var(--Primary);
+}
+
+.menu-item:active {
+    -webkit-filter: brightness(0.8);
 }
 
 .mi-selected {
@@ -111,12 +111,13 @@
 }
 
 .skill {
-    display: inline-flex;
-    padding: 12px 24px;
+    display: flex;
+    padding: 8px 16px;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 50px;
+    border: 1px solid var(--Medium);
     background: var(--Dark);
 }
 
@@ -184,7 +185,6 @@
     }
 
     .skill {
-        padding: 16px 40px;
-        border-radius: 16px;
+        padding: 8px 20px;
     }
 }

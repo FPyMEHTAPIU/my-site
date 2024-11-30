@@ -3,13 +3,22 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    margin: 16px auto 36px;
 }
 
 .dot {
     width: 15px;
     height: 15px;
-    fill: #D9FFD0;
+    padding: 0;
+    margin: 0;
+    background-color: #D9FFD0;
     opacity: 0.3;
+    border: 0;
+    border-radius: 20px;
+}
+
+.dot:hover {
+    cursor: pointer;
 }
 
 .dot-next-prev {
@@ -17,7 +26,7 @@
 }
 
 .dot-filled {
-    fill: var(--Primary);
+    background-color: var(--Primary);
     opacity: 1;
 }
 

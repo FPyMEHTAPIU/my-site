@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Methods from "@/components/methods";
+import Card from "@/components/card";
 
 type SkillRowsProps = {
     rows: string[][];
@@ -100,14 +101,32 @@ const Index = () => {
                 <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
             </div>
             <div id="infinite-line">
-                <p className="body-default black">Lorem Ipsum</p>
-                <p className="body-default black">Lorem Ipsum</p>
-                <p className="body-default black">Lorem Ipsum</p>
+                <p className="body-default black">Open to work</p>
+                <p className="body-default black">Open to work</p>
+                <p className="body-default black">Open to work</p>
             </div>
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Skills
             </h1>
             {/*FillSkills()*/}
+            <h1 style={{justifySelf: "center", marginBottom: 24}}>
+                My Projects
+            </h1>
+            <div style={{justifyItems: "center"}}>
+                {Card('FdF', './FDF.png', ['C', 'Makefile', 'MLX42 Library'])}
+                <div className="control-block">
+                    <button className="dot dot-filled"/>
+                    <button className="dot dot-next-prev"/>
+                    <button className="dot"/>
+                    <button className="dot"/>
+                    <button className="dot"/>
+                    <button className="dot"/>
+                </div>
+            </div>
+            <a className="button-primary" href='./work'>
+                <p className="body-small black">All projects</p>
+                <img src='' alt="arrow right"/>
+            </a>
         </main>
     );
 };

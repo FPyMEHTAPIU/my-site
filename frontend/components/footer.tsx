@@ -82,7 +82,9 @@ const Footer = () => {
                 }
                 {SocialLinks()}
             </div>
-            <p className={ isMobile ? "body-small" : "body-default" }>
+            <p
+                className={ isMobile ? "body-small" : "body-default" }
+                style={{marginBottom: 40}}>
                 Designed by&nbsp;
                 <a
                     href="https://www.behance.net/naumova_design"
