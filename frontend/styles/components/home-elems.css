@@ -43,6 +43,7 @@
     align-items: center;
     gap: 16px;
     align-self: stretch;
+    margin-bottom: 48px;
 }
 
 .skills-row {
@@ -51,4 +52,8 @@
     align-items: center;
     gap: 10px;
     align-self: stretch;
+}
+
+@media (min-width: 720px) {
+
 }

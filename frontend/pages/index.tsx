@@ -7,20 +7,23 @@ type SkillRowsProps = {
 };
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
-    'React Native', 'Node.js', 'Next.js', 'PostgreSQL', 'HTML', 'CSS',
-    'C', 'C++', 'C#', 'Qt', 'Git', 'Linux', 'Docker', 'Figma', 'Postman',
-    'Bash', 'CMake'];
+    'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
+    'C', 'C++', 'C#'];
 
 const Index = () => {
-   /* const [containerWidth, setContainerWidth] = useState<number>(0);
+    const [containerWidth, setContainerWidth] = useState<number>(0);
     const [skillGap, setSkillGap] = useState<number>(0);
+    const [windowWidth, setWindowWidth] = useState<number>(0);
 
     useEffect(() => {
-        const screenWidth:number = window.innerWidth;
-        setContainerWidth(screenWidth < 720 ? 345 :
-            (screenWidth > 1440 ? window.innerWidth : 690 ));
-        setSkillGap(screenWidth < 1440 ? 10 : 24);
-    }, [window.innerWidth])
+        if (typeof window !== 'undefined')
+        {
+            setWindowWidth(window.innerWidth);
+            setContainerWidth(windowWidth < 720 ? 345 :
+                (windowWidth > 1440 ? window.innerWidth : 690 ));
+            setSkillGap(windowWidth < 1440 ? 10 : 24);
+        }
+    }, [windowWidth])
 
     const FillSkills = () => {
         const SkillRows: React.FC<SkillRowsProps> = ({ rows }) => {
@@ -29,7 +32,11 @@ const Index = () => {
                     {rows.map((row, rowIndex) => (
                         <div key={rowIndex} className="skills-row">
                             {row.map((skill, skillIndex) => (
-                                <div key={skillIndex} className="skill">
+                                <div
+                                    key={skillIndex}
+                                    className="skill"
+                                    style={{borderRadius: 8, border: 'none'}}
+                                >
                                     <p className="body-default">{skill}</p>
                                 </div>
                             ))}
@@ -40,7 +47,7 @@ const Index = () => {
         };
 
         const calculateSkillWidth = (skill: string): number => {
-            return skill.length * 30;
+            return skill.length * 12.1 + 32;
         };
 
         const arrangeSkills = (
@@ -76,7 +83,7 @@ const Index = () => {
         return (
             <SkillRows rows={rows} />
         );
-    }*/
+    }
 
     return (
         <main>
@@ -108,7 +115,7 @@ const Index = () => {
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Skills
             </h1>
-            {/*FillSkills()*/}
+            {FillSkills()}
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Projects
             </h1>
