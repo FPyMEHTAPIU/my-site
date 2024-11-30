@@ -11,7 +11,6 @@ const Footer = () => {
         if (typeof window !== 'undefined')
             setWindowWidth(window.innerWidth);
         ListenResize(setIsMobile, setIsTablet);
-        console.log(isMobile);
     }, [windowWidth]);
 
     const SocialLinks = () => {

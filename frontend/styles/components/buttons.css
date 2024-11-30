@@ -81,6 +81,10 @@
     background: var(--Secondary);
 }
 
+.button-primary:hover, .button-small:hover, .button-secondary:hover {
+    cursor: pointer;
+}
+
 .button-secondary:active {
     background: var(--Button-click-blue);
 }

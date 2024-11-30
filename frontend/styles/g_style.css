@@ -14,3 +14,7 @@ main {
 a {
     text-decoration: none;
 }
+
+textarea {
+    resize: none;
+}

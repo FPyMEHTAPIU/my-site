@@ -144,7 +144,7 @@ const Index = () => {
             <div className='input-container'>
                 <input className="input" placeholder="Topic"/>
                 <input className="input" placeholder="Email"/>
-                <input
+                <textarea
                     className="input"
                     placeholder="Message"
                     style={{height: 357}}
