@@ -58,6 +58,7 @@
     align-items: center;
     gap: 16px;
     border-radius: 8px;
+    border: none;
     background: var(--Primary);
 }
 

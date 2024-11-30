@@ -127,6 +127,35 @@ const Index = () => {
                 <p className="body-small black">All projects</p>
                 <img src='' alt="arrow right"/>
             </a>
+            <div style={{
+                display: 'flex',
+                width: 345,
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 16,
+                marginBottom: 24,
+                marginTop: 48
+            }}>
+                <h1>Get In Touch</h1>
+                <p className="body-default" style={{textAlign: 'center'}}>
+                    Orci varius natoque penatibus et magnis.
+                </p>
+            </div>
+            <div className='input-container'>
+                <input className="input" placeholder="Topic"/>
+                <input className="input" placeholder="Email"/>
+                <input
+                    className="input"
+                    placeholder="Message"
+                    style={{height: 357}}
+                />
+                <button
+                    className="button-primary"
+                    style={{width: '100%', justifySelf: 'stretch'}}
+                >
+                    <p className="body-default black">Submit</p>
+                </button>
+            </div>
         </main>
     );
 };

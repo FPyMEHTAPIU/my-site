@@ -88,7 +88,9 @@ const Footer = () => {
                 Designed by&nbsp;
                 <a
                     href="https://www.behance.net/naumova_design"
-                    className={ isMobile ? "body-small" : "body-default" }>
+                    className={ isMobile ? "body-small" : "body-default" }
+                    style={{textDecoration: 'underline'}}
+                >
                     Iryna Naumova
                 </a>
             </p>

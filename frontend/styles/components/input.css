@@ -1,12 +1,35 @@
-.input {
+.input-container {
     display: flex;
     width: 345px;
+    padding: 24px 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 16px;
+    background: var(--Dark);
+    margin-bottom: 48px;
+}
+
+.input {
+    display: flex;
     padding: 12px;
     align-items: flex-start;
+    align-self: stretch;
     gap: 10px;
     border-radius: 8px;
     border: 1px solid var(--Medium);
     background: var(--Dark-1);
+}
+
+::placeholder {
+    text-align: left;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    color: var(--Medium);
 }
 
 .input:focus {
