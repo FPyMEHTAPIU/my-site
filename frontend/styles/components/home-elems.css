@@ -55,5 +55,11 @@
 }
 
 @media (min-width: 720px) {
-
+    .content-photo {
+        display: flex;
+        flex-direction: row;
+        width: 690px;
+        align-items: center;
+        gap: 20px;
+    }
 }

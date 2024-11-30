@@ -1,10 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Methods from "@/components/methods";
-import Card from "@/components/card";
-
-type SkillRowsProps = {
-    rows: string[][];
-};
+import Card from "@/components/home/card";
+import FillSkills from "@/components/home/skill";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
@@ -14,6 +11,8 @@ const Index = () => {
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [skillGap, setSkillGap] = useState<number>(0);
     const [windowWidth, setWindowWidth] = useState<number>(0);
+    const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
 
     useEffect(() => {
         if (typeof window !== 'undefined')
@@ -23,70 +22,13 @@ const Index = () => {
                 (windowWidth > 1440 ? window.innerWidth : 690 ));
             setSkillGap(windowWidth < 1440 ? 10 : 24);
         }
+        setIsMobile(windowWidth < 720);
+        setIsTablet(windowWidth > 720 && windowWidth < 1440);
     }, [windowWidth])
 
-    const FillSkills = () => {
-        const SkillRows: React.FC<SkillRowsProps> = ({ rows }) => {
-            return (
-                <div className="skills-block-home">
-                    {rows.map((row, rowIndex) => (
-                        <div key={rowIndex} className="skills-row">
-                            {row.map((skill, skillIndex) => (
-                                <div
-                                    key={skillIndex}
-                                    className="skill"
-                                    style={{borderRadius: 8, border: 'none'}}
-                                >
-                                    <p className="body-default">{skill}</p>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
-                </div>
-            );
-        };
-
-        const calculateSkillWidth = (skill: string): number => {
-            return skill.length * 12.1 + 32;
-        };
-
-        const arrangeSkills = (
-            skills: string[],
-            containerWidth: number,
-            gap: number
-        ): string[][] => {
-            const rows: string[][] = [];
-            let currentRow: string[] = [];
-            let currentRowWidth = 0;
-
-            skills.forEach((skill) => {
-                const skillWidth = calculateSkillWidth(skill);
-                if (currentRowWidth + skillWidth + (currentRow.length > 0 ? gap : 0) <= containerWidth) {
-                    currentRow.push(skill);
-                    currentRowWidth += skillWidth + (currentRow.length > 1 ? gap : 0);
-                } else {
-                    rows.push(currentRow);
-                    currentRow = [skill];
-                    currentRowWidth = skillWidth;
-                }
-            });
-
-            if (currentRow.length > 0) {
-                rows.push(currentRow);
-            }
-
-            return rows;
-        };
-
-        const rows = arrangeSkills(skills, containerWidth, skillGap);
-
+    const GreetingBlock = () => {
         return (
-            <SkillRows rows={rows} />
-        );
-    }
-
-    return (
-        <main>
+            isMobile ?
             <div className="content-container">
                 <div className="greeting">
                     <p className="body-small black">
@@ -107,6 +49,35 @@ const Index = () => {
                 </p>
                 <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
             </div>
+                :
+                <div className="content-photo">
+                    <div className="content-container">
+                        <div className="greeting">
+                            <p className="body-small black">
+                                Hi there! I'm Nick!
+                            </p>
+                        </div>
+                        <h1>A Full-Stack Developer</h1>
+                        <p className="body-default">
+                            with experience in mobile app
+                            development with React Native and software development using
+                            C/C++. My background includes game development, and I've
+                    worked on various software projects such as developing an
+                    image editor, 3D modelling, implementing sorting algorithms,
+                    and creating my own library.
+                        </p>
+                        <p className="body-default">
+                            At my free time I play the guitar, recording videos and play computer games.
+                        </p>
+                    </div>
+                    <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
+                </div>
+        )
+    }
+
+    return (
+        <main>
+            {GreetingBlock()}
             <div id="infinite-line">
                 <p className="body-default black">Open to work</p>
                 <p className="body-default black">Open to work</p>
@@ -115,7 +86,7 @@ const Index = () => {
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Skills
             </h1>
-            {FillSkills()}
+            {FillSkills(skills, containerWidth, skillGap)}
             <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Projects
             </h1>
