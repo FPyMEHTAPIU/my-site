@@ -17,7 +17,10 @@ header {
 
 @media (min-width: 720px) {
     header {
-        margin: 40px auto 48px auto;
+        margin: 20px auto 0;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -29,5 +32,6 @@ header {
         gap: 36px;
         border-radius: 30px;
         width: 549px;
+
     }
 }

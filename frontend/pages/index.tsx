@@ -47,10 +47,7 @@ const Index = () => {
                 <p className="body-default">
                     with experience in mobile app
                     development with React Native and software development using
-                    C/C++. My background includes game development, and I've
-                    worked on various software projects such as developing an
-                    image editor, 3D modelling, implementing sorting algorithms,
-                    and creating my own library.
+                    C/C++.
                 </p>
                 <p className="body-default">
                     At my free time I play the guitar, recording videos and play computer games.
@@ -58,7 +55,7 @@ const Index = () => {
                 <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
             </div>
                 :
-                <div className="content-photo">
+                <div className="content-photo" style={{marginTop: 139}}>
                     <div className="content-container">
                         <div className="greeting">
                             <p className="body-small black">
@@ -69,10 +66,7 @@ const Index = () => {
                         <p className="body-default">
                             with experience in mobile app
                             development with React Native and software development using
-                            C/C++. My background includes game development, and I've
-                    worked on various software projects such as developing an
-                    image editor, 3D modelling, implementing sorting algorithms,
-                    and creating my own library.
+                            C/C++.
                         </p>
                         <p className="body-default">
                             At my free time I play the guitar, recording videos and play computer games.

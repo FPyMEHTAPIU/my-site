@@ -102,8 +102,8 @@
         display: flex;
         height: auto;
         flex-direction: column;
-        align-items: flex-start;
-        gap: auto;
+        align-items: stretch;
+        gap: 30px;
         align-self: stretch;
     }
 }
