@@ -54,6 +54,16 @@
     align-self: stretch;
 }
 
+.get-in-touch {
+    display: flex;
+    width: 345px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
 @media (min-width: 720px) {
     .content-photo {
         display: flex;
@@ -61,5 +71,39 @@
         width: 690px;
         align-items: center;
         gap: 20px;
+    }
+
+    .projects-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        margin-bottom: 24px;
+    }
+
+    .input-block {
+        display: flex;
+        width: 690px;
+        height: auto;
+        align-items: center;
+        gap: 20px;
+        flex-shrink: 0;
+    }
+
+    .get-in-touch {
+        align-items: start;
+        width: 335px;
+        margin: 0;
+        justify-self: center;
+    }
+
+    .letter-block {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: auto;
+        align-self: stretch;
     }
 }

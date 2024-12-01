@@ -18,19 +18,19 @@ const Footer = () => {
             <div className="social-block">
                 <a href="https://www.linkedin.com/in/mykolasaveliev/" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "./linkedin24.svg" : "./linkedin48.svg"}
+                        src={isMobile || isTablet ? "./icons/linkedin24.svg" : "./icons/linkedin48.svg"}
                         alt="linkedin"
                     />
                 </a>
                 <a href="mailto:kolya59264@gmail.com" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "./gmail24.svg" : "./gmail48.svg"}
+                        src={isMobile || isTablet ? "./icons/gmail24.svg" : "./icons/gmail48.svg"}
                         alt="gmail"
                     />
                 </a>
                 <a href="https://github.com/FPyMEHTAPIU" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "./github24.svg" : "./github48.svg"}
+                        src={isMobile || isTablet ? "./icons/github24.svg" : "./icons/github48.svg"}
                         alt="github"
                     />
                 </a>
@@ -56,7 +56,7 @@ const Footer = () => {
                         </div>
                         <a href="/" className="text-button">
                             <p className="body-default">Download CV</p>
-                            <img src="./download16.svg" alt="download"/>
+                            <img src="./icons/download16.svg" alt="download"/>
                         </a>
                     </div>
                     :
@@ -73,7 +73,7 @@ const Footer = () => {
                         <a href="/" className="text-button">
                             <p className="body-default">Download CV</p>
                             <img
-                                src={ isTablet ? "./download16.svg" : "./download24.svg"}
+                                src={ isTablet ? "./icons/download16.svg" : "./icons/download24.svg"}
                                 alt="download"
                             />
                         </a>

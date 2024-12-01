@@ -83,6 +83,26 @@ const Index = () => {
         )
     }
 
+    const InputContainer = () => {
+        return (
+            <div className='input-container'>
+                <input className="input" placeholder="Name"/>
+                <input className="input" placeholder="Email"/>
+                <textarea
+                    className="input"
+                    placeholder="Message"
+                    style={ { height: isMobile ? 357 : 157 } }
+                />
+                <button
+                    className="button-primary"
+                    style={{width: '100%', justifySelf: 'stretch'}}
+                >
+                    <p className="body-default black">Submit</p>
+                </button>
+            </div>
+        )
+    }
+
     return (
         <main>
             {GreetingBlock()}
@@ -95,18 +115,21 @@ const Index = () => {
                 My Skills
             </h1>
             {FillSkills(skills, containerWidth, skillGap)}
-            { isMobile ?
-            <h1 style={{justifySelf: "center", marginBottom: 24}}>
+            {isMobile ?
+                <h1 style={{justifySelf: "center", marginBottom: 24}}>
                 My Projects
             </h1>
                 :
-            <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', alignSelf: 'stretch'}}>
-                <h1 style={{justifySelf: "center", marginBottom: 24}}>
+            <div className="projects-link" style={{width: containerWidth}}>
+                <h1>
                     My Projects
                 </h1>
-                <a className="button-primary" href='./work'>
+                <a className="button-primary" href='./work' style={{width: 'auto', gap: 16}}>
                     <p className="body-small black">All projects</p>
-                    <img src='' alt="arrow right"/>
+                    <img
+                        src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
+                        alt="arrow right"
+                    />
                 </a>
             </div>
         }
@@ -125,38 +148,34 @@ const Index = () => {
             { isMobile ?
             <a className="button-primary" href='./work'>
                 <p className="body-small black">All projects</p>
-                <img src='' alt="arrow right"/>
+                <img
+                    src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
+                    alt="arrow right"
+                />
             </a>
             : <></>}
-            <div style={{
-                display: 'flex',
-                width: 345,
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: 16,
-                marginBottom: 24,
-                marginTop: isMobile ? 48 : 0
-            }}>
-                <h1>Get In Touch</h1>
-                <p className="body-default" style={{textAlign: 'center'}}>
-                    Orci varius natoque penatibus et magnis.
-                </p>
-            </div>
-            <div className='input-container'>
-                <input className="input" placeholder="Topic"/>
-                <input className="input" placeholder="Email"/>
-                <textarea
-                    className="input"
-                    placeholder="Message"
-                    style={{height: 357}}
-                />
-                <button
-                    className="button-primary"
-                    style={{width: '100%', justifySelf: 'stretch'}}
-                >
-                    <p className="body-default black">Submit</p>
-                </button>
-            </div>
+            {isMobile ?
+                <div className="get-in-touch">
+                    <h1>Get In Touch</h1>
+                    <p className="body-default" style={{textAlign: 'center'}}>
+                        Orci varius natoque penatibus et magnis.
+                    </p>
+                    {InputContainer()}
+                </div>
+                :
+                <div className="input-block">
+                    <div className="letter-block">
+                        <div className="get-in-touch">
+                            <h1>Get In Touch</h1>
+                            <p className="body-default">
+                                Orci varius natoque penatibus et magnis.
+                            </p>
+                        </div>
+                        <img src="./letter.svg" alt="letter"/>
+                    </div>
+                    {InputContainer()}
+                </div>
+            }
         </main>
     );
 };
