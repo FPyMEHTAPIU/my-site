@@ -5,7 +5,7 @@ const Card = (
     ) => {
     const FillSkills = (skills:string[]) => {
         return skills.map((skill:string) => (
-            <div className="skill">
+            <div className="skill project-skill">
                 <p className="body-small">{skill}</p>
             </div>
         ))

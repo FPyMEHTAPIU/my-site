@@ -32,11 +32,10 @@
 
 @media (min-width: 1440px) {
     .control-block {
-        display: inline-flex;
         height: 24px;
-        align-items: center;
         gap: 24px;
         flex-shrink: 0;
+        margin: 40px auto 104px;
     }
 
     .dot {

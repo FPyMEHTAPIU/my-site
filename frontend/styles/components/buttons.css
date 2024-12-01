@@ -190,6 +190,10 @@
     }
 
     .skill {
+        padding: 16px 40px;
+    }
+
+    .project-skill {
         padding: 8px 20px;
     }
 }

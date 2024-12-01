@@ -26,12 +26,11 @@ header {
 
 @media (min-width: 1440px) {
     header {
-        margin: 84px auto 104px;
+        margin: 20px auto 0;
         padding: 20px 40px;
         justify-content: center;
         gap: 36px;
         border-radius: 30px;
         width: 549px;
-
     }
 }

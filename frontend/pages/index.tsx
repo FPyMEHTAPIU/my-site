@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import Methods from "@/components/methods";
 import Card from "@/components/home/card";
 import FillSkills from "@/components/home/skill";
-import {router} from "next/client";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
@@ -20,7 +19,7 @@ const Index = () => {
         const updateDimensions = () => {
             const width = window.innerWidth;
             setContainerWidth(
-                width < 720 ? 345 : width > 1440 ? width : 690
+                width < 720 ? 345 : (width >= 1440 ? 1290 : 690)
             );
             setSkillGap(width < 1440 ? 10 : 24);
             setIsMobile(width < 720);
@@ -56,7 +55,7 @@ const Index = () => {
                 <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
             </div>
                 :
-                <div className="content-photo" style={{marginTop: 139}}>
+                <div className="content-photo" style={{marginTop: isTablet ? 139 : 195}}>
                     <div className="content-container">
                         <div className="greeting">
                             <p className="body-small black">
@@ -86,7 +85,7 @@ const Index = () => {
                 <textarea
                     className="input"
                     placeholder="Message"
-                    style={ { height: isMobile ? 357 : 157 } }
+                    style={ { height: isMobile || !isTablet ? 357 : 157 } }
                 />
                 <button
                     className="button-primary"
@@ -106,7 +105,10 @@ const Index = () => {
                 <p className="body-default black">Open to work</p>
                 <p className="body-default black">Open to work</p>
             </div>
-            <h1 style={{justifySelf: "center", marginBottom: 24}}>
+            <h1 style={{
+                justifySelf: "center",
+                marginBottom: containerWidth < 1290 ? 24: 40
+            }}>
                 My Skills
             </h1>
             {FillSkills(skills, containerWidth, skillGap)}

@@ -14,7 +14,10 @@ const FillSkills = (skills:string[], containerWidth:number, skillGap:number) => 
                             <div
                                 key={skillIndex}
                                 className="skill"
-                                style={{borderRadius: 8, border: 'none'}}
+                                style={{
+                                    borderRadius: containerWidth < 1290 ? 8 : 16,
+                                    border: 'none'
+                            }}
                             >
                                 <p className="body-default">{skill}</p>
                             </div>
@@ -26,7 +29,8 @@ const FillSkills = (skills:string[], containerWidth:number, skillGap:number) => 
     };
 
     const calculateSkillWidth = (skill: string): number => {
-        return skill.length * 12.1 + 32;
+        return (containerWidth < 1290 ? (skill.length * 12.1 + 32)
+            : (skill.length * 25 + 40));
     };
 
     const arrangeSkills = (

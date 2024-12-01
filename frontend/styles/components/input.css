@@ -52,19 +52,42 @@
 }
 
 @media (min-width: 1440px) {
+    .input-container {
+        width: fit-content;
+        display: flex;
+        height: 727px;
+        padding: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: center;
+        gap: 24px;
+        flex: 1 0 0;
+    }
+
     .input {
-        display: inline-flex;
+        width: 550px;
+        display: flex;
+        height: 64px;
         padding: 16px;
-        justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         gap: 10px;
-        border-radius: 8px;
-        border: 1px solid var(--Medium);
-        background: var(--Dark-1);
+        flex-shrink: 0;
+        align-self: stretch;
+        align-content: center;
+        line-height: 32px;
     }
 
     .input:focus, .input:hover {
         border: 1px solid rgba(49, 217, 60, 0.28);
+    }
+
+    ::placeholder {
+        font-family: "Roboto Mono", sans-serif;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: var(--Medium);
     }
 
     .error-container {

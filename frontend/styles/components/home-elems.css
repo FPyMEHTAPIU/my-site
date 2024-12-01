@@ -107,3 +107,59 @@
         align-self: stretch;
     }
 }
+
+@media (min-width: 1440px) {
+    .content-photo {
+        width: 1290px;
+        gap: 30px;
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        flex: 1 0 0;
+    }
+
+    #my-photo {
+        width: 520px;
+        height: 650px;
+    }
+
+    .skills-block-home {
+        width: 1290px;
+    }
+
+    #infinite-line {
+        margin: 104px 0;
+    }
+
+    .input-block {
+        width: 1290px;
+        gap: 30px;
+    }
+
+    .letter-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        flex: 1 0 0;
+    }
+
+    .get-in-touch {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        align-self: stretch;
+    }
+
+    .letter-block img {
+        width: 457px;
+        height: 332px;
+        flex-shrink: 0;
+    }
+}
