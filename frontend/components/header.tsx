@@ -1,19 +1,35 @@
 import {useRouter} from "next/router";
+import {useEffect, useState} from "react";
+import {string} from "prop-types";
 
 const Header = () => {
     const router = useRouter();
-    const page = router.query;
-    console.log(page);
+    const [page, setPage] = useState<string|undefined>('');
+
+    useEffect(() => {
+        if (router.isReady) {
+            setPage(router.query.index as string|undefined);
+            console.log(page?.length);
+            console.log(page?.length === 0);
+        }
+    }, [router.isReady, router.query.index]);
+
     return (
         <header>
-            <a href='/' className='menu-item'>
-                <p className='body-small'>Home</p>
+            <a href='/'
+               className={!page ? 'menu-item menu-item-selected' : 'menu-item'}
+            >
+                <p className={!page ? 'body-small black' : 'body-small'}>Home</p>
             </a>
-            <a href='/work' className='menu-item'>
-                <p className='body-small'>Work</p>
+            <a href='/work'
+               className={page === 'work' ? 'menu-item menu-item-selected' : 'menu-item'}
+            >
+                <p className={page === 'work' ? 'body-small black' : 'body-small'}>Work</p>
             </a>
-            <a href='/contact' className='menu-item'>
-                <p className='body-small'>Contact</p>
+            <a href='/contact'
+               className={page === 'contact' ? 'menu-item menu-item-selected' : 'menu-item'}
+            >
+                <p className={page === 'contact' ? 'body-small black' : 'body-small'}>Contact</p>
             </a>
         </header>
     )

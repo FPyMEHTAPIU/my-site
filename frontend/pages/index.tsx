@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Methods from "@/components/methods";
 import Card from "@/components/home/card";
 import FillSkills from "@/components/home/skill";
+import {router} from "next/client";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
