@@ -1,6 +1,6 @@
 .menu-item {
     display: flex;
-    padding: 8px 20px;
+    padding: 8px 0;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -8,8 +8,9 @@
     text-decoration: none;
 }
 
-.menu-item-selected, .menu-item:hover {
+.menu-item-selected {
     display: flex;
+    padding: 8px 20px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -20,6 +21,14 @@
 .menu-item:hover, .text-button:hover {
     cursor: pointer;
     color: var(--Primary);
+}
+
+.menu-item:hover p {
+    color: var(--Primary);
+}
+
+.menu-item-selected:hover p {
+    color: black;
 }
 
 .menu-item:active {
