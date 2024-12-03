@@ -1,5 +1,9 @@
 /* Project cards */
 
+.cards-container {
+
+}
+
 .project-card {
     display: flex;
     width: 309px;
@@ -125,6 +129,24 @@
 }
 
 @media (min-width: 1440px) {
+    .cards-control-block {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards-container {
+        width: 100%;
+        display: inline-flex;
+        height: 742px;
+        align-items: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+        gap: 30px;
+    }
+
+
     .project-card {
         width: 520px;
         height: 740px;

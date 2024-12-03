@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Methods from "@/components/methods";
-import Card from "@/components/home/card";
+import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/skill";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
@@ -131,9 +131,8 @@ const Index = () => {
                 </a>
             </div>
         }
-
-            <div style={{justifyItems: "center"}}>
-                {Card('FdF', './FDF.png', ['C', 'Makefile', 'MLX42 Library'])}
+            <div className="cards-control-block">
+                {Cards()}
                 <div className="control-block">
                     <button className="dot dot-filled"/>
                     <button className="dot dot-next-prev"/>
