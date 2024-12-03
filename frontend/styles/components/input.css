@@ -10,7 +10,7 @@
     margin-bottom: 48px;
 }
 
-.input {
+input, textarea {
     display: flex;
     padding: 12px;
     align-items: flex-start;
@@ -19,6 +19,22 @@
     border-radius: 8px;
     border: 1px solid var(--Medium);
     background: var(--Dark-1);
+    text-align: left;
+    vertical-align: top;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    color: white;
+}
+
+input:focus, input:hover,
+textarea:focus, textarea:hover {
+    color: var(--Light);
+    border: 1px solid var(--Input-stroke-green);
+    outline: none;
 }
 
 ::placeholder {
@@ -31,11 +47,6 @@
     line-height: normal;
     margin: 0;
     color: var(--Medium);
-}
-
-.input:focus {
-    border: 1px solid var(--Input-stroke-green);
-    background: var(--Dark-1);
 }
 
 .error-container {
@@ -53,18 +64,16 @@
 
 @media (min-width: 1440px) {
     .input-container {
-        width: fit-content;
         display: flex;
         height: 727px;
         padding: 40px;
         flex-direction: column;
-        align-items: flex-start;
         justify-items: center;
         gap: 24px;
-        flex: 1 0 0;
+        width: fit-content;
     }
 
-    .input {
+    input {
         width: 550px;
         display: flex;
         height: 64px;
@@ -72,13 +81,11 @@
         align-items: flex-start;
         gap: 10px;
         flex-shrink: 0;
-        align-self: stretch;
-        align-content: center;
-        line-height: 32px;
+        align-self: center;
     }
 
-    .input:focus, .input:hover {
-        border: 1px solid rgba(49, 217, 60, 0.28);
+    input, textarea {
+        font-size: 24px;
     }
 
     ::placeholder {

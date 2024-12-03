@@ -58,7 +58,7 @@ const Index = () => {
                 <div className="content-photo" style={{marginTop: isTablet ? 139 : 195}}>
                     <div className="content-container">
                         <div className="greeting">
-                            <p className="body-small black">
+                            <p className="body-default black">
                                 Hi there! I'm Nick!
                             </p>
                         </div>
@@ -80,17 +80,18 @@ const Index = () => {
     const InputContainer = () => {
         return (
             <div className='input-container'>
-                <input className="input" placeholder="Name"/>
-                <input className="input" placeholder="Email"/>
+                <input placeholder="Name"/>
+                <input placeholder="Email"/>
                 <textarea
-                    className="input"
                     placeholder="Message"
                     style={ { height: isMobile || !isTablet ? 357 : 157 } }
                 />
                 <button
                     className="button-primary"
-                    style={{width: '100%', justifySelf: 'stretch'}}
-                >
+                    style= {
+                    { width: isMobile || isTablet ? '100%' : 550,
+                        justifySelf: 'stretch'}
+                }>
                     <p className="body-default black">Submit</p>
                 </button>
             </div>
@@ -121,7 +122,7 @@ const Index = () => {
                 <h1>
                     My Projects
                 </h1>
-                <a className="button-primary" href='./work' style={{width: 'auto', gap: 16}}>
+                <a className="button-small" href='./work' style={{width: 'auto', gap: 16}}>
                     <p className="body-small black">All projects</p>
                     <img
                         src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
@@ -163,7 +164,7 @@ const Index = () => {
                 <div className="input-block">
                     <div className="letter-block">
                         <div className="get-in-touch">
-                            <h1>Get In Touch</h1>
+                            <h1 style={!isTablet ? {width: 520} : {}}>Get In Touch</h1>
                             <p className="body-default">
                                 Orci varius natoque penatibus et magnis.
                             </p>
