@@ -5,7 +5,7 @@
     flex-direction: column;
 }
 
-.cards-container {
+.cards-container, .swiper-wrapper {
     width: 100vw;
     display: inline-flex;
     height: 405px;
@@ -23,7 +23,7 @@
     padding-right: calc((100vw - 309px) / 2);
 }
 
-.project-card {
+.project-card, .swiper-slide {
     display: flex;
     width: 309px;
     height: 405px;
@@ -112,13 +112,13 @@
 }
 
 @media (min-width: 720px) {
-    .cards-container {
+    .cards-container, .swiper-wrapper  {
         gap: 20px;
         padding-left: calc((100vw - 690px) / 2);
         padding-right: calc((100vw - 690px) / 2);
     }
 
-    .project-card {
+    .project-card, .swiper-slide {
         width: 335px;
     }
 
@@ -154,14 +154,14 @@
 }
 
 @media (min-width: 1440px) {
-    .cards-container {
+    .cards-container, .swiper-wrapper  {
         height: 742px;
         gap: 30px;
         padding-left: calc((100vw - 1290px) / 2);
         padding-right: calc((100vw - 1290px) / 2);
     }
 
-    .project-card {
+    .project-card, .swiper-slide {
         width: 520px;
         height: 740px;
     }

@@ -48,7 +48,7 @@ const projects:ProjectCardData[] = [
 ];
 
 const Card = (
-    project:ProjectCardData
+    project: ProjectCardData
     ) => {
     const FillSkills = (skills:string[]) => {
         return project.projectSkills.map((skill:string) => (
@@ -59,25 +59,29 @@ const Card = (
     }
 
     return (
-        <SwiperSlide
-            className="project-card"
-            tag='a'
-            href={project.projectLink}
-        >
-            <img src={project.projectPhoto} alt="project photo"/>
-            <div className="content-block">
-                <h2>{project.projectName}</h2>
-                <div className="skills-block">
-                    {FillSkills(project.projectSkills)}
+        <SwiperSlide>
+            <a href={project.projectLink} className="project-card">
+                <img src={project.projectPhoto} alt="project photo"/>
+                <div className="content-block">
+                    <h2>{project.projectName}</h2>
+                    <div className="skills-block">
+                        {FillSkills(project.projectSkills)}
+                    </div>
                 </div>
-            </div>
+            </a>
         </SwiperSlide>
     )
 }
 
 const Cards = () => {
     return (
-        <Swiper navigation className="cards-container">
+        <Swiper
+            slidesPerView="auto"
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{clickable: true}}
+            className="cards-control-block"
+        >
             {projects.map((project:ProjectCardData) => (
                 Card(project)
             ))}
