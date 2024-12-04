@@ -135,17 +135,22 @@
     }
 
     .cards-container {
-        width: 100%;
+        width: 100vw;
         display: inline-flex;
         height: 742px;
         align-items: center;
         flex-shrink: 0;
         overflow: hidden;
         position: relative;
+        overflow-x: auto;
         white-space: nowrap;
         gap: 30px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        scroll-behavior: smooth;
+        padding-left: calc((100vw - 1290px) / 2);
+        padding-right: calc((100vw - 1290px) / 2);
     }
-
 
     .project-card {
         width: 520px;
