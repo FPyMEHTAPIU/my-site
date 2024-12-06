@@ -103,10 +103,11 @@ const Cards = () => {
         <Swiper
             slidesPerView="auto"
             centeredSlides={isMobile}
-            spaceBetween={8}
+            centerInsufficientSlides={true}
+            spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
             modules={[Navigation, Pagination, Scrollbar]}
             navigation
-            pagination={{clickable: true}}
+            pagination={{dynamicBullets: true, clickable: true}}
             scrollbar={{draggable: true}}
             className="cards-control-block"
         >
