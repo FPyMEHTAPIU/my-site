@@ -1,11 +1,11 @@
 /* Project cards */
 
-.cards-control-block {
+.swiper.cards-control-block {
     display: flex;
     flex-direction: column;
 }
 
-.cards-container, .swiper-wrapper {
+.swiper-wrapper.cards-container {
     width: 100vw;
     display: inline-flex;
     height: 405px;
@@ -23,7 +23,7 @@
     padding-right: calc((100vw - 309px) / 2);
 }
 
-.project-card, .swiper-slide {
+.swiper-slide.project-card {
     display: flex;
     width: 309px;
     height: 405px;

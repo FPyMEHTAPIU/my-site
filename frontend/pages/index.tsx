@@ -131,17 +131,7 @@ const Index = () => {
                 </a>
             </div>
         }
-            <div className="cards-control-block">
-                {Cards()}
-                <div className="control-block">
-                    <button className="dot dot-filled"/>
-                    <button className="dot dot-next-prev"/>
-                    <button className="dot"/>
-                    <button className="dot"/>
-                    <button className="dot"/>
-                    <button className="dot"/>
-                </div>
-            </div>
+            {Cards()}
             { isMobile ?
             <a className="button-primary" href='./work'>
                 <p className="body-small black">All projects</p>

@@ -1,5 +1,9 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 type ProjectCardData = {
     projectName: string;
@@ -59,7 +63,7 @@ const Card = (
     }
 
     return (
-        <SwiperSlide>
+        <SwiperSlide className="project-card">
             <a href={project.projectLink} className="project-card">
                 <img src={project.projectPhoto} alt="project photo"/>
                 <div className="content-block">
@@ -77,9 +81,10 @@ const Cards = () => {
     return (
         <Swiper
             slidesPerView="auto"
-            modules={[Navigation, Pagination]}
+            modules={[Navigation, Pagination, Scrollbar]}
             navigation
             pagination={{clickable: true}}
+            scrollbar={{draggable: true}}
             className="cards-control-block"
         >
             {projects.map((project:ProjectCardData) => (
