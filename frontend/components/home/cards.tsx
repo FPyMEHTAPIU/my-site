@@ -4,6 +4,7 @@ import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import {useEffect, useState} from "react";
 
 type ProjectCardData = {
     projectName: string;
@@ -78,9 +79,31 @@ const Card = (
 }
 
 const Cards = () => {
+    const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        const updateDimensions = () => {
+            const width = window.innerWidth;
+            setIsMobile(width < 720);
+            setIsTablet(width >= 720 && width < 1440);
+        };
+
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
+
+        return () => {
+            window.removeEventListener('resize', updateDimensions);
+        };
+    }, [])
+
     return (
         <Swiper
             slidesPerView="auto"
+            centeredSlides={isMobile}
+            spaceBetween={8}
             modules={[Navigation, Pagination, Scrollbar]}
             navigation
             pagination={{clickable: true}}

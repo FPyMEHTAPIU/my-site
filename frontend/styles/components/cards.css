@@ -7,18 +7,15 @@
 
 .swiper-wrapper, .cards-container {
     width: 100vw;
-    display: inline-flex;
+    display: flex;
     height: 405px;
     align-items: center;
     flex-shrink: 0;
     position: relative;
     white-space: nowrap;
-    gap: 8px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-behavior: smooth;
-    padding-left: calc((100vw - 309px) / 2);
-    padding-right: calc((100vw - 309px) / 2);
 }
 
 .swiper-slide.project-card, .project-card {
@@ -30,7 +27,6 @@
     border-radius: 24px;
     background: var(--Dark);
     transition: height 0.3s ease, transform 0.3s ease;
-    transition-property: height, transform;
 }
 
 .swiper-slide-prev, .swiper-slide-next {
