@@ -5,15 +5,13 @@
     flex-direction: column;
 }
 
-.swiper-wrapper.cards-container {
+.swiper-wrapper, .cards-container {
     width: 100vw;
     display: inline-flex;
     height: 405px;
     align-items: center;
     flex-shrink: 0;
-    overflow: hidden;
     position: relative;
-    overflow-x: auto;
     white-space: nowrap;
     gap: 8px;
     scrollbar-width: none;
@@ -23,18 +21,24 @@
     padding-right: calc((100vw - 309px) / 2);
 }
 
-.swiper-slide.project-card {
+.swiper-slide.project-card, .project-card {
     display: flex;
     width: 309px;
     height: 405px;
     flex-direction: column;
     align-items: flex-start;
-    flex-shrink: 0;
     border-radius: 24px;
     background: var(--Dark);
+    transition: height 0.3s ease, transform 0.3s ease;
+    transition-property: height, transform;
 }
 
-.project-card img {
+.swiper-slide-prev, .swiper-slide-next {
+    height: 359px !important;
+}
+
+.project-photo {
+    display: flex;
     flex: 1 0 0;
     align-self: stretch;
     border-radius: 16px;
@@ -112,13 +116,13 @@
 }
 
 @media (min-width: 720px) {
-    .cards-container, .swiper-wrapper  {
+    .swiper-wrapper, .cards-container {
         gap: 20px;
         padding-left: calc((100vw - 690px) / 2);
         padding-right: calc((100vw - 690px) / 2);
     }
 
-    .project-card, .swiper-slide {
+    .swiper-slide.project-card, .project-card {
         width: 335px;
     }
 
@@ -154,14 +158,14 @@
 }
 
 @media (min-width: 1440px) {
-    .cards-container, .swiper-wrapper  {
+    .swiper-wrapper, .cards-container {
         height: 742px;
         gap: 30px;
         padding-left: calc((100vw - 1290px) / 2);
         padding-right: calc((100vw - 1290px) / 2);
     }
 
-    .project-card, .swiper-slide {
+    .swiper-slide.project-card, .project-card {
         width: 520px;
         height: 740px;
     }
