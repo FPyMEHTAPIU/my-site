@@ -107,7 +107,9 @@ const Cards = () => {
             spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
             modules={[Navigation, Pagination, Scrollbar]}
             navigation
-            pagination={{dynamicBullets: true, clickable: true}}
+            pagination={{dynamicBullets: true, clickable: true,
+                //bulletClass: "dot", bulletActiveClass: "dot-filled"
+            }}
             scrollbar={{draggable: true}}
             className="cards-control-block"
         >

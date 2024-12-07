@@ -3,6 +3,7 @@
 .swiper.cards-control-block {
     display: flex;
     flex-direction: column;
+    margin-bottom: 36px;
 }
 
 .swiper-wrapper, .cards-container {
@@ -112,6 +113,10 @@
 }
 
 @media (min-width: 720px) {
+    .swiper.cards-control-block {
+        margin-bottom: 48px;
+    }
+
     .swiper-wrapper, .cards-container {
         padding-left: calc((100% - 690px) / 2);
         padding-right: calc((100% - 690px) / 2);
@@ -161,6 +166,10 @@
 }
 
 @media (min-width: 1440px) {
+    .swiper.cards-control-block {
+        margin-bottom: 104px;
+    }
+
     .swiper-wrapper, .cards-container {
         padding-left: calc((100% - 1290px) / 2);
         padding-right: calc((100% - 1290px) / 2);

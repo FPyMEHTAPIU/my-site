@@ -1,12 +1,14 @@
-.control-block {
+.pagination-block {
+    position: relative;
     height: 15px;
     display: inline-flex;
     align-items: center;
     gap: 12px;
     margin: 16px auto 36px;
+    z-index: 10;
 }
 
-.dot {
+.dot, .dot-filled-next-next, .dot-filled-prev-prev, .dot span {
     width: 15px;
     height: 15px;
     padding: 0;
@@ -21,7 +23,7 @@
     cursor: pointer;
 }
 
-.dot-next-prev {
+.dot-filled-next, .dot-filled-prev {
     opacity: 0.7;
 }
 
