@@ -162,9 +162,12 @@
 
 @media (min-width: 1440px) {
     .swiper-wrapper, .cards-container {
-        height: 742px;
-        padding-left: calc((100vw - 1290px) / 2);
-        padding-right: calc((100vw - 1290px) / 2);
+        padding-left: calc((100% - 1290px) / 2);
+        padding-right: calc((100% - 1290px) / 2);
+    }
+
+    .swiper-slide:last-child {
+        margin-right: calc(100% - 1290px);
     }
 
     .swiper-slide.project-card, .project-card {
