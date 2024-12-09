@@ -7,6 +7,7 @@
     margin: 16px auto 36px;
     z-index: 10;
     width: auto !important;
+    bottom: 0 !important;
 }
 
 .dot, .dot-filled-next-next, .dot-filled-prev-prev, .dot span {
@@ -31,6 +32,12 @@
 .dot-filled {
     background-color: var(--Primary);
     opacity: 1;
+}
+
+@media (min-width: 720px) {
+    .pagination-block {
+        margin: 20px auto 48px;
+    }
 }
 
 @media (min-width: 1440px) {
