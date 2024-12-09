@@ -1,10 +1,10 @@
+import {useEffect, useState, useRef} from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import {useEffect, useState} from "react";
 
 type ProjectCardData = {
     projectName: string;
@@ -103,25 +103,49 @@ const Cards = () => {
         <div className="cards-control-block">
             <Swiper
                 slidesPerView="auto"
-                lazyPreloadPrevNext={5}
                 loop={true} //???????
                 centeredSlides={isMobile}
                 centerInsufficientSlides={true}
                 spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
                 modules={[Navigation, Pagination, Scrollbar]}
-                navigation
+                navigation={{
+                    prevEl: '.arrow-round.left',
+                    nextEl: '.arrow-round.right'
+                }}
                 pagination={{
-                    dynamicBullets: true, clickable: true, 
+                    dynamicBullets: true, clickable: true,
                     el: ".pagination-block",
                     bulletClass: "dot", bulletActiveClass: "dot-filled"
                 }}
                 scrollbar={{draggable: true}}
                 className="cards-control-block"
             >
-                {projects.map((project:ProjectCardData) => (
+                {projects.map((project: ProjectCardData) => (
                     Card(project)
                 ))}
             </Swiper>
+            {!isMobile && (
+                <>
+                    <button className="arrow-round left">
+                        <img
+                            src={isMobile ? "./arrows/arrow_left_white16.svg" :
+                                isTablet ? "./arrows/arrow_left_white24.svg" :
+                                    "./arrows/arrow_left_white32.svg"}
+                            alt="arrow left"
+                            className="arrow"
+                        />
+                    </button>
+                    <button className="arrow-round right">
+                        <img
+                            src={isMobile ? "./arrows/arrow_right_white16.svg" :
+                                isTablet ? "./arrows/arrow_right_white24.svg" :
+                                    "./arrows/arrow_right_white32.svg"}
+                            alt="arrow left"
+                            className="arrow"
+                        />
+                    </button>
+                </>
+            )}
             <div className="pagination-block"></div>
         </div>
     )

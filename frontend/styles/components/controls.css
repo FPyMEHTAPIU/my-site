@@ -8,6 +8,8 @@
     z-index: 10;
     width: auto !important;
     bottom: 0 !important;
+    left: 0 !important;
+    transform: translateX(0) !important;
 }
 
 .dot, .dot-filled-next-next, .dot-filled-prev-prev, .dot span {

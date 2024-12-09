@@ -1,64 +1,4 @@
-.arrow-32 {
-    display: flex;
-    width: 32px;
-    height: 32px;
-    padding: 7px 0;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.arrow-round-32 {
-    display: inline-flex;
-    padding: 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 50px;
-    border: 1px solid var(--Medium);
-    background: var(--Dark-1);
-}
-
-.arrow-round-32:hover, .arrow-round-24:hover {
-    background: var(--Gradient);
-}
-
-.arrow-round-32:active, .arrow-round-24:active {
-    -webkit-filter: brightness(0.8);
-}
-
-.arrow-24 {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 5px 0;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.arrow-24-vert {
-    display: flex;
-    width: 24px;
-    height: 24px;
-    padding: 0 5px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.arrow-round-24 {
-    display: inline-flex;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 50px;
-    border: 1px solid var(--Medium);
-    background: var(--Dark-1);
-}
-
-.arrow-16 {
+.arrow {
     display: flex;
     width: 16px;
     height: 16px;
@@ -66,4 +6,54 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+}
+
+@media (min-width: 720px) {
+    .arrow {
+        width: 24px;
+        height: 24px;
+        padding: 5px 0;
+    }
+
+    .arrow-round:hover {
+        background: var(--Gradient);
+    }
+
+    .arrow:active, .arrow-round:active {
+        -webkit-filter: brightness(0.8);
+        filter: brightness(0.8);
+    }
+
+    .arrow-vert {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        padding: 0 5px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .arrow-round {
+        display: inline-flex;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 50px;
+        border: 1px solid var(--Medium);
+        background: var(--Dark-1);
+    }
+}
+
+@media (min-width: 1440px) {
+    .arrow {
+        width: 32px;
+        height: 32px;
+        padding: 7px 0;
+    }
+
+    .arrow-round {
+        padding: 24px;
+    }
 }

@@ -1,5 +1,10 @@
 /* Project cards */
 
+.cards-control-block {
+    justify-items: center;
+    display: grid;
+}
+
 .swiper.cards-control-block {
     display: flex;
     flex-direction: column;
