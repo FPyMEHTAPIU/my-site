@@ -24,6 +24,25 @@
         filter: brightness(0.8);
     }
 
+    .arrow-round.left {
+        display: flex;
+        position: absolute;
+        align-self: center;
+        justify-self: flex-start;
+        margin-left: 15px;
+        margin-right: auto;
+        z-index: 10;
+    }
+
+    .arrow-round.right {
+        position: absolute;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 15px;
+        margin-left: auto;
+        z-index: 10;
+    }
+
     .arrow-vert {
         display: flex;
         width: 24px;
