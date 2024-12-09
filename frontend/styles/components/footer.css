@@ -5,6 +5,7 @@ footer {
     align-items: center;
     gap: 24px;
     justify-self: center;
+    margin: auto;
 }
 
 .footer-container {

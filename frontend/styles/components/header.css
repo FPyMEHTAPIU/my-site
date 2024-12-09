@@ -2,7 +2,7 @@ header {
     position: sticky;
     z-index: 10;
     top: 0;
-    margin: 40px 15px 48px 15px;
+    margin: 40px auto 48px;
     display: flex;
     width: 345px;
     padding: 16px 40px;

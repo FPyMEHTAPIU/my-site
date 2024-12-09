@@ -5,11 +5,13 @@
 body {
     margin: 0;
     background-color: var(--Black);
+    
 }
 
 main {
     justify-items: center;
     overflow: hidden;
+    display: grid;
 }
 
 a {
