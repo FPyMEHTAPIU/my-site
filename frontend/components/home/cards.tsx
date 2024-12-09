@@ -100,23 +100,30 @@ const Cards = () => {
     }, [])
 
     return (
-        <Swiper
-            slidesPerView="auto"
-            centeredSlides={isMobile}
-            centerInsufficientSlides={true}
-            spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
-            modules={[Navigation, Pagination, Scrollbar]}
-            navigation
-            pagination={{dynamicBullets: true, clickable: true,
-                //bulletClass: "dot", bulletActiveClass: "dot-filled"
-            }}
-            scrollbar={{draggable: true}}
-            className="cards-control-block"
-        >
-            {projects.map((project:ProjectCardData) => (
-                Card(project)
-            ))}
-        </Swiper>
+        <div className="cards-control-block">
+            <Swiper
+                slidesPerView="auto"
+                lazyPreloadPrevNext={5}
+                loop={true} //???????
+                centeredSlides={isMobile}
+                centerInsufficientSlides={true}
+                spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
+                modules={[Navigation, Pagination, Scrollbar]}
+                navigation
+                pagination={{
+                    dynamicBullets: true, clickable: true, 
+                    el: ".pagination-block",
+                    bulletClass: "dot", bulletActiveClass: "dot-filled"
+                }}
+                scrollbar={{draggable: true}}
+                className="cards-control-block"
+            >
+                {projects.map((project:ProjectCardData) => (
+                    Card(project)
+                ))}
+            </Swiper>
+            <div className="pagination-block"></div>
+        </div>
     )
 }
 

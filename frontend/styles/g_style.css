@@ -12,6 +12,7 @@ main {
     justify-items: center;
     overflow: hidden;
     display: grid;
+    justify-content: center;
 }
 
 a {

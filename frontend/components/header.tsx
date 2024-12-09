@@ -9,8 +9,6 @@ const Header = () => {
     useEffect(() => {
         if (router.isReady) {
             setPage(router.query.index as string|undefined);
-            console.log(page?.length);
-            console.log(page?.length === 0);
         }
     }, [router.isReady, router.query.index]);
 

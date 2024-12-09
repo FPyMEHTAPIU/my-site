@@ -6,6 +6,7 @@
     gap: 12px;
     margin: 16px auto 36px;
     z-index: 10;
+    width: auto !important;
 }
 
 .dot, .dot-filled-next-next, .dot-filled-prev-prev, .dot span {
@@ -33,7 +34,7 @@
 }
 
 @media (min-width: 1440px) {
-    .control-block {
+    .pagination-block {
         height: 24px;
         gap: 24px;
         flex-shrink: 0;
