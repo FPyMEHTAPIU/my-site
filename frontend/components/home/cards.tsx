@@ -103,6 +103,10 @@ const Cards = () => {
         <div className="cards-control-block">
             <Swiper
                 slidesPerView="auto"
+                slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
+                    (isTablet ? ((document.documentElement.clientWidth - 690) / 2)
+                        : ((document.documentElement.clientWidth - 1290) / 2)) : 0
+                }
                 //loop={true} //???????
                 centeredSlides={isMobile}
                 centerInsufficientSlides={true}

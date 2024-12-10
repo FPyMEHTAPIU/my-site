@@ -121,8 +121,14 @@
 }
 
 @media (min-width: 720px) {
-    .swiper-slide-active {
-        margin-left: calc((100vw -
+    .cards-control-block {
+        position: relative;
+        overflow: visible;
+        align-items: center;
+    }
+
+    .swiper-slide:last-child {
+        margin-right: calc((100vw -
             var(--scrollbar-width) - 690px) / 2);
     }
 
@@ -171,13 +177,9 @@
 }
 
 @media (min-width: 1440px) {
-    .cards-container {
-        padding-left: calc((100% - 1290px) / 2);
-        padding-right: calc((100% - 1290px) / 2);
-    }
-
     .swiper-slide:last-child {
-        margin-right: calc(100% - 1290px);
+        margin-right: calc((100vw -
+            var(--scrollbar-width) - 1290px) / 2);
     }
 
     .swiper-slide.project-card, .project-card {
