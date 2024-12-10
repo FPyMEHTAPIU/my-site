@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import '@/styles/colors.css'
 import '@/styles/g_style.css'
 import '@/styles/typo.css'
+import '@/styles/work.css'
 
 import '@/styles/components/arrows.css'
 import '@/styles/components/buttons.css'

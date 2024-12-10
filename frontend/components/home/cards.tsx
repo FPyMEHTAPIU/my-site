@@ -1,56 +1,12 @@
-import {useEffect, useState, useRef} from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import {ProjectCardData} from "@/components/projects";
+import projects from "@/components/projects";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
-type ProjectCardData = {
-    projectName: string;
-    projectPhoto: string;
-    projectSkills: string[];
-    projectLink: string;
-}
-
-const projects:ProjectCardData[] = [
-    {
-        projectName: 'Hero Fan',
-        projectPhoto: './HF.png',
-        projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
-        projectLink: './hero_fan'
-    },
-    {
-        projectName: 'FdF',
-        projectPhoto: './FdF.png',
-        projectSkills: ['C', 'Makefile', 'MLX42 Library'],
-        projectLink: './fdf'
-    },
-    {
-        projectName: 'push_swap',
-        projectPhoto: './push_swap.png',
-        projectSkills: ['C', 'Makefile'],
-        projectLink: './push_swap'
-    },
-    {
-        projectName: 'libft',
-        projectPhoto: './libft.png',
-        projectSkills: ['C', 'Makefile'],
-        projectLink: './libft'
-    },
-    {
-        projectName: 'Bee Runner',
-        projectPhoto: './bee_runner.png',
-        projectSkills: ['C#', 'Unity'],
-        projectLink: './bee_runner'
-    },
-    {
-        projectName: 'Zombie Strike',
-        projectPhoto: './zombie_strike.png',
-        projectSkills: ['C++', 'Unreal Engine'],
-        projectLink: './zombie_strike'
-    },
-];
 
 const Card = (
     project: ProjectCardData

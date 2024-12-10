@@ -1,0 +1,11 @@
+.projects-filter {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 24px; /* could be 16px ? */
+    margin-bottom: 24px;
+}
+
+.back-none {
+    background: none;
+    border: none;
+}
