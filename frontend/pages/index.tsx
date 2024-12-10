@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import Methods from "@/components/methods";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/skill";
 
@@ -25,6 +24,13 @@ const Index = () => {
             setIsMobile(width < 720);
             setIsTablet(width >= 720 && width < 1440);
         };
+
+        const getScrollbarWidth = () =>  {
+            const documentWidth = document.documentElement.clientWidth
+            return Math.abs(window.innerWidth - documentWidth)
+        }
+
+        document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
 
         updateDimensions();
         window.addEventListener('resize', updateDimensions);

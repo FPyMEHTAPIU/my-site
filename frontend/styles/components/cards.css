@@ -121,6 +121,11 @@
 }
 
 @media (min-width: 720px) {
+    .swiper-slide-active {
+        margin-left: calc((100vw -
+            var(--scrollbar-width) - 690px) / 2);
+    }
+
     .cards-container {
         max-width: 100%;
         width: 100%;

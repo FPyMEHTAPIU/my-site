@@ -55,7 +55,7 @@ const projects:ProjectCardData[] = [
 const Card = (
     project: ProjectCardData
     ) => {
-    const FillSkills = (skills:string[]) => {
+    const FillSkills = () => {
         return project.projectSkills.map((skill:string) => (
             <div className="skill project-skill">
                 <p className="body-small">{skill}</p>
@@ -70,7 +70,7 @@ const Card = (
                 <div className="content-block">
                     <h2>{project.projectName}</h2>
                     <div className="skills-block">
-                        {FillSkills(project.projectSkills)}
+                        {FillSkills()}
                     </div>
                 </div>
             </a>
@@ -86,7 +86,7 @@ const Cards = () => {
         if (typeof window === 'undefined') return;
 
         const updateDimensions = () => {
-            const width = window.innerWidth;
+            const width:number = window.innerWidth;
             setIsMobile(width < 720);
             setIsTablet(width >= 720 && width < 1440);
         };
@@ -103,7 +103,7 @@ const Cards = () => {
         <div className="cards-control-block">
             <Swiper
                 slidesPerView="auto"
-                loop={true} //???????
+                //loop={true} //???????
                 centeredSlides={isMobile}
                 centerInsufficientSlides={true}
                 spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
