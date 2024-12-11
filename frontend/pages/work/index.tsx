@@ -14,7 +14,7 @@ const WorkCard = (project:ProjectCardData) => {
     }
 
     return (
-        <a href={project.projectLink} className="project-card work-card" style={{marginBottom: 16}}>
+        <a href={project.projectLink} className="project-card work-card">
             <img className="project-photo" src={project.projectPhoto} alt="project photo"/>
             <div className="content-block">
                 <h2>{project.projectName}</h2>

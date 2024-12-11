@@ -38,18 +38,22 @@
     transition: height 0.3s ease, transform 0.3s ease;
 }
 
+.swiper-slide-prev, .swiper-slide-next {
+    height: 359px !important;
+}
+
+.work-card-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 36px;
+    align-self: center;
+    gap: 16px
+}
+
 .work-card {
     height: 561px;
     width: 345px;
     align-self: stretch;
-}
-
-.work-card-container {
-    margin-bottom: 48px;
-}
-
-.swiper-slide-prev, .swiper-slide-next {
-    height: 359px !important;
 }
 
 .project-photo {
@@ -153,6 +157,18 @@
 
     .swiper-slide-prev, .swiper-slide-next {
         height: 405px !important;
+    }
+
+    .work-card-container {
+        width: 690px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+        justify-content: space-between;
+        grid-gap: 20px;
+    }
+
+    .work-card {
+
     }
 
     .vertical-card-container {

@@ -3,6 +3,7 @@
     align-items: flex-start;
     gap: 24px; /* could be 16px ? */
     margin-bottom: 24px;
+    align-self: center;
 }
 
 .back-none {
@@ -14,7 +15,8 @@
     .projects-filter {
         position: relative;
         justify-self: flex-start;
-        margin-left: 0;
-        margin-right: auto;
+        align-self: flex-start;
+        margin: 105px auto 24px;
+        width: 690px;
     }
 }
