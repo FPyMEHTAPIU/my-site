@@ -38,6 +38,12 @@
     transition: height 0.3s ease, transform 0.3s ease;
 }
 
+.work-card {
+    height: 561px;
+    width: 345px;
+    align-self: stretch;
+}
+
 .swiper-slide-prev, .swiper-slide-next {
     height: 359px !important;
 }

@@ -9,8 +9,8 @@ const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
 const Index = () => {
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [skillGap, setSkillGap] = useState<number>(0);
-    const [isMobile, setIsMobile] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
+    const [isTablet, setIsTablet] = useState<boolean>(false);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;

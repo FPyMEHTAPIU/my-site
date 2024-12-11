@@ -14,7 +14,8 @@ const projects:ProjectCardData[] = [
         projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
         projectLink: './work/hero_fan',
         projectType: 'web',
-        projectDescription: 'Hero Fan Description'
+        projectDescription: 'A full-stack (Marvel) Hero Fan webpage created for the ' +
+            'Web Express Coding Challenge at Hive Helsinki'
     },
     {
         projectName: 'FdF',
@@ -22,7 +23,7 @@ const projects:ProjectCardData[] = [
         projectSkills: ['C', 'Makefile', 'MLX42 Library'],
         projectLink: './work/fdf',
         projectType: 'software',
-        projectDescription: 'FdF Description'
+        projectDescription: 'A graphics project that represents a 2D map of numbers in 3D.'
     },
     {
         projectName: 'push_swap',
@@ -30,7 +31,8 @@ const projects:ProjectCardData[] = [
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/push_swap',
         projectType: 'software',
-        projectDescription: 'push_swap Description'
+        projectDescription: 'A sorting algorithm that sorts a stack using another ' +
+            'one with pre-calculation logic.'
     },
     {
         projectName: 'libft',
@@ -38,7 +40,8 @@ const projects:ProjectCardData[] = [
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/libft',
         projectType: 'software',
-        projectDescription: 'libft Description'
+        projectDescription: 'A custom library that reimplements many standard ' +
+            'C functions, along with linked lists and more.'
     },
     {
         projectName: 'Bee Runner',
@@ -46,7 +49,7 @@ const projects:ProjectCardData[] = [
         projectSkills: ['C#', 'Unity'],
         projectLink: './work/bee_runner',
         projectType: 'game',
-        projectDescription: 'Bee Runner Description'
+        projectDescription: 'An endless runner game created in Unity using C#.'
     },
     {
         projectName: 'Zombie Strike',
@@ -54,7 +57,7 @@ const projects:ProjectCardData[] = [
         projectSkills: ['C++', 'Unreal Engine'],
         projectLink: './work/zombie_strike',
         projectType: 'game',
-        projectDescription: 'Zombie Strike Description'
+        projectDescription: 'A top-down auto-shooter game created in Unreal Engine 5 using C++.'
     },
 ]
 

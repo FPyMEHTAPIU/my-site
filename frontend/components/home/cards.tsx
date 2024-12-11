@@ -7,6 +7,7 @@ import projects from "@/components/projects";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import useDeviceType from "@/components/useDeviceType";
 
 const Card = (
     project: ProjectCardData
@@ -35,25 +36,7 @@ const Card = (
 }
 
 const Cards = () => {
-    const [isMobile, setIsMobile] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
-
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-
-        const updateDimensions = () => {
-            const width:number = window.innerWidth;
-            setIsMobile(width < 720);
-            setIsTablet(width >= 720 && width < 1440);
-        };
-
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-
-        return () => {
-            window.removeEventListener('resize', updateDimensions);
-        };
-    }, [])
+    const {isMobile, isTablet} = useDeviceType();
 
     return (
         <div className="cards-control-block">
