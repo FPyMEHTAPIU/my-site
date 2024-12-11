@@ -15,7 +15,7 @@ const projects:ProjectCardData[] = [
         projectLink: './work/hero_fan',
         projectType: 'web',
         projectDescription: 'A full-stack (Marvel) Hero Fan webpage created for the ' +
-            'Web Express Coding Challenge at Hive Helsinki'
+            'Web Express Coding Challenge at Hive Helsinki.'
     },
     {
         projectName: 'FdF',

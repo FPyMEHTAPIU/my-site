@@ -113,14 +113,14 @@ const Index = () => {
                 <p className="body-default black">Open to work</p>
             </div>
             <h1 style={{
-                justifySelf: "center",
+                alignSelf: "center",
                 marginBottom: containerWidth < 1290 ? 24: 40
             }}>
                 My Skills
             </h1>
             {FillSkills(skills, containerWidth, skillGap)}
             {isMobile ?
-                <h1 style={{justifySelf: "center", marginBottom: 24}}>
+                <h1 style={{alignSelf: "center", marginBottom: 24}}>
                 My Projects
             </h1>
                 :
@@ -139,7 +139,7 @@ const Index = () => {
         }
             {Cards()}
             { isMobile ?
-            <a className="button-primary" href='./work'>
+            <a className="button-primary" style={{alignSelf: "center"}} href='./work'>
                 <p className="body-small black">All projects</p>
                 <img
                     src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}

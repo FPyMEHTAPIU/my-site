@@ -9,3 +9,12 @@
     background: none;
     border: none;
 }
+
+@media (min-width: 720px) {
+    .projects-filter {
+        position: relative;
+        justify-self: flex-start;
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
