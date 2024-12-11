@@ -44,7 +44,9 @@ const Work = () => {
                 <button className="body-default text-button back-none">Software</button>
                 <button className="body-default text-button back-none">Game</button>
             </div>
-            {WorkCards()}
+            <div className="work-card-container">
+                {WorkCards()}
+            </div>
         </main>
     )
 }

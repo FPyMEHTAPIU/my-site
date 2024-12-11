@@ -44,6 +44,10 @@
     align-self: stretch;
 }
 
+.work-card-container {
+    margin-bottom: 48px;
+}
+
 .swiper-slide-prev, .swiper-slide-next {
     height: 359px !important;
 }
