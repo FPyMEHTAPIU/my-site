@@ -1,33 +1,32 @@
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
-import {string} from "prop-types";
 
 const Header = () => {
     const router = useRouter();
-    const [page, setPage] = useState<string|undefined>('');
+    const [page, setPage] = useState<string>('');
 
     useEffect(() => {
         if (router.isReady) {
-            setPage(router.query.index as string|undefined);
+            setPage(router.pathname as string);
         }
-    }, [router.isReady, router.query.index]);
+    }, [router.isReady, router.pathname]);
 
     return (
         <header>
             <a href='/'
-               className={!page ? 'menu-item menu-item-selected' : 'menu-item'}
+               className={page === '/' ? 'menu-item menu-item-selected' : 'menu-item'}
             >
-                <p className={!page ? 'body-small black' : 'body-small'}>Home</p>
+                <p className={page === '/' ? 'body-small black' : 'body-small'}>Home</p>
             </a>
             <a href='/work'
-               className={page === 'work' ? 'menu-item menu-item-selected' : 'menu-item'}
+               className={page.includes('/work') ? 'menu-item menu-item-selected' : 'menu-item'}
             >
-                <p className={page === 'work' ? 'body-small black' : 'body-small'}>Work</p>
+                <p className={page.includes('/work') ? 'body-small black' : 'body-small'}>Work</p>
             </a>
             <a href='/contact'
-               className={page === 'contact' ? 'menu-item menu-item-selected' : 'menu-item'}
+               className={page.includes('/contact') ? 'menu-item menu-item-selected' : 'menu-item'}
             >
-                <p className={page === 'contact' ? 'body-small black' : 'body-small'}>Contact</p>
+                <p className={page.includes('/contact') ? 'body-small black' : 'body-small'}>Contact</p>
             </a>
         </header>
     )

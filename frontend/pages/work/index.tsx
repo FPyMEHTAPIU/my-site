@@ -1,7 +1,10 @@
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
+import useDeviceType from "@/components/useDeviceType";
 
 const WorkCard = (project:ProjectCardData) => {
+    const { isMobile, isTablet } = useDeviceType();
+
     const FillSkills = () => {
         return project.projectSkills.map((skill:string) => (
             <div className="skill project-skill">
@@ -11,10 +14,11 @@ const WorkCard = (project:ProjectCardData) => {
     }
 
     return (
-        <a href={project.projectLink} className="project-card" style={{marginBottom: 16}}>
+        <a href={project.projectLink} className="project-card work-card" style={{marginBottom: 16}}>
             <img className="project-photo" src={project.projectPhoto} alt="project photo"/>
             <div className="content-block">
                 <h2>{project.projectName}</h2>
+                <p className="body-small">{project.projectDescription}</p>
                 <div className="skills-block">
                     {FillSkills()}
                 </div>
@@ -45,4 +49,4 @@ const Work = () => {
     )
 }
 
-export default Work
+export default Work;
