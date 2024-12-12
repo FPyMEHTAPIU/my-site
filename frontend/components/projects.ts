@@ -13,7 +13,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './HF.png',
         projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
         projectLink: './work/hero_fan',
-        projectType: 'web',
+        projectType: 'Web',
         projectDescription: 'A full-stack (Marvel) Hero Fan webpage created for the ' +
             'Web Express Coding Challenge at Hive Helsinki.'
     },
@@ -22,7 +22,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './FdF.png',
         projectSkills: ['C', 'Makefile', 'MLX42 Library'],
         projectLink: './work/fdf',
-        projectType: 'software',
+        projectType: 'Software',
         projectDescription: 'A graphics project that represents a 2D map of numbers in 3D.'
     },
     {
@@ -30,7 +30,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './push_swap.png',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/push_swap',
-        projectType: 'software',
+        projectType: 'Software',
         projectDescription: 'A sorting algorithm that sorts a stack using another ' +
             'one with pre-calculation logic.'
     },
@@ -39,7 +39,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './libft.png',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/libft',
-        projectType: 'software',
+        projectType: 'Software',
         projectDescription: 'A custom library that reimplements many standard ' +
             'C functions, along with linked lists and more.'
     },
@@ -48,7 +48,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './bee_runner.png',
         projectSkills: ['C#', 'Unity'],
         projectLink: './work/bee_runner',
-        projectType: 'game',
+        projectType: 'Game',
         projectDescription: 'An endless runner game created in Unity using C#.'
     },
     {
@@ -56,7 +56,7 @@ const projects:ProjectCardData[] = [
         projectPhoto: './zombie_strike.png',
         projectSkills: ['C++', 'Unreal Engine'],
         projectLink: './work/zombie_strike',
-        projectType: 'game',
+        projectType: 'Game',
         projectDescription: 'A top-down auto-shooter game created in Unreal Engine 5 using C++.'
     },
 ]

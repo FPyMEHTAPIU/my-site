@@ -1,10 +1,8 @@
+import {useState} from "react";
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
-import useDeviceType from "@/components/useDeviceType";
 
 const WorkCard = (project:ProjectCardData) => {
-    const { isMobile, isTablet } = useDeviceType();
-
     const FillSkills = () => {
         return project.projectSkills.map((skill:string) => (
             <div className="skill project-skill">
@@ -27,25 +25,103 @@ const WorkCard = (project:ProjectCardData) => {
     )
 }
 
-const WorkCards = () => {
+const WorkCards = (
+    isAll:boolean,
+    isWeb:boolean,
+    isSoftware:boolean,
+    isGame:boolean
+    ) => {
     return (
         projects.map((project: ProjectCardData) => (
-            WorkCard(project)
+            isAll ? WorkCard(project)
+                : isWeb ? (project.projectType === 'Web' ? WorkCard(project) : <></>)
+                    : isSoftware ? (project.projectType === 'Software' ? WorkCard(project) : <></>)
+                        : isGame ? (project.projectType === 'Game' ? WorkCard(project) : <></>)
+                            : <></>
         ))
     )
 }
 
 const Work = () => {
+    const [isAll, setIsAll] = useState<boolean>(true);
+    const [isWeb, setIsWeb] = useState<boolean>(false);
+    const [isSoftware, setIsSoftware] = useState<boolean>(false);
+    const [isGame, setIsGame] = useState<boolean>(false);
+
+    const filters:string[] = [
+        'All',
+        'Web',
+        'Software',
+        'Game'
+    ]
+
+    const states:boolean[] = [
+        isAll,
+        isWeb,
+        isSoftware,
+        isGame
+    ];
+
+    const clickAll = () => {
+        setIsAll(true);
+        setIsWeb(false);
+        setIsSoftware(false);
+        setIsGame(false);
+    }
+
+    const clickWeb = () => {
+        setIsAll(false);
+        setIsWeb(true);
+        setIsSoftware(false);
+        setIsGame(false);
+    }
+
+    const clickSoftware = () => {
+        setIsAll(false);
+        setIsWeb(false);
+        setIsSoftware(true);
+        setIsGame(false);
+    }
+
+    const clickGame = () => {
+        setIsAll(false);
+        setIsWeb(false);
+        setIsSoftware(false);
+        setIsGame(true);
+    }
+
+    const setFilters = () => {
+        const Filter = (filter:string, index:number) => {
+            return (
+                <button
+                    className={"text-button back-none"}
+                    onClick={filter === 'All' ? clickAll
+                        : filter === 'Web' ? clickWeb
+                            : filter === 'Software' ? clickSoftware
+                                : clickGame
+                    }
+                >
+                    <p className={states[index] ? "body-default green" : "body-default"}>
+                        {filter}
+                    </p>
+                </button>
+            )
+        };
+
+        return (
+            <div className="projects-filter">
+                {filters.map((filter:string, index: number) => (
+                    Filter(filter, index)
+                ))}
+            </div>
+        )
+    }
+
     return (
         <main>
-            <div className="projects-filter">
-                <button className="body-default text-button back-none">All</button>
-                <button className="body-default text-button back-none">Web</button>
-                <button className="body-default text-button back-none">Software</button>
-                <button className="body-default text-button back-none">Game</button>
-            </div>
+            {setFilters()}
             <div className="work-card-container">
-                {WorkCards()}
+                {WorkCards(isAll, isWeb, isSoftware, isGame)}
             </div>
         </main>
     )

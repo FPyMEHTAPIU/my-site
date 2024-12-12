@@ -49,6 +49,10 @@
     text-decoration: none;
 }
 
+.text-button:hover p {
+    color: var(--Primary);
+}
+
 .tb-selected {
     color: var(--Primary);
 }
