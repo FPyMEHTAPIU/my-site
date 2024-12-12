@@ -93,6 +93,7 @@
         align-self: center;
         gap: 20px;
         flex-shrink: 0;
+        margin-bottom: 48px;
     }
 
     .get-in-touch {
@@ -109,6 +110,7 @@
         align-items: stretch;
         gap: 40px;
         align-self: stretch;
+        justify-content: space-between;
     }
 }
 
@@ -146,11 +148,10 @@
     .input-block {
         width: 1290px;
         gap: 30px;
+        margin-bottom: 104px;
     }
 
     .letter-block {
-        display: flex;
-        flex-direction: column;
         align-items: flex-start;
         flex: 1 0 0;
         width: 630px;

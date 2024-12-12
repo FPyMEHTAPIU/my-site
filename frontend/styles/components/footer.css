@@ -92,4 +92,8 @@ footer {
         gap: 48px;
         padding: 0 24px;
     }
+
+    .links-row {
+        height: auto;
+    }
 }

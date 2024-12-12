@@ -165,10 +165,7 @@
         grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
         justify-content: space-between;
         grid-gap: 20px;
-    }
-
-    .work-card {
-
+        margin-bottom: 48px;
     }
 
     .vertical-card-container {
@@ -220,6 +217,18 @@
     .content-block {
         padding: 40px 24px;
         gap: 24px;
+    }
+
+    .work-card-container {
+        width: 1290px;
+        grid-template-columns: repeat(auto-fit, minmax(630px, 1fr));
+        grid-gap: 30px;
+        margin-bottom: 104px;
+    }
+
+    .work-card {
+        height: 846px;
+        width: 630px;
     }
 
     .vertical-card-container {

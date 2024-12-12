@@ -20,3 +20,10 @@
         width: 690px;
     }
 }
+
+@media (min-width: 1440px) {
+    .projects-filter {
+        margin: 196px auto 40px;
+        width: 1290px;
+    }
+}
