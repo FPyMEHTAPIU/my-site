@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
+import FillCardSkills from "@/components/card-skills";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,14 +12,6 @@ import useDeviceType from "@/components/useDeviceType";
 const Card = (
     project: ProjectCardData
     ) => {
-    const FillSkills = () => {
-        return project.projectSkills.map((skill:string) => (
-            <div className="skill project-skill">
-                <p className="body-small">{skill}</p>
-            </div>
-        ))
-    }
-
     return (
         <SwiperSlide className="project-card">
             <a href={project.projectLink} className="project-card">
@@ -27,7 +19,7 @@ const Card = (
                 <div className="content-block">
                     <h2>{project.projectName}</h2>
                     <div className="skills-block">
-                        {FillSkills()}
+                        {FillCardSkills(project.projectSkills)}
                     </div>
                 </div>
             </a>

@@ -4,10 +4,17 @@ type SkillRowsProps = {
     rows: string[][];
 };
 
-const FillSkills = (skills:string[], containerWidth:number, skillGap:number) => {
+const FillSkills = (
+    skills:string[],
+    containerWidth:number,
+    skillGap:number,
+    isWorkPage:boolean
+) => {
     const SkillRows: React.FC<SkillRowsProps> = ({ rows }) => {
         return (
-            <div className="skills-block-home">
+                <div className={isWorkPage ? "skills-block-home align-start" : "skills-block-home" }
+                     style={{marginBottom: isWorkPage ? 0 : 'revert-layer'}}
+                >
                 {rows.map((row, rowIndex) => (
                     <div key={rowIndex} className="skills-row">
                         {row.map((skill, skillIndex) => (

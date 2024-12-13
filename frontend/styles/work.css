@@ -1,3 +1,7 @@
+.main-gap {
+    gap: 24px;
+}
+
 .projects-filter {
     display: inline-flex;
     align-items: flex-start;
@@ -9,6 +13,24 @@
 .back-none {
     background: none;
     border: none;
+}
+
+.work-content-block {
+    display: flex;
+    padding: 0 15px;
+    width: 345px;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.work-sub-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: center;
 }
 
 @media (min-width: 720px) {

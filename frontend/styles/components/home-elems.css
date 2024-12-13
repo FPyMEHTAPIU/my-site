@@ -47,6 +47,10 @@
     margin-bottom: 48px;
 }
 
+.align-start {
+    align-self: flex-start;
+}
+
 .skills-row {
     display: flex;
     justify-content: center;

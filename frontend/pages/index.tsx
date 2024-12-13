@@ -1,44 +1,14 @@
 import React, {useEffect, useState} from "react";
 import Cards from "@/components/home/cards";
-import FillSkills from "@/components/home/skill";
+import FillSkills from "@/components/home/main-skills";
+import calculateContainerSize from "@/components/calculateContainerSize";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
     'C', 'C++', 'C#'];
 
 const Index = () => {
-    const [containerWidth, setContainerWidth] = useState<number>(0);
-    const [skillGap, setSkillGap] = useState<number>(0);
-    const [isMobile, setIsMobile] = useState<boolean>(false);
-    const [isTablet, setIsTablet] = useState<boolean>(false);
-
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-
-        const updateDimensions = () => {
-            const width = window.innerWidth;
-            setContainerWidth(
-                width < 720 ? 345 : (width >= 1440 ? 1290 : 690)
-            );
-            setSkillGap(width < 1440 ? 10 : 24);
-            setIsMobile(width < 720);
-            setIsTablet(width >= 720 && width < 1440);
-        };
-
-        const getScrollbarWidth = () =>  {
-            const documentWidth = document.documentElement.clientWidth
-            return Math.abs(window.innerWidth - documentWidth)
-        }
-
-        document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
-
-        updateDimensions();
-        window.addEventListener('resize', updateDimensions);
-
-        return () => {
-            window.removeEventListener('resize', updateDimensions);
-        };
-    }, [])
+    const {containerWidth, skillGap, isMobile, isTablet} = calculateContainerSize();
 
     const GreetingBlock = () => {
         return (
@@ -118,7 +88,7 @@ const Index = () => {
             }}>
                 My Skills
             </h1>
-            {FillSkills(skills, containerWidth, skillGap)}
+            {FillSkills(skills, containerWidth, skillGap, false)}
             {isMobile ?
                 <h1 style={{alignSelf: "center", marginBottom: 24}}>
                 My Projects
