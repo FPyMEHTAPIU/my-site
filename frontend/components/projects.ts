@@ -14,8 +14,15 @@ const projects:ProjectCardData[] = [
         projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
         projectLink: './work/hero_fan',
         projectType: 'Web',
-        projectDescription: 'A full-stack (Marvel) Hero Fan webpage created for the ' +
-            'Web Express Coding Challenge at Hive Helsinki.'
+        projectDescription: 'A full-stack (Marvel) Hero Fan webpage.'
+    },
+    {
+        projectName: 'SMTH',
+        projectPhoto: './SMTH.png',
+        projectSkills: ['TypeScript', 'React Native'],
+        projectLink: './work/smth',
+        projectType: 'Web',
+        projectDescription: 'A mobile app designed to make job searching and hiring stress-free.'
     },
     {
         projectName: 'FdF',
