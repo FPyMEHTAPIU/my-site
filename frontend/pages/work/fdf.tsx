@@ -2,8 +2,9 @@ import FillSkills from "@/components/home/main-skills";
 import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import {SwiperSlide} from "swiper/react";
-import FillCardSkills from "@/components/card-skills";
 import SwiperContainer from "@/components/swiper-container";
+import {useState} from "react";
+import FillImageButtons from "@/components/image-buttons";
 
 const buttonsZoomRotate:string[] = [
     'Zooming',
@@ -23,6 +24,7 @@ const gifsZoomRotate:string[] = [
 
 const FdF = () => {
     const {containerWidth, skillGap, isMobile, isTablet} = calculateContainerSize();
+    const [activeIndex, setActiveIndex] = useState<number>(0);
 
     const imageSlide = (img_src:string) => {
         return (
@@ -90,12 +92,12 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            <div className="work-content-block">
+            <div className="work-content-block" style={{marginBottom: -8}}>
                 <div className="skills-block">
-                    {FillCardSkills(buttonsZoomRotate)}
+                    {FillImageButtons(buttonsZoomRotate, activeIndex)}
                 </div>
             </div>
-            {SwiperContainer(isMobile, isTablet, imageSlide, gifsZoomRotate)}
+            {SwiperContainer(isMobile, isTablet, imageSlide, gifsZoomRotate, setActiveIndex)}
         </main>
     )
 }

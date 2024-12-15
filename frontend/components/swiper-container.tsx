@@ -6,8 +6,15 @@ const SwiperContainer = (
     isMobile: boolean,
     isTablet: boolean,
     Card:any,
-    projects:any
+    projects:any,
+    setActiveIndex:any
 ) => {
+    const setSlideIndex = (swiper:any) => {
+        if (setActiveIndex === null)
+            return ;
+        setActiveIndex(swiper.activeIndex);
+    }
+
     return (
         <div className="cards-control-block">
             <Swiper
@@ -19,6 +26,7 @@ const SwiperContainer = (
                 centeredSlides={isMobile}
                 centerInsufficientSlides={true}
                 spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
+                onSlideChange={setSlideIndex}
                 modules={[Navigation, Pagination, Scrollbar]}
                 navigation={{
                     prevEl: '.arrow-round.left',

@@ -1,10 +1,8 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { SwiperSlide } from 'swiper/react';
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
 import useDeviceType from "@/components/useDeviceType";
-import AddArrows from "@/components/swiper-arrows";
 import SwiperContainer from "@/components/swiper-container";
 
 const Card = (
@@ -29,7 +27,7 @@ const Cards = () => {
     const {isMobile, isTablet} = useDeviceType();
 
     return (
-        SwiperContainer(isMobile, isTablet, Card, projects)
+        SwiperContainer(isMobile, isTablet, Card, projects, null)
     )
 }
 

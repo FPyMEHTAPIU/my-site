@@ -124,8 +124,14 @@
     background: var(--Dark-1);
 }
 
-.tab:active {
+.tab:hover {
     background: var(--Primary);
+    cursor: pointer;
+    color: var(--Black)
+}
+
+.tab-selected {
+    background: var(--Primary) !important;
 }
 
 .skill {
