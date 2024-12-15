@@ -2,7 +2,8 @@
 
 .cards-control-block {
     justify-items: center;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     max-width: 100%;
     width: 100%;
 }
@@ -40,6 +41,12 @@
 
 .swiper-slide-prev, .swiper-slide-next {
     height: 359px !important;
+}
+
+.swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,
+.swiper-slide-prev.horizontal-card img, .swiper-slide-next.horizontal-card img {
+    height: 191px !important;
+    align-self: center;
 }
 
 .work-card-container {
@@ -121,14 +128,15 @@
 
 .horizontal-card-block {
     display: flex;
-    width: 375px;
-    height: 252px;
+    width: calc(100vw - var(--scrollbar-width));
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    align-self: center;
+    overflow: visible;
 }
 
-.horizontal-card {
+.swiper-slide.horizontal-card, .horizontal-card {
+    display: flex;
     width: 345px;
     height: 209px;
     border-radius: 16px;

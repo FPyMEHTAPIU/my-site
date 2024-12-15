@@ -3,10 +3,6 @@ import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
-
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import useDeviceType from "@/components/useDeviceType";
 
 const Card = (

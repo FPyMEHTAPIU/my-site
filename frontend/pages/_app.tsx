@@ -18,6 +18,10 @@ import '@/styles/components/input.css'
 
 import '@/styles/components/home-elems.css'
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
