@@ -4,6 +4,8 @@ import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
 import useDeviceType from "@/components/useDeviceType";
+import AddArrows from "@/components/swiper-arrows";
+import SwiperContainer from "@/components/swiper-container";
 
 const Card = (
     project: ProjectCardData
@@ -27,58 +29,7 @@ const Cards = () => {
     const {isMobile, isTablet} = useDeviceType();
 
     return (
-        <div className="cards-control-block">
-            <Swiper
-                slidesPerView="auto"
-                slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
-                    (isTablet ? ((document.documentElement.clientWidth - 690) / 2)
-                        : ((document.documentElement.clientWidth - 1290) / 2)) : 0
-                }
-                //loop={true} //???????
-                centeredSlides={isMobile}
-                centerInsufficientSlides={true}
-                spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
-                modules={[Navigation, Pagination, Scrollbar]}
-                navigation={{
-                    prevEl: '.arrow-round.left',
-                    nextEl: '.arrow-round.right'
-                }}
-                pagination={{
-                    dynamicBullets: true, clickable: true,
-                    el: ".pagination-block",
-                    bulletClass: "dot", bulletActiveClass: "dot-filled"
-                }}
-                scrollbar={{draggable: true}}
-                className="cards-control-block"
-            >
-                {!isMobile && (
-                    <>
-                        <button className="arrow-round left">
-                            <img
-                                src={isMobile ? "./arrows/arrow_left_white16.svg" :
-                                    isTablet ? "./arrows/arrow_left_white24.svg" :
-                                        "./arrows/arrow_left_white32.svg"}
-                                alt="arrow left"
-                                className="arrow"
-                            />
-                        </button>
-                        <button className="arrow-round right">
-                            <img
-                                src={isMobile ? "./arrows/arrow_right_white16.svg" :
-                                    isTablet ? "./arrows/arrow_right_white24.svg" :
-                                        "./arrows/arrow_right_white32.svg"}
-                                alt="arrow left"
-                                className="arrow"
-                            />
-                        </button>
-                    </>
-                )}
-                {projects.map((project: ProjectCardData) => (
-                    Card(project)
-                ))}
-            </Swiper>
-            <div className="pagination-block"></div>
-        </div>
+        SwiperContainer(isMobile, isTablet, Card, projects)
     )
 }
 

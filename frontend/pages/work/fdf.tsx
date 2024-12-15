@@ -1,9 +1,9 @@
 import FillSkills from "@/components/home/main-skills";
 import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
-import {Swiper, SwiperSlide} from "swiper/react";
+import {SwiperSlide} from "swiper/react";
 import FillCardSkills from "@/components/card-skills";
-import {Navigation, Pagination, Scrollbar} from "swiper/modules";
+import SwiperContainer from "@/components/swiper-container";
 
 const buttonsZoomRotate:string[] = [
     'Zooming',
@@ -29,59 +29,6 @@ const FdF = () => {
             <SwiperSlide className="horizontal-card">
                 <img className="horizontal-card" src={img_src} alt="image" />
             </SwiperSlide>
-        )
-    }
-
-    const imageSwiper = () => {
-        return (
-            <div className="horizontal-card-block">
-                <Swiper
-                    slidesPerView="auto"
-                    centeredSlides={true}
-                    centerInsufficientSlides={true}
-                    spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
-                    modules={[Navigation, Pagination, Scrollbar]}
-                    navigation={{
-                        prevEl: '.arrow-round.left',
-                        nextEl: '.arrow-round.right'
-                    }}
-                    pagination={{
-                        dynamicBullets: true, clickable: true,
-                        el: ".pagination-block",
-                        bulletClass: "dot", bulletActiveClass: "dot-filled"
-                    }}
-                    scrollbar={{draggable: true}}
-                    className="cards-control-block"
-                >
-                    {!isMobile && (
-                        <>
-                            <button className="arrow-round left">
-                                <img
-                                    src={isMobile ? "./arrows/arrow_left_white16.svg" :
-                                        isTablet ? "./arrows/arrow_left_white24.svg" :
-                                            "./arrows/arrow_left_white32.svg"}
-                                    alt="arrow left"
-                                    className="arrow"
-                                />
-                            </button>
-                            <button className="arrow-round right">
-                                <img
-                                    src={isMobile ? "./arrows/arrow_right_white16.svg" :
-                                        isTablet ? "./arrows/arrow_right_white24.svg" :
-                                            "./arrows/arrow_right_white32.svg"}
-                                    alt="arrow left"
-                                    className="arrow"
-                                />
-                            </button>
-                        </>
-                    )}
-                    {gifsZoomRotate.map((gif: string) => (
-                        imageSlide(gif)
-                    ))}
-                </Swiper>
-                <div className="pagination-block"></div>
-            </div>
-
         )
     }
 
@@ -147,8 +94,8 @@ const FdF = () => {
                 <div className="skills-block">
                     {FillCardSkills(buttonsZoomRotate)}
                 </div>
-                {imageSwiper()}
             </div>
+            {SwiperContainer(isMobile, isTablet, imageSlide, gifsZoomRotate)}
         </main>
     )
 }

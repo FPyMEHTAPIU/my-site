@@ -4,8 +4,7 @@
     justify-items: center;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
-    width: 100%;
+    width: calc(100vw - var(--scrollbar-width));
 }
 
 .swiper.cards-control-block {
@@ -140,6 +139,7 @@
     width: 345px;
     height: 209px;
     border-radius: 16px;
+    transition: height 0.3s ease, transform 0.3s ease;
 }
 
 @media (min-width: 720px) {
