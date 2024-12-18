@@ -4,6 +4,7 @@ import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
 import useDeviceType from "@/components/useDeviceType";
 import SwiperContainer from "@/components/swiper-container";
+import {useRef} from "react";
 
 const Card = (
     project: ProjectCardData
@@ -25,9 +26,10 @@ const Card = (
 
 const Cards = () => {
     const {isMobile, isTablet} = useDeviceType();
+    const swiperRefMain = useRef(null);
 
     return (
-        SwiperContainer(isMobile, isTablet, Card, projects, null)
+        SwiperContainer(isMobile, isTablet, Card, projects, null, swiperRefMain, 'main')
     )
 }
 
