@@ -7,7 +7,8 @@ const SwiperContainer = (
     isTablet: boolean,
     Card:any,
     projects:any,
-    setActiveIndex:any
+    setActiveIndex:any,
+    swiperRef:any
 ) => {
     const setSlideIndex = (swiper:any) => {
         if (setActiveIndex === null)
@@ -39,6 +40,7 @@ const SwiperContainer = (
                 }}
                 scrollbar={{draggable: true}}
                 className="cards-control-block"
+                onSwiper={(swiper) =>(swiperRef.current = swiper)}
             >
                 {AddArrows(isMobile, isTablet)}
                 {projects.map((project: any) => (
