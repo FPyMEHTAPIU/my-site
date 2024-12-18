@@ -1,11 +1,21 @@
 import { useState, useEffect } from "react";
 import Methods from "@/components/methods";
+import {useRouter} from "next/router";
 
 const Footer = () => {
     const ListenResize:any = Methods();
     const [isMobile, setIsMobile] = useState(false);
     const [isTablet, setIsTablet] = useState(false);
     const [windowWidth, setWindowWidth] = useState(0);
+    const router = useRouter();
+    const [page, setPage] = useState<string>('');
+
+    useEffect(() => {
+        if (router.isReady) {
+            setPage(router.pathname as string);
+            console.log(page)
+        }
+    }, [router.isReady, router.pathname]);
 
     useEffect(() => {
         if (typeof window !== 'undefined')
@@ -39,7 +49,8 @@ const Footer = () => {
     };
 
     return (
-        <footer>
+        <footer style={{marginBottom:
+                (isMobile && page !== '/work' && page.includes('work')) ? 116 : 'revert'}}>
             <div className="footer-container">
                 {isMobile ?
                     <div className="links-container">

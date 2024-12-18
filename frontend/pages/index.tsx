@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";

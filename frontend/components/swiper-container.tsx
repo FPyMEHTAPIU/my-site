@@ -8,7 +8,8 @@ const SwiperContainer = (
     Card:any,
     projects:any,
     setActiveIndex:any,
-    swiperRef:any
+    swiperRef:any,
+    paginationId:string
 ) => {
     const setSlideIndex = (swiper:any) => {
         if (setActiveIndex === null)
@@ -35,7 +36,7 @@ const SwiperContainer = (
                 }}
                 pagination={{
                     dynamicBullets: true, clickable: true,
-                    el: ".pagination-block",
+                    el: `.pagination-block.${paginationId}`,
                     bulletClass: "dot", bulletActiveClass: "dot-filled"
                 }}
                 scrollbar={{draggable: true}}
@@ -47,7 +48,7 @@ const SwiperContainer = (
                     Card(project)
                 ))}
             </Swiper>
-            <div className="pagination-block"></div>
+            <div className={"pagination-block " + paginationId}></div>
         </div>
     )
 }

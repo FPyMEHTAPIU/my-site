@@ -5,6 +5,7 @@ import {SwiperSlide} from "swiper/react";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef, useState} from "react";
 import FillImageButtons from "@/components/image-buttons";
+import GitHubBlock from "@/components/work/github-block";
 
 const buttonsZoomRotate:string[] = [
     'Zooming',
@@ -22,10 +23,26 @@ const gifsZoomRotate:string[] = [
     '/projects/fdf/rotate_z.gif'
 ]
 
+const buttonsProjections:string[] = [
+    'isometric',
+    'top-down',
+    'right-side',
+    'front-side'
+]
+
+const imagesProjections:string[] = [
+    '/projects/fdf/isometric.png',
+    '/projects/fdf/top_view.png',
+    '/projects/fdf/right_view.png',
+    '/projects/fdf/front_view.png'
+]
+
 const FdF = () => {
     const {containerWidth, skillGap, isMobile, isTablet} = calculateContainerSize();
-    const [activeIndex, setActiveIndex] = useState<number>(0);
-    const swipeRef = useRef(null);
+    const [activeIndexZoom, setActiveIndexZoom] = useState<number>(0);
+    const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
+    const swipeRefZoom = useRef(null);
+    const swipeRefProjections = useRef(null);
 
     const imageSlide = (img_src:string) => {
         return (
@@ -89,17 +106,80 @@ const FdF = () => {
                     <p className="body-default">
                         In this phase, the points are scaled according to the total number
                         of points in the map. This controls the spacing between points.
-                        Zooming and height scaling examples are provided below:
+                    </p>
+                </div>
+                <div className="work-sub-block">
+                    <p className="body-default green">6.Rotating Points</p>
+                    <p className="body-default">
+                        After scaling, matrix rotation formulas are applied to change the model's angle along the:
+                    </p>
+                    <ul>
+                        <li className="list-dots"><p className="body-default">x-axis</p></li>
+                        <li className="list-dots"><p className="body-default">y-axis</p></li>
+                        <li className="list-dots"><p className="body-default">z-axis</p></li>
+                    </ul>
+                    <p className="body-default">
+                        <span className="green">Important!</span> The original angle values are stored before rotation.
+                        Zooming, height scaling and rotation examples are provided below:
                     </p>
                 </div>
             </div>
             <div className="work-content-block" style={{marginBottom: -8}}>
                 <div className="skills-block">
-                    {FillImageButtons(buttonsZoomRotate, activeIndex, setActiveIndex, swipeRef)}
+                    {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
             {SwiperContainer(isMobile, isTablet, imageSlide,
-                gifsZoomRotate, setActiveIndex, swipeRef)}
+                gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')}
+            <div className="work-content-block" style={{marginTop: -36}}>
+                <div className="work-sub-block">
+                    <p className="body-default green">7.2D Projection Conversion</p>
+                    <p className="body-default">
+                        The program converts the 3D coordinates into either isometric or orthographic projections.
+                        Examples of different projections are shown below:
+                    </p>
+                </div>
+            </div>
+            <div className="work-content-block" style={{marginBottom: -8}}>
+                <div className="skills-block">
+                    {FillImageButtons(buttonsProjections, activeIndexProjections,
+                        setActiveIndexProjections, swipeRefProjections)}
+                </div>
+            </div>
+            {SwiperContainer(isMobile, isTablet, imageSlide,
+                imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')}
+            <div className="work-content-block" style={{marginTop: -36}}>
+                <div className="work-sub-block">
+                    <p className="body-default green">8.Centering and Moving Points</p>
+                    <p className="body-default">
+                        Next, the model is moved to avoid image cropping by aligning it with the
+                        left and top edges of the screen. It is also centered based on the window size.
+                        User-controlled movement is added in this phase. Moving example is shown below:
+                    </p>
+                </div>
+            </div>
+            <div style={{alignSelf: 'center'}}>
+                {imageSlide('/projects/fdf/moving.gif')}
+            </div>
+            <div className="work-content-block last-block">
+                <div className="work-sub-block">
+                    <p className="body-default green">9.Line Drawing</p>
+                    <p className="body-default">
+                        This section uses the DDA (Digital Differential Analyzer) algorithm to draw lines.
+                        First, horizontal lines are drawn, followed by vertical lines.
+                    </p>
+                </div>
+                <div className="work-sub-block">
+                    <p className="body-default green">10. Setting up Keyboard and Mouse Controls</p>
+                    <p className="body-default">
+                        Here, keys and mouse controls are configured to change between isometric and
+                        orthographic projections, move the model, rotate it, zoom, and adjust the height scaling.
+                        After closing the program (by pressing ESC or clicking the Close button),
+                        all allocated memory is cleaned up.
+                    </p>
+                </div>
+            </div>
+            {isMobile ? GitHubBlock('https://github.com/FPyMEHTAPIU/FdF') : <></>}
         </main>
     )
 }

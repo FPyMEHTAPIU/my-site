@@ -104,13 +104,20 @@
 
 .button-small {
     display: flex;
-    width: 335px;
     padding: 18px 24px;
     justify-content: center;
     align-items: center;
     gap: 16px;
     border-radius: 8px;
     background: var(--Primary);
+}
+
+.button-small:hover, .button-primary:hover {
+    box-shadow: -1px 5px 14px 0 #0C5F11;
+}
+
+.button-secondary:hover {
+    box-shadow: -1px 5px 14px 0 #0C115F;
 }
 
 .tab {
@@ -190,14 +197,6 @@
         display: inline-flex;
         padding: 16px 40px;
         border-radius: 16px;
-    }
-
-    .button-small:hover, .button-primary:hover {
-        box-shadow: -1px 5px 14px 0 #0C5F11;
-    }
-
-    .button-secondary:hover {
-        box-shadow: -1px 5px 14px 0 #0C115F;
     }
 
     .tab {
