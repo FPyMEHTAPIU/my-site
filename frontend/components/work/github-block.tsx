@@ -1,7 +1,7 @@
 import calculateContainerSize from "@/components/calculateContainerSize";
 
 const GitHubBlock = (link:string) => {
-    const {isMobile, isTablet} = calculateContainerSize();
+    const {isTablet} = calculateContainerSize();
 
     const MobileGithubBlock = () => {
         return (

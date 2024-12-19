@@ -37,13 +37,15 @@ const imagesProjections:string[] = [
     '/projects/fdf/front_view.png'
 ]
 
+const link:string = 'https://github.com/FPyMEHTAPIU/FdF'
+
 const FdF = () => {
-    const {containerWidth, skillGap, isMobile, isTablet} = calculateContainerSize();
+    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
     const [activeIndexZoom, setActiveIndexZoom] = useState<number>(0);
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
     const swipeRefZoom = useRef(null);
     const swipeRefProjections = useRef(null);
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock('https://github.com/FPyMEHTAPIU/FdF');
+    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
 
     const imageSlide = (img_src:string) => {
         return (
@@ -180,6 +182,14 @@ const FdF = () => {
                         all allocated memory is cleaned up.
                     </p>
                 </div>
+            {!isMobile && (
+                <a className="button-small" href={link} target="_blank"
+                    style={{margin: '36px 0 48px'}}
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             </div>
             {isMobile ? MobileGithubBlock() : <></>}
         </main>

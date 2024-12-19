@@ -62,6 +62,13 @@ textarea:focus, textarea:hover {
     border: 1px solid var(--Input-stroke-red);
 }
 
+@media (min-width: 720px) {
+    .input-container {
+        min-width: unset;
+        align-items: unset;
+    }
+}
+
 @media (min-width: 1440px) {
     .input-container {
         display: flex;

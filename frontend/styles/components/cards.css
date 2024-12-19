@@ -203,9 +203,17 @@
         padding-left: 0;
     }
 
-    .horizontal-card {
+    .swiper-slide.horizontal-card, .horizontal-card {
         height: 275px;
         align-self: stretch;
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,
+    .swiper-slide-prev.horizontal-card img, .swiper-slide-next.horizontal-card img {
+        height: 275px !important;
+        align-self: unset;
     }
 }
 
