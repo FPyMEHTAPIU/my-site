@@ -22,8 +22,7 @@ const SwiperContainer = (
             <Swiper
                 slidesPerView="auto"
                 slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
-                    (isTablet ? ((document.documentElement.clientWidth - 690) / 2)
-                        : ((document.documentElement.clientWidth - 1290) / 2)) : 0
+                    (isTablet ? 15 : 75) : 0
                 }
                 centeredSlides={isMobile}
                 centerInsufficientSlides={true}

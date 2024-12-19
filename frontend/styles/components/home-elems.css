@@ -77,10 +77,19 @@
     .content-photo {
         display: flex;
         flex-direction: row;
-        width: 690px;
         align-items: center;
         gap: 20px;
-        align-self: center;
+        margin: auto 15px;
+    }
+
+    .content-container {
+        margin: auto;
+    }
+
+    #my-photo {
+        min-width: 335px;
+        min-height: 385px;
+        flex: 1 0;
     }
 
     .projects-link {
@@ -88,19 +97,16 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        align-self: center;
-        margin-bottom: 24px;
+        margin: auto 15px 24px;
     }
 
     .input-block {
         display: flex;
-        width: 690px;
         height: auto;
         align-items: center;
-        align-self: center;
         gap: 20px;
         flex-shrink: 0;
-        margin-bottom: 48px;
+        margin: auto 15px 48px;
     }
 
     .get-in-touch {
@@ -123,7 +129,7 @@
 
 @media (min-width: 1440px) {
     .content-photo {
-        width: 1290px;
+        margin: auto 75px;
         gap: 30px;
     }
 
@@ -141,21 +147,25 @@
 
     #my-photo {
         width: 520px;
-        height: 650px;
+        flex: unset;
     }
 
     .skills-block-home {
-        width: 1290px;
+        max-width: 1920px;
+        margin: auto 75px 104px;
     }
 
     #infinite-line {
         margin: 104px 0;
     }
 
+    .projects-link {
+        margin: auto 75px 40px;
+    }
+
     .input-block {
-        width: 1290px;
         gap: 30px;
-        margin-bottom: 104px;
+        margin: auto 75px 104px;
     }
 
     .letter-block {

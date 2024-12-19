@@ -43,11 +43,6 @@ footer {
 }
 
 @media (min-width: 720px) {
-    footer {
-        display: flex;
-        width: 690px;
-    }
-
     .footer-container {
         padding: 40px 15px;
         justify-content: space-between;
@@ -75,13 +70,11 @@ footer {
 
 @media (min-width: 1440px) {
     footer {
-        width: 1290px;
         gap: 40px;
-        justify-self: center;
+        margin: auto 75px;
     }
 
     .footer-container {
-        width: 1290px;
         padding: 57px 40px;
         justify-content: space-between;
         flex-direction: row;

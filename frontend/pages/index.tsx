@@ -2,14 +2,13 @@ import React from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";
-import FillCardSkills from "@/components/card-skills";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
     'C', 'C++', 'C#'];
 
 const Index = () => {
-    const {containerWidth, skillGap, isMobile, isTablet} = calculateContainerSize();
+    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
 
     const GreetingBlock = () => {
         return (
@@ -95,7 +94,7 @@ const Index = () => {
                     My Projects
                 </h1>
                 :
-                <div className="projects-link" style={{width: containerWidth}}>
+                <div className="projects-link">
                     <h1>
                         My Projects
                     </h1>

@@ -150,8 +150,7 @@
     }
 
     .swiper-slide:last-child {
-        margin-right: calc((100vw -
-            var(--scrollbar-width) - 690px) / 2);
+        margin-right: 15px;
     }
 
     .cards-container {
