@@ -51,15 +51,15 @@
 .work-card-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 36px;
-    align-self: center;
-    gap: 16px
+    gap: 16px;
+    margin: auto 15px 36px;
+    min-width: 345px;
 }
 
 .work-card {
-    height: 561px;
-    width: 345px;
-    align-self: stretch;
+    min-height: 561px;
+    min-width: 345px;
+    width: 100%;
 }
 
 .project-photo {

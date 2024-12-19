@@ -43,7 +43,7 @@
 .skills-block-home {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     align-self: center;
     min-width: 345px;
     margin: auto 15px 48px;
@@ -153,6 +153,7 @@
     .skills-block-home {
         max-width: 1920px;
         margin: auto 75px 104px;
+        gap: 24px;
     }
 
     #infinite-line {
