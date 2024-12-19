@@ -2,6 +2,7 @@ import React from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";
+import FillCardSkills from "@/components/card-skills";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
@@ -84,39 +85,39 @@ const Index = () => {
             </div>
             <h1 style={{
                 alignSelf: "center",
-                marginBottom: containerWidth < 1290 ? 24: 40
+                marginBottom: containerWidth < 1290 ? 24 : 40
             }}>
                 My Skills
             </h1>
-            {FillSkills(skills, containerWidth, skillGap, false)}
+            {FillSkills(skills, containerWidth, false)}
             {isMobile ?
                 <h1 style={{alignSelf: "center", marginBottom: 24}}>
-                My Projects
-            </h1>
-                :
-            <div className="projects-link" style={{width: containerWidth}}>
-                <h1>
                     My Projects
                 </h1>
-                <a className="button-small" href='./work' style={{width: 'auto', gap: 16}}>
+                :
+                <div className="projects-link" style={{width: containerWidth}}>
+                    <h1>
+                        My Projects
+                    </h1>
+                    <a className="button-small" href='./work' style={{width: 'auto', gap: 16}}>
+                        <p className="body-small black">All projects</p>
+                        <img
+                            src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
+                            alt="arrow right"
+                        />
+                    </a>
+                </div>
+            }
+            {Cards()}
+            {isMobile ?
+                <a className="button-primary" style={{alignSelf: "center"}} href='./work'>
                     <p className="body-small black">All projects</p>
                     <img
                         src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
                         alt="arrow right"
                     />
                 </a>
-            </div>
-        }
-            {Cards()}
-            { isMobile ?
-            <a className="button-primary" style={{alignSelf: "center"}} href='./work'>
-                <p className="body-small black">All projects</p>
-                <img
-                    src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
-                    alt="arrow right"
-                />
-            </a>
-            : <></>}
+                : <></>}
             {isMobile ?
                 <div className="get-in-touch">
                     <h1>Get In Touch</h1>

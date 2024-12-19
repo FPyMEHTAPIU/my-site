@@ -4,7 +4,7 @@
     justify-items: center;
     display: flex;
     flex-direction: column;
-    width: calc(100vw - var(--scrollbar-width));
+    width: 100%;
 }
 
 .swiper.cards-control-block {
