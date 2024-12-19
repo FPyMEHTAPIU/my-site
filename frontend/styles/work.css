@@ -16,9 +16,9 @@
 }
 
 .work-content-block {
+    margin: auto 15px;
     display: flex;
-    padding: 0 15px;
-    width: 345px;
+    min-width: 345px;
     align-self: center;
     flex-direction: column;
     align-items: flex-start;
@@ -66,6 +66,22 @@
         align-self: flex-start;
         margin: 105px auto 24px;
         width: 690px;
+    }
+
+    .work-content-block {
+        margin: auto 113px;
+        padding: 0 20px;
+    }
+
+    .github-block {
+        bottom: unset;
+        padding: unset;
+        margin: 138px 15px 16px;
+        border-radius: unset;
+        position: unset;
+        z-index: unset;
+        background: unset;
+        width: unset;
     }
 }
 

@@ -43,6 +43,7 @@ const FdF = () => {
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
     const swipeRefZoom = useRef(null);
     const swipeRefProjections = useRef(null);
+    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock('https://github.com/FPyMEHTAPIU/FdF');
 
     const imageSlide = (img_src:string) => {
         return (
@@ -55,6 +56,7 @@ const FdF = () => {
     return (
         <main className="main-gap">
             {/*HEADER*/}
+            {!isMobile && TabletDesktopGithubBlock()}
             <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 60}}>
                 <h1>FdF</h1>
                 <p className="body-default">
@@ -179,7 +181,7 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            {isMobile ? GitHubBlock('https://github.com/FPyMEHTAPIU/FdF') : <></>}
+            {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )
 }

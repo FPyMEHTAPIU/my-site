@@ -136,7 +136,8 @@
 
 .swiper-slide.horizontal-card, .horizontal-card {
     display: flex;
-    width: 345px;
+    min-width: 345px;
+    width: 90vw;
     height: 209px;
     border-radius: 16px;
     transition: height 0.3s ease, transform 0.3s ease;
@@ -167,12 +168,13 @@
     }
 
     .work-card-container {
-        width: 690px;
+        min-width: 690px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
-        justify-content: space-between;
         grid-gap: 20px;
+        grid-row-gap: 20px;
         margin-bottom: 48px;
+        align-self: center;
     }
 
     .vertical-card-container {
@@ -191,6 +193,7 @@
     .horizontal-card-container {
         width: 494px;
         padding: 0 20px;
+        margin: auto 113px;
         justify-content: center;
         align-items: flex-start;
         gap: 16px;
