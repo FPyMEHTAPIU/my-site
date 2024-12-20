@@ -40,6 +40,7 @@ const imagesProjections:string[] = [
 const link:string = 'https://github.com/FPyMEHTAPIU/FdF'
 
 const FdF = () => {
+    const {SwiperDefault} = SwiperContainer();
     const {containerWidth, isMobile, isTablet} = calculateContainerSize();
     const [activeIndexZoom, setActiveIndexZoom] = useState<number>(0);
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
@@ -133,7 +134,7 @@ const FdF = () => {
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
-            {SwiperContainer(isMobile, isTablet, imageSlide,
+            {SwiperDefault(isMobile, isTablet, imageSlide,
                 gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')}
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
@@ -150,7 +151,7 @@ const FdF = () => {
                         setActiveIndexProjections, swipeRefProjections)}
                 </div>
             </div>
-            {SwiperContainer(isMobile, isTablet, imageSlide,
+            {SwiperDefault(isMobile, isTablet, imageSlide,
                 imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')}
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">

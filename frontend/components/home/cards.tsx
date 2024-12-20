@@ -25,11 +25,12 @@ const Card = (
 }
 
 const Cards = () => {
+    const {SwiperDefault} = SwiperContainer();
     const {isMobile, isTablet} = useDeviceType();
     const swiperRefMain = useRef(null);
 
     return (
-        SwiperContainer(isMobile, isTablet, Card, projects, null, swiperRefMain, 'main')
+        SwiperDefault(isMobile, isTablet, Card, projects, null, swiperRefMain, 'main')
     )
 }
 
