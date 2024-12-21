@@ -175,7 +175,7 @@
 
     .swiper.horizontal-card-container, .horizontal-card-container {
         display: flex;
-        width: calc(100vw - var(--scrollbar-width) - 226px - 40px);
+        width: calc(100vw - var(--scrollbar-width) - 226px);
         margin: auto 113px 24px;
         justify-content: center;
         align-items: center;
