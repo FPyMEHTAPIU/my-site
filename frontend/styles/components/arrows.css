@@ -84,7 +84,11 @@
         height: 80px;
     }
 
-    .arrow-round.left, .arrow-round.right {
+    .arrow-round.left {
+        margin-left: 75px;
+    }
 
+    .arrow-round.right {
+        margin-right: 75px;
     }
 }

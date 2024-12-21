@@ -1,6 +1,7 @@
 import {Swiper} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import AddArrows from "@/components/swiper-arrows";
+import {useEffect, useState} from "react";
 
 const SwiperContainer = () => {
     const setSlideIndex = (
@@ -17,10 +18,19 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
+        activeIndex:number,
         setActiveIndex:any,
         swiperRef:any,
         paginationId:string
     ) => {
+        const [isFirstSlide, setIsFirstSlide] = useState(true);
+        const [isLastSlide, setIsLastSlide] = useState(true);
+
+        useEffect(() => {
+            setIsFirstSlide(activeIndex === 0);
+            setIsLastSlide(activeIndex === projects.length - 2);
+        }, [activeIndex])
+
         return (
             <div className="cards-control-block">
                 <Swiper
@@ -46,7 +56,7 @@ const SwiperContainer = () => {
                     className="cards-control-block"
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                 >
-                    {AddArrows(isMobile, isTablet, false)}
+                    {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide)}
                     {projects.map((project: any) => (
                         Card(project)
                     ))}
@@ -61,10 +71,20 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
+        activeIndex:number,
         setActiveIndex:any,
         swiperRef:any
     ) =>
     {
+        const [isFirstSlide, setIsFirstSlide] = useState(true);
+        const [isLastSlide, setIsLastSlide] = useState(true);
+
+        useEffect(() => {
+            setIsFirstSlide(activeIndex === 0);
+            setIsLastSlide(activeIndex === projects.length - 1);
+            console.log(projects.length)
+        }, [activeIndex])
+
         return (
             <Swiper
                 slidesPerView={1}
@@ -80,7 +100,7 @@ const SwiperContainer = () => {
                 className="horizontal-card-container"
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
             >
-                {AddArrows(isMobile, isTablet, true)}
+                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide)}
                 {projects.map((project: any) => (
                     Card(project)
                 ))}

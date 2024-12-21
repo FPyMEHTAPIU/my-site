@@ -4,7 +4,7 @@ import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
 import useDeviceType from "@/components/useDeviceType";
 import SwiperContainer from "@/components/swiper-container";
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 const Card = (
     project: ProjectCardData
@@ -28,9 +28,10 @@ const Cards = () => {
     const {SwiperDefault} = SwiperContainer();
     const {isMobile, isTablet} = useDeviceType();
     const swiperRefMain = useRef(null);
+    const [activeIndex, setActiveIndex] = useState<number>(0);
 
     return (
-        SwiperDefault(isMobile, isTablet, Card, projects, null, swiperRefMain, 'main')
+        SwiperDefault(isMobile, isTablet, Card, projects, activeIndex, setActiveIndex, swiperRefMain, 'main')
     )
 }
 

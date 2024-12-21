@@ -208,8 +208,7 @@
 
 @media (min-width: 1440px) {
     .swiper-slide:last-child {
-        margin-right: calc((100vw -
-            var(--scrollbar-width) - 1290px) / 2);
+        margin-right: 75px;
     }
 
     .swiper-slide.project-card, .project-card {

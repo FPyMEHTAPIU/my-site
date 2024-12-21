@@ -1,12 +1,17 @@
 const AddArrows = (
     isMobile: boolean,
     isTablet: boolean,
-    isImages: boolean
+    isImages: boolean,
+    isFirstSlide: boolean,
+    isLastSlide: boolean
 ) => {
     return (
         !isMobile && (
         <>
-            <button className={isImages ? "arrow-round left no-margin" : "arrow-round left"}>
+            <button
+                className={isImages ? "arrow-round left no-margin" : "arrow-round left"}
+                style={{visibility: isFirstSlide ? "hidden" : "visible"}}
+            >
                 <img
                     src={isMobile ? "/arrows/arrow_left_white16.svg" :
                         isTablet ? "/arrows/arrow_left_white24.svg" :
@@ -15,7 +20,10 @@ const AddArrows = (
                     className="arrow"
                 />
             </button>
-            <button className={isImages ? "arrow-round right no-margin" : "arrow-round right"}>
+            <button
+                className={isImages ? "arrow-round right no-margin" : "arrow-round right"}
+                style={{visibility: isLastSlide ? "hidden" : "visible"}}
+            >
                 <img
                     src={isMobile ? "/arrows/arrow_right_white16.svg" :
                         isTablet ? "/arrows/arrow_right_white24.svg" :
