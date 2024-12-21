@@ -190,13 +190,16 @@
         height: 460px;
     }
 
-    .horizontal-card-container {
-        width: 494px;
-        padding: 0 20px;
-        margin: auto 113px;
+    .swiper.horizontal-card-container, .horizontal-card-container {
+        display: flex;
+        width: calc(100vw - var(--scrollbar-width) - 226px - 40px);
+        margin: auto 113px 24px;
         justify-content: center;
-        align-items: flex-start;
-        gap: 16px;
+        align-items: center;
+        align-self: center;
+        position: relative;
+        gap: 0;
+        flex-direction: column;
     }
 
     .tabs-block {
@@ -206,8 +209,12 @@
     .swiper-slide.horizontal-card, .horizontal-card {
         height: 275px;
         align-self: stretch;
-        width: auto;
+        width: 100%;
         margin: 0 auto;
+    }
+
+    .horizontal-card img {
+        margin: 0 20px;
     }
 
     .swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,

@@ -19,7 +19,7 @@
     margin: auto 15px;
     display: flex;
     min-width: 345px;
-    align-self: center;
+    align-self: flex-start;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;

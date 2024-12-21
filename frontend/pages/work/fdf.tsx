@@ -40,7 +40,7 @@ const imagesProjections:string[] = [
 const link:string = 'https://github.com/FPyMEHTAPIU/FdF'
 
 const FdF = () => {
-    const {SwiperDefault} = SwiperContainer();
+    const {SwiperDefault, SwiperImageDesktopHorizontal} = SwiperContainer();
     const {containerWidth, isMobile, isTablet} = calculateContainerSize();
     const [activeIndexZoom, setActiveIndexZoom] = useState<number>(0);
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
@@ -134,8 +134,11 @@ const FdF = () => {
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
-            {SwiperDefault(isMobile, isTablet, imageSlide,
-                gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')}
+            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
+                gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')
+                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
+                    gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
+            }
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
                     <p className="body-default green">7.2D Projection Conversion</p>
@@ -151,8 +154,10 @@ const FdF = () => {
                         setActiveIndexProjections, swipeRefProjections)}
                 </div>
             </div>
-            {SwiperDefault(isMobile, isTablet, imageSlide,
-                imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')}
+            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
+                imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
+            : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
+                    imagesProjections, setActiveIndexProjections, swipeRefProjections)}
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
                     <p className="body-default green">8.Centering and Moving Points</p>
@@ -163,7 +168,14 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            <div style={{alignSelf: 'center'}}>
+            <div className="work-content-block">
+                <div className="skills-block">
+                    <div className="skill project-skill body-small tab-text black tab-selected">
+                        moving
+                    </div>
+                </div>
+            </div>
+            <div className="horizontal-card-container">
                 {imageSlide('/projects/fdf/moving.gif')}
             </div>
             <div className="work-content-block last-block">

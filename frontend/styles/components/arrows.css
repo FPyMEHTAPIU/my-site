@@ -32,6 +32,7 @@
         margin-left: 15px;
         margin-right: auto;
         z-index: 10;
+        left: 0;
     }
 
     .arrow-round.right {
@@ -41,6 +42,11 @@
         margin-right: 15px;
         margin-left: auto;
         z-index: 10;
+        right: 0;
+    }
+
+    .arrow-round.left.no-margin, .arrow-round.right.no-margin {
+        margin: 0;
     }
 
     .arrow-vert {
