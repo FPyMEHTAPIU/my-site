@@ -17,14 +17,13 @@ const calculateContainerSize = () => {
             setSkillGap(width < 1440 ? 10 : 24);
             setIsMobile(width < 720);
             setIsTablet(width >= 720 && width < 1440);
+            document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
         };
 
         const getScrollbarWidth = () =>  {
             const documentWidth = document.documentElement.clientWidth
             return Math.abs(window.innerWidth - documentWidth)
         }
-
-        document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
 
         updateDimensions();
         window.addEventListener('resize', updateDimensions);

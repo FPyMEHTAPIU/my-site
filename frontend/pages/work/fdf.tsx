@@ -196,7 +196,7 @@ const FdF = () => {
                     </p>
                 </div>
             {!isMobile && (
-                <a className="button-small" href={link} target="_blank"
+                <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
                     style={{margin: '36px 0 48px'}}
                 >
                     <p className="body-small black">See on GitHub</p>
