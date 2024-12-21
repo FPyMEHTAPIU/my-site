@@ -60,7 +60,7 @@ const FdF = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 60}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
                 <h1>FdF</h1>
                 <p className="body-default">
                     This project is about creating a simple wireframe model representation
@@ -129,7 +129,7 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            <div className="work-content-block" style={{marginBottom: -8}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? -8 : -16}}>
                 <div className="skills-block">
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
@@ -148,7 +148,7 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            <div className="work-content-block" style={{marginBottom: -8}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? -8 : -16}}>
                 <div className="skills-block">
                     {FillImageButtons(buttonsProjections, activeIndexProjections,
                         setActiveIndexProjections, swipeRefProjections)}
@@ -175,7 +175,7 @@ const FdF = () => {
                     </div>
                 </div>
             </div>
-            <div className="horizontal-card-container">
+            <div className="horizontal-card-container" style={{marginBottom: 0}}>
                 {imageSlide('/projects/fdf/moving.gif')}
             </div>
             <div className="work-content-block last-block">

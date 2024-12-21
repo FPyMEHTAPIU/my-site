@@ -80,5 +80,11 @@
 
     .arrow-round {
         padding: 24px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .arrow-round.left, .arrow-round.right {
+
     }
 }

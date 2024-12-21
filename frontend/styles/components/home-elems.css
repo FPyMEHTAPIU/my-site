@@ -52,7 +52,7 @@
     justify-content: center;
 }
 
-.align-start {
+.align-start, .skills-block-home.align-start {
     align-self: flex-start;
     margin: 0;
     justify-content: flex-start;

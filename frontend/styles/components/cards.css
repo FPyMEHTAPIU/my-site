@@ -251,10 +251,8 @@
         border-radius: 24px;
     }
 
-    .horizontal-card-container {
-        width: 1070px;
-        justify-content: center;
-        align-items: flex-start;
+    .swiper.horizontal-card-container, .horizontal-card-container {
+        width: calc(100vw - var(--scrollbar-width) - 370px);
     }
 
     .tabs-block {
@@ -267,9 +265,12 @@
         align-self: stretch;
     }
 
-    .horizontal-card {
+    .swiper-slide.horizontal-card, .horizontal-card {
         height: 515px;
-        flex: 1 0 0;
         border-radius: 24px;
+    }
+
+    .horizontal-card img {
+        margin: 0 110px;
     }
 }
