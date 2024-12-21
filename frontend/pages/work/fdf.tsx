@@ -135,9 +135,9 @@ const FdF = () => {
                 </div>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
-                gifsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom, 'zoom')
+                gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')
                 : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
-                    gifsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)
+                    gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
             }
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
@@ -155,9 +155,9 @@ const FdF = () => {
                 </div>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
-                imagesProjections, activeIndexProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
+                imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
             : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
-                    imagesProjections, activeIndexProjections, setActiveIndexProjections, swipeRefProjections)}
+                    imagesProjections, setActiveIndexProjections, swipeRefProjections)}
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
                     <p className="body-default green">8.Centering and Moving Points</p>

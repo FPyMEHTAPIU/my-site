@@ -1,16 +1,40 @@
 import {Swiper} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import AddArrows from "@/components/swiper-arrows";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 
 const SwiperContainer = () => {
-    const setSlideIndex = (
+    const setPaginationIndex = (
         swiper:any,
-        setActiveIndex:any
+        setActiveIndex:any,
+        setIsFirstSlide:any,
+        setIsLastSlide:any
     ) => {
         if (setActiveIndex === null)
             return ;
         setActiveIndex(swiper.activeIndex);
+        setIsFirstSlide(swiper.activeIndex === 0);
+
+        const bullets = swiper.pagination.bullets;
+        const totalBullets = bullets.length;
+        const activeBulletIndex = Array.from(bullets).findIndex((bullet: any) =>
+            bullet.classList.contains(swiper.params.pagination.bulletActiveClass));
+
+        setIsLastSlide(activeBulletIndex >= totalBullets - 1);
+    }
+
+    const setSlideIndex = (
+        swiper:any,
+        setActiveIndex:any,
+        projects:any,
+        setIsFirstSlide:any,
+        setIsLastSlide:any
+    ) => {
+        if (setActiveIndex === null)
+            return;
+        setActiveIndex(swiper.activeIndex);
+        setIsFirstSlide(swiper.activeIndex === 0);
+        setIsLastSlide(swiper.activeIndex === projects.length - 1);
     }
 
     const SwiperDefault = (
@@ -18,20 +42,12 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
-        activeIndex:number,
         setActiveIndex:any,
         swiperRef:any,
         paginationId:string
     ) => {
-        const [isFirstSlide, setIsFirstSlide] = useState(true);
-        const [isLastSlide, setIsLastSlide] = useState(true);
-        const [visibleSlides, setVisibleSlides] = useState<number>(1);
-
-        useEffect(() => {
-            setIsFirstSlide(activeIndex === 0);
-            setVisibleSlides(swiperRef.current.slidesPerViewDynamic())
-            setIsLastSlide(activeIndex + visibleSlides - 1 >= projects.length);
-        }, [activeIndex])
+        const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
+        const [isLastSlide, setIsLastSlide] = useState<boolean>(false);
 
         return (
             <div className="cards-control-block">
@@ -43,7 +59,9 @@ const SwiperContainer = () => {
                     centeredSlides={isMobile}
                     centerInsufficientSlides={true}
                     spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
-                    onSlideChange={() => setSlideIndex(swiperRef.current, setActiveIndex)}
+                    onPaginationUpdate={(swiper) => setPaginationIndex(
+                        swiper, setActiveIndex, setIsFirstSlide, setIsLastSlide
+                    )}
                     modules={[Navigation, Pagination, Scrollbar]}
                     navigation={{
                         prevEl: '.arrow-round.left',
@@ -75,25 +93,21 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
-        activeIndex:number,
         setActiveIndex:any,
         swiperRef:any
     ) =>
     {
-        const [isFirstSlide, setIsFirstSlide] = useState(true);
-        const [isLastSlide, setIsLastSlide] = useState(true);
-
-        useEffect(() => {
-            setIsFirstSlide(activeIndex === 0);
-            setIsLastSlide(activeIndex === projects.length - 1);
-        }, [activeIndex])
+        const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
+        const [isLastSlide, setIsLastSlide] = useState<boolean>(false);
 
         return (
             <Swiper
                 slidesPerView={1}
                 centeredSlides={true}
                 centerInsufficientSlides={true}
-                onSlideChange={() => setSlideIndex(swiperRef.current, setActiveIndex)}
+                onSlideChange={(swiper) => setSlideIndex(
+                    swiper, setActiveIndex, projects, setIsFirstSlide, setIsLastSlide
+                )}
                 modules={[Navigation, Scrollbar]}
                 navigation={{
                     prevEl: '.arrow-round.left.no-margin',

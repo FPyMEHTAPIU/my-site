@@ -31,7 +31,7 @@ const Cards = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     return (
-        SwiperDefault(isMobile, isTablet, Card, projects, activeIndex, setActiveIndex, swiperRefMain, 'main')
+        SwiperDefault(isMobile, isTablet, Card, projects, setActiveIndex, swiperRefMain, 'main')
     )
 }
 
