@@ -25,10 +25,12 @@ const SwiperContainer = () => {
     ) => {
         const [isFirstSlide, setIsFirstSlide] = useState(true);
         const [isLastSlide, setIsLastSlide] = useState(true);
+        const [visibleSlides, setVisibleSlides] = useState<number>(1);
 
         useEffect(() => {
             setIsFirstSlide(activeIndex === 0);
-            setIsLastSlide(activeIndex === projects.length - 2);
+            setVisibleSlides(swiperRef.current.slidesPerViewDynamic())
+            setIsLastSlide(activeIndex + visibleSlides - 1 >= projects.length);
         }, [activeIndex])
 
         return (
@@ -54,7 +56,9 @@ const SwiperContainer = () => {
                     }}
                     scrollbar={{draggable: true}}
                     className="cards-control-block"
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper
+                    }}
                 >
                     {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide)}
                     {projects.map((project: any) => (
@@ -82,7 +86,6 @@ const SwiperContainer = () => {
         useEffect(() => {
             setIsFirstSlide(activeIndex === 0);
             setIsLastSlide(activeIndex === projects.length - 1);
-            console.log(projects.length)
         }, [activeIndex])
 
         return (
