@@ -66,27 +66,25 @@ const SwiperContainer = () => {
     ) =>
     {
         return (
-            <div className="horizontal-card-container">
-                <Swiper
-                    slidesPerView={1}
-                    centeredSlides={true}
-                    centerInsufficientSlides={true}
-                    onSlideChange={() => setSlideIndex(swiperRef.current, setActiveIndex)}
-                    modules={[Navigation, Scrollbar]}
-                    navigation={{
-                        prevEl: '.arrow-round.left.no-margin',
-                        nextEl: '.arrow-round.right.no-margin'
-                    }}
-                    scrollbar={{draggable: true}}
-                    className="horizontal-card-container"
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                >
-                    {AddArrows(isMobile, isTablet, true)}
-                    {projects.map((project: any) => (
-                        Card(project)
-                    ))}
-                </Swiper>
-            </div>
+            <Swiper
+                slidesPerView={1}
+                centeredSlides={true}
+                centerInsufficientSlides={true}
+                onSlideChange={() => setSlideIndex(swiperRef.current, setActiveIndex)}
+                modules={[Navigation, Scrollbar]}
+                navigation={{
+                    prevEl: '.arrow-round.left.no-margin',
+                    nextEl: '.arrow-round.right.no-margin'
+            }}
+                scrollbar={{draggable: true}}
+                className="horizontal-card-container"
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+            >
+                {AddArrows(isMobile, isTablet, true)}
+                {projects.map((project: any) => (
+                    Card(project)
+                ))}
+            </Swiper>
         )
     }
     return {SwiperDefault, SwiperImageDesktopHorizontal}
