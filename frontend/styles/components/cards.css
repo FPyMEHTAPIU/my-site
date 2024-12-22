@@ -84,7 +84,7 @@
     flex-shrink: 0;
 }
 
-.vertical-card {
+.swiper-slide.vertical-card, .vertical-card {
     width: 345px;
     height: 457px;
     flex-shrink: 0;

@@ -1,11 +1,11 @@
 import FillSkills from "@/components/home/main-skills";
 import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
-import {SwiperSlide} from "swiper/react";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef, useState} from "react";
 import FillImageButtons from "@/components/image-buttons";
 import GitHubBlock from "@/components/work/github-block";
+import imageSlides from "@/components/work/image-slides";
 
 const buttonsZoomRotate:string[] = [
     'Zooming',
@@ -47,14 +47,7 @@ const FdF = () => {
     const swipeRefZoom = useRef(null);
     const swipeRefProjections = useRef(null);
     const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
-
-    const imageSlide = (img_src:string) => {
-        return (
-            <SwiperSlide className="horizontal-card">
-                <img className="horizontal-card" src={img_src} alt="image" />
-            </SwiperSlide>
-        )
-    }
+    const {imageSlideHorizontal} = imageSlides();
 
     return (
         <main className="main-gap">
@@ -134,9 +127,9 @@ const FdF = () => {
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
+            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideHorizontal,
                 gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')
-                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
+                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
             }
             <div className="work-content-block" style={{marginTop: -36}}>
@@ -154,9 +147,9 @@ const FdF = () => {
                         setActiveIndexProjections, swipeRefProjections)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlide,
+            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideHorizontal,
                 imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
-            : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlide,
+            : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     imagesProjections, setActiveIndexProjections, swipeRefProjections)}
             <div className="work-content-block" style={{marginTop: -36}}>
                 <div className="work-sub-block">
@@ -176,7 +169,7 @@ const FdF = () => {
                 </div>
             </div>
             <div className="horizontal-card-container" style={{marginBottom: 0}}>
-                {imageSlide('/projects/fdf/moving.gif')}
+                {imageSlideHorizontal('/projects/fdf/moving.gif')}
             </div>
             <div className="work-content-block last-block">
                 <div className="work-sub-block">

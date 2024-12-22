@@ -61,12 +61,12 @@ h2 {
     color: var(--Medium);
 }
 
-.green {
-    color: var(--Primary);
-}
-
 .list-dots {
     color: white;
+}
+
+.green {
+    color: var(--Primary);
 }
 
 @media (min-width: 1440px) {

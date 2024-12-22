@@ -15,6 +15,10 @@
         padding: 5px 0;
     }
 
+    .swiper-button-disabled {
+        visibility: hidden;
+    }
+
     .gradient-block {
         position: absolute;
         display: flex;
