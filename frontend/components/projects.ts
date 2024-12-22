@@ -10,7 +10,7 @@ export type ProjectCardData = {
 const projects:ProjectCardData[] = [
     {
         projectName: 'Hero Fan',
-        projectPhoto: './HF.png',
+        projectPhoto: '/HF.png',
         projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
         projectLink: './work/hero_fan',
         projectType: 'Web',
@@ -18,7 +18,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'SMTH',
-        projectPhoto: './SMTH.png',
+        projectPhoto: '/SMTH.png',
         projectSkills: ['TypeScript', 'React Native'],
         projectLink: './work/smth',
         projectType: 'Web',
@@ -26,7 +26,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'FdF',
-        projectPhoto: './FdF.png',
+        projectPhoto: '/FdF.png',
         projectSkills: ['C', 'Makefile', 'MLX42 Library'],
         projectLink: './work/fdf',
         projectType: 'Software',
@@ -34,7 +34,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'push_swap',
-        projectPhoto: './push_swap.png',
+        projectPhoto: '/push_swap.png',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/push_swap',
         projectType: 'Software',
@@ -43,7 +43,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'libft',
-        projectPhoto: './libft.png',
+        projectPhoto: '/libft.png',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/libft',
         projectType: 'Software',
@@ -52,7 +52,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'Bee Runner',
-        projectPhoto: './bee_runner.png',
+        projectPhoto: '/projects/bee_runner/bee_runner.png',
         projectSkills: ['C#', 'Unity'],
         projectLink: './work/bee_runner',
         projectType: 'Game',
@@ -60,7 +60,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'Zombie Strike',
-        projectPhoto: './zombie_strike.png',
+        projectPhoto: '/projects/zombie_strike/zombie_strike.png',
         projectSkills: ['C++', 'Unreal Engine'],
         projectLink: './work/zombie_strike',
         projectType: 'Game',
