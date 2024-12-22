@@ -29,7 +29,7 @@ const imagesPushSwap3:string[] = [
 const link:string = 'https://github.com/FPyMEHTAPIU/push_swap'
 
 const push_swap = () => {
-    const {SwiperDefault, SwiperImageDesktopHorizontal, SwiperImageDesktopVertical} = SwiperContainer();
+    const {SwiperDefault, SwiperImageDesktopVertical} = SwiperContainer();
     const {containerWidth, isMobile, isTablet} = calculateContainerSize();
     const swiperRef = useRef(null);
     const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
@@ -46,7 +46,7 @@ const push_swap = () => {
                     output the smallest program, made of Push swap language instructions, that sorts the
                     integers received as arguments
                 </p>
-                {FillSkills(projects[2].projectSkills, containerWidth, true)}
+                {FillSkills(projects[3].projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block">
