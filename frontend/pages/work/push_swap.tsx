@@ -29,7 +29,7 @@ const imagesPushSwap3:string[] = [
 const link:string = 'https://github.com/FPyMEHTAPIU/push_swap'
 
 const push_swap = () => {
-    const {SwiperDefault, SwiperImageDesktopHorizontal} = SwiperContainer();
+    const {SwiperDefault, SwiperImageDesktopHorizontal, SwiperImageDesktopVertical} = SwiperContainer();
     const {containerWidth, isMobile, isTablet} = calculateContainerSize();
     const swiperRef = useRef(null);
     const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
@@ -124,10 +124,10 @@ const push_swap = () => {
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef, 'first')
-                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideVertical,
+                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef)
             }
-            <div className="work-content-block" style={{marginTop: -36}}>
+            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
                     After that, I perform the actual actions and push a number from stack 'a' to stack 'b'.
                     As I mentioned, I repeat these actions until stack 'a' has a size of 3. When the size of
@@ -140,9 +140,9 @@ const push_swap = () => {
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef, 'second')
-                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideVertical,
+                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef)}
-            <div className="work-content-block" style={{marginTop: -36}}>
+            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
                     Finally, I push numbers from stack 'b' to stack 'a' to their suitable places.
                     They must be pushed above the lowest number in stack 'a' that is greater than a number from
@@ -155,7 +155,7 @@ const push_swap = () => {
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef, 'third')
-                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideVertical,
+                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef)}
             {/*BONUS PART*/}
             <div className="work-content-block" style={{marginTop: -36}}>
