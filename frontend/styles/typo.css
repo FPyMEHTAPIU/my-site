@@ -12,6 +12,19 @@
     src: url("../public/fonts/Tomorrow-Medium.ttf") format("truetype");
 }
 
+.not-found {
+    color: var(--Primary);
+    font-family: "Tomorrow", sans-serif;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    align-self: center;
+    display: flex;
+    margin: 0 auto;
+}
+
 h1 {
     color: var(--Primary);
     font-family: "Tomorrow", sans-serif;
@@ -69,7 +82,19 @@ h2 {
     color: var(--Primary);
 }
 
+@media (min-width: 720px) {
+    .not-found {
+        margin: 90px auto;
+        font-size: 300px;
+    }
+}
+
 @media (min-width: 1440px) {
+    .not-found {
+        margin: 135px auto;
+        font-size: 450px;
+    }
+
     h1 {
         font-size: 96px;
     }

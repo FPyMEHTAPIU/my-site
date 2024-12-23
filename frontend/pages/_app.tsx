@@ -2,11 +2,13 @@ import { AppProps } from "next/app";
 import HeadData from "@/components/Metadata/head";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import {useRouter} from "next/router";
 
 import '@/styles/colors.css'
 import '@/styles/g_style.css'
 import '@/styles/typo.css'
 import '@/styles/work.css'
+import '@/styles/404.css'
 
 import '@/styles/components/arrows.css'
 import '@/styles/components/buttons.css'
@@ -23,12 +25,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+
     return (
         <>
             <HeadData />
             <Header />
             <Component {...pageProps} />
-            <Footer />
+            {router.pathname !== '/404' && <Footer />}
         </>
     );
 }
