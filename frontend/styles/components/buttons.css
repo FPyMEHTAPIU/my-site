@@ -203,10 +203,6 @@
         padding: 8px 20px;
     }
 
-    .tab:hover {
-        background: var(--Gradient);
-    }
-
     .skill {
         padding: 16px 40px;
     }

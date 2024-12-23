@@ -2,6 +2,7 @@ import React from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";
+import InputForm from "@/components/input";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
@@ -9,6 +10,7 @@ const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
 
 const Index = () => {
     const {containerWidth, isMobile, isTablet} = calculateContainerSize();
+    const {InputBlock} = InputForm(isMobile, isTablet);
 
     const GreetingBlock = () => {
         return (
@@ -28,7 +30,7 @@ const Index = () => {
                 <p className="body-default">
                     At my free time I play the guitar, recording videos and play computer games.
                 </p>
-                <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
+                <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
             </div>
                 :
                 <div className="content-photo" style={{marginTop: isTablet ? 139 : 195}}>
@@ -48,29 +50,8 @@ const Index = () => {
                             At my free time I play the guitar, recording videos and play computer games.
                         </p>
                     </div>
-                    <img id="my-photo" src="./My%20photo.jpg" alt="my photo"/>
+                    <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
                 </div>
-        )
-    }
-
-    const InputContainer = () => {
-        return (
-            <div className='input-container'>
-                <input placeholder="Name"/>
-                <input placeholder="Email"/>
-                <textarea
-                    placeholder="Message"
-                    style={ { height: isMobile || !isTablet ? 357 : 157 } }
-                />
-                <button
-                    className="button-primary"
-                    style= {
-                    { width: isMobile || isTablet ? '100%' : 550,
-                        justifySelf: 'stretch'}
-                }>
-                    <p className="body-default black">Submit</p>
-                </button>
-            </div>
         )
     }
 
@@ -117,28 +98,7 @@ const Index = () => {
                     />
                 </a>
                 : <></>}
-            {isMobile ?
-                <div className="get-in-touch">
-                    <h1>Get In Touch</h1>
-                    <p className="body-default" style={{textAlign: 'center'}}>
-                        Orci varius natoque penatibus et magnis.
-                    </p>
-                    {InputContainer()}
-                </div>
-                :
-                <div className="input-block">
-                    <div className="letter-block">
-                        <div className="get-in-touch">
-                            <h1 style={!isTablet ? {width: 520} : {}}>Get In Touch</h1>
-                            <p className="body-default">
-                                Orci varius natoque penatibus et magnis.
-                            </p>
-                        </div>
-                        <img src="./letter.svg" alt="letter"/>
-                    </div>
-                    {InputContainer()}
-                </div>
-            }
+            {InputBlock()}
         </main>
     );
 };

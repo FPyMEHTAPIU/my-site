@@ -26,7 +26,7 @@ const Footer = () => {
     const SocialLinks = () => {
         return (
             <div className="social-block">
-                <a href="https://www.linkedin.com/in/mykolasaveliev/" target="_blank">
+                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank">
                     <img
                         src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin48.svg"}
                         alt="linkedin"
@@ -97,9 +97,11 @@ const Footer = () => {
                 style={{marginBottom: 40}}>
                 Designed by&nbsp;
                 <a
-                    href="https://www.behance.net/naumova_design"
+                    href="https://www.linkedin.com/in/naumovadesign/"
                     className={ isMobile ? "body-small" : "body-default" }
-                    style={{textDecoration: 'underline'}}
+                    style={{textDecoration: 'underline'
+                }}
+                    target="_blank"
                 >
                     Iryna Naumova
                 </a>

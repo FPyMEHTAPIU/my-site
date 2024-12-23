@@ -16,8 +16,8 @@ const FillImageButtons = (
         index:number
     ) => (
         <button
-            className={index === activeIndex ? "skill project-skill body-small tab-text black tab-selected"
-                : "skill project-skill tab body-small tab-text"}
+            className={index === activeIndex ? "skill project-skill body-small black tab-selected"
+                : "skill project-skill tab body-small"}
             onClick={() => moveToSlide(index)}
         >
             {skill}
