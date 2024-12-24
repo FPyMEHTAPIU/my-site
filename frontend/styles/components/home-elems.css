@@ -81,7 +81,7 @@
         flex-direction: row;
         align-items: center;
         gap: 20px;
-        margin: auto 15px;
+        margin: 139px 15px auto;
     }
 
     .content-container {
@@ -131,7 +131,7 @@
 
 @media (min-width: 1440px) {
     .content-photo {
-        margin: auto 75px;
+        margin: 195px 75px auto;
         gap: 30px;
     }
 
@@ -190,5 +190,32 @@
         width: 457px;
         height: 332px;
         flex-shrink: 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    .content-photo {
+        margin: 195px 140px auto;
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    .content-container {
+        min-width: 805px;
+        margin-left: 0;
+        flex: unset;
+    }
+
+    .skills-block-home {
+        width: 1440px;
+        margin: auto 140px 104px;
+    }
+
+    .projects-link {
+        margin: auto 140px 40px;
+    }
+
+    .input-block {
+        margin: auto 140px 104px;
     }
 }

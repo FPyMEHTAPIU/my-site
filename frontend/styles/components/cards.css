@@ -56,6 +56,7 @@
     border-radius: 16px;
     background: lightgray 50% / cover no-repeat;
     box-shadow: 0 11px 25px 1px rgba(0, 0, 0, 0.13);
+    /*TODO: fix image bee runner*/
 }
 
 .content-block {
@@ -285,5 +286,33 @@
 
     .horizontal-card img {
         margin: 0 110px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .swiper-slide:last-child {
+        margin-right: 140px;
+    }
+
+    .work-card-container {
+        align-self: stretch;
+        width: auto;
+        min-width: 1641px;
+        grid-template-columns: repeat(auto-fill, minmax(527px, 3fr));
+        grid-gap: 30px;
+        margin: auto 140px 104px;
+    }
+
+    .work-card {
+        height: 846px;
+        width: 527px;
+    }
+
+    .swiper.horizontal-card-container, .horizontal-card-container {
+        width: calc(100vw - var(--scrollbar-width) - 558px);
+    }
+
+    .horizontal-card img {
+        margin: 0 140px;
     }
 }

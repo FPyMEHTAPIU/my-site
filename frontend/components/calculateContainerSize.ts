@@ -5,6 +5,7 @@ const calculateContainerSize = () => {
     const [skillGap, setSkillGap] = useState<number>(0);
     const [isMobile, setIsMobile] = useState<boolean>(false);
     const [isTablet, setIsTablet] = useState<boolean>(false);
+    const [isDesktop1440, setIsDesktop1440] = useState<boolean>(false);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
@@ -17,6 +18,7 @@ const calculateContainerSize = () => {
             setSkillGap(width < 1440 ? 10 : 24);
             setIsMobile(width < 720);
             setIsTablet(width >= 720 && width < 1440);
+            setIsDesktop1440(width >= 1440 && width < 1920);
             document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
         };
 
@@ -33,7 +35,7 @@ const calculateContainerSize = () => {
         };
     }, [])
 
-    return {containerWidth, skillGap, isMobile, isTablet};
+    return {containerWidth, skillGap, isMobile, isTablet, isDesktop1440};
 }
 
 export default calculateContainerSize;

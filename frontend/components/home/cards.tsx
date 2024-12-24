@@ -2,9 +2,9 @@ import { SwiperSlide } from 'swiper/react';
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
-import useDeviceType from "@/components/useDeviceType";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef, useState} from "react";
+import calculateContainerSize from "@/components/calculateContainerSize";
 
 const Card = (
     project: ProjectCardData
@@ -26,12 +26,12 @@ const Card = (
 
 const Cards = () => {
     const {SwiperDefault} = SwiperContainer();
-    const {isMobile, isTablet} = useDeviceType();
+    const {isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const swiperRefMain = useRef(null);
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     return (
-        SwiperDefault(isMobile, isTablet, Card, projects, setActiveIndex, swiperRefMain, 'main')
+        SwiperDefault(isMobile, isTablet, isDesktop1440, Card, projects, setActiveIndex, swiperRefMain, 'main')
     )
 }
 

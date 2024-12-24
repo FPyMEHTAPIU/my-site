@@ -67,7 +67,7 @@ const Footer = () => {
                         </div>
                         <a href="/" className="text-button">
                             <p className="body-default">Download CV</p>
-                            <img src="/icons/download16.svg" alt="download"/>
+                            <img className="download-icon" src="/icons/download16.svg" alt="download"/>
                         </a>
                     </div>
                     :
@@ -84,6 +84,7 @@ const Footer = () => {
                         <a href="/" className="text-button">
                             <p className="body-default">Download CV</p>
                             <img
+                                className="download-icon"
                                 src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}
                                 alt="download"
                             />

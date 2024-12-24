@@ -41,7 +41,7 @@ const link:string = 'https://github.com/FPyMEHTAPIU/FdF'
 
 const FdF = () => {
     const {SwiperDefault, SwiperImageDesktopHorizontal} = SwiperContainer();
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
+    const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const [activeIndexZoom, setActiveIndexZoom] = useState<number>(0);
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
     const swipeRefZoom = useRef(null);
@@ -53,7 +53,7 @@ const FdF = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block">
                 <h1>FdF</h1>
                 <p className="body-default">
                     This project is about creating a simple wireframe model representation
@@ -127,7 +127,7 @@ const FdF = () => {
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideHorizontal,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideHorizontal,
                 gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')
                 : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
@@ -147,7 +147,7 @@ const FdF = () => {
                         setActiveIndexProjections, swipeRefProjections)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideHorizontal,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideHorizontal,
                 imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
             : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     imagesProjections, setActiveIndexProjections, swipeRefProjections)}

@@ -66,6 +66,11 @@ h2 {
     margin: 0;
 }
 
+.body-small:hover a {
+    cursor: pointer;
+    color: var(--Primary);
+}
+
 .black {
     color: black;
 }

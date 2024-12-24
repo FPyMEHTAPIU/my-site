@@ -16,7 +16,7 @@
 }
 
 .work-content-block {
-    margin: auto 15px;
+    margin: auto 15px 12px;
     display: flex;
     min-width: 345px;
     align-self: flex-start;
@@ -90,6 +90,10 @@
         gap: 40px;
     }
 
+    .github-block {
+        margin: 239px 75px 44px;
+    }
+
     .projects-filter {
         margin: 196px auto 40px;
         width: 1290px;
@@ -97,8 +101,34 @@
 
     .work-content-block {
         gap: 24px;
-        margin: auto 185px;
+        margin: 0 185px 44px;
         padding: 0 110px;
         width: calc(100vw - var(--scrollbar-width) - 370px);
+    }
+}
+
+@media (min-width: 1920px) {
+    .main-gap {
+        gap: 84px;
+    }
+
+    .github-block {
+        margin: 239px 140px 0;
+    }
+
+    .projects-filter {
+        margin: 196px auto 40px;
+        width: 1641px;
+    }
+
+    .work-content-block {
+        gap: 40px;
+        margin: 0 279px;
+        padding: 0 140px;
+        width: calc(100vw - var(--scrollbar-width) - 558px);
+    }
+
+    .work-sub-block {
+        gap: 16px;
     }
 }

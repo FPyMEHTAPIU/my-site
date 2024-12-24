@@ -33,7 +33,7 @@ const Index = () => {
                 <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
             </div>
                 :
-                <div className="content-photo" style={{marginTop: isTablet ? 139 : 195}}>
+                <div className="content-photo">
                     <div className="content-container">
                         <div className="greeting">
                             <p className="body-default black">

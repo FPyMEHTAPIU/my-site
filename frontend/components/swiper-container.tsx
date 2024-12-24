@@ -42,6 +42,7 @@ const SwiperContainer = () => {
     const SwiperDefault = (
         isMobile: boolean,
         isTablet: boolean,
+        isDesktop1440: boolean,
         Card:any,
         projects:any,
         setActiveIndex:any,
@@ -56,7 +57,7 @@ const SwiperContainer = () => {
                 <Swiper
                     slidesPerView="auto"
                     slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
-                        (isTablet ? 15 : 75) : 0
+                        (isTablet ? 15 : (isDesktop1440 ? 75 : 140)) : 0
                     }
                     centeredSlides={isMobile}
                     centerInsufficientSlides={true}

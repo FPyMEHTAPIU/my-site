@@ -42,6 +42,10 @@ footer {
     gap: 40px;
 }
 
+.text-button:hover .download-icon {
+    content: url("/icons/download16_green.svg");
+}
+
 @media (min-width: 720px) {
     .footer-container {
         padding: 40px 15px;
@@ -85,7 +89,18 @@ footer {
         padding: 0 24px;
     }
 
+    .text-button:hover .download-icon {
+        content: url("/icons/download24_green.svg");
+    }
+
     .links-row {
         height: auto;
+    }
+}
+
+@media (min-width: 1920px) {
+    footer {
+        gap: 40px;
+        margin: auto 140px;
     }
 }
