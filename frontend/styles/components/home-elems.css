@@ -31,13 +31,27 @@
 }
 
 #infinite-line {
-    display: flex;
+    display: inline-flex;
     width: 100%;
     padding: 16px 0;
     align-items: center;
     gap: 22px;
     background: var(--Primary);
     margin: 48px 0;
+    overflow: hidden;
+}
+
+#infinite-line p {
+    display: inline-flex;
+    flex-shrink: 0;
+    animation: scroll-left 2s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes scroll-left {
+    100% {
+        transform: translateX(calc(-100% - 1.35rem));
+    }
 }
 
 .skills-block-home {
@@ -160,6 +174,10 @@
         flex: 1 0;
     }
 
+    .skills-block-home {
+        margin: auto 75px 48px;
+    }
+
     .projects-link {
         display: flex;
         flex-direction: row;
@@ -252,7 +270,15 @@
     }
 
     #infinite-line {
+        padding: 17px 74px;
         margin: 104px 0;
+        gap: 74px;
+    }
+
+    @keyframes scroll-left {
+        100% {
+            transform: translateX(calc(-100% - 4.6rem));
+        }
     }
 
     .projects-link {

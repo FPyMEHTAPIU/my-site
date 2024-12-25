@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";
@@ -55,17 +55,47 @@ const Index = () => {
         )
     }
 
+    const FillMarquee: React.FC = () => {
+        const containerRef = useRef<HTMLDivElement | null>(null);
+
+        useEffect(() => {
+            const container = containerRef.current;
+
+            if (!container) return;
+
+            const text = "Open to work";
+
+            const replicateText = () => {
+                if (!container) return;
+                const containerWidth = container.parentElement?.offsetWidth || 0;
+
+                while (container.scrollWidth < containerWidth * 2) {
+                    const newElement = document.createElement("p");
+                    newElement.className = "body-default black";
+                    newElement.textContent = text;
+                    container.appendChild(newElement);
+                }
+            };
+
+            replicateText();
+            window.addEventListener("resize", replicateText);
+
+            return () => {
+                window.removeEventListener("resize", replicateText);
+            };
+        }, []);
+
+        return <div id="infinite-line" ref={containerRef}></div>;
+    };
+
+
     return (
         <main>
             <div className="background-ellipse-green"></div>
             <div className="background-ellipse-blue"></div>
             <div className="background-ellipse-light-blue"></div>
             {GreetingBlock()}
-            <div id="infinite-line">
-                <p className="body-default black">Open to work</p>
-                <p className="body-default black">Open to work</p>
-                <p className="body-default black">Open to work</p>
-            </div>
+            <FillMarquee />
             <h1 style={{
                 alignSelf: "center",
                 marginBottom: containerWidth < 1290 ? 24 : 40

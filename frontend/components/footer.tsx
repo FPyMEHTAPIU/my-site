@@ -13,7 +13,6 @@ const Footer = () => {
     useEffect(() => {
         if (router.isReady) {
             setPage(router.pathname as string);
-            console.log(page)
         }
     }, [router.isReady, router.pathname]);
 
