@@ -149,7 +149,8 @@
         width: 335px;
     }
 
-    .swiper-slide-prev, .swiper-slide-next {
+    .swiper-slide-prev, .swiper-slide-next,
+    .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
         height: 405px !important;
     }
 
@@ -219,7 +220,8 @@
         height: 740px;
     }
 
-    .swiper-slide-prev, .swiper-slide-next {
+    .swiper-slide-prev, .swiper-slide-next,
+    .swiper-slide-prev .project-card, .swiper-slide-next .project-card{
         height: 740px !important;
     }
 
@@ -297,8 +299,7 @@
     }
 
     .work-card-container {
-        align-self: stretch;
-        width: auto;
+        width: 1440px;
         min-width: 1641px;
         grid-template-columns: repeat(auto-fill, minmax(527px, 3fr));
         grid-gap: 30px;

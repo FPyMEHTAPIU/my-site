@@ -57,6 +57,9 @@ const Index = () => {
 
     return (
         <main>
+            <div className="background-ellipse-green"></div>
+            <div className="background-ellipse-blue"></div>
+            <div className="background-ellipse-light-blue"></div>
             {GreetingBlock()}
             <div id="infinite-line">
                 <p className="body-default black">Open to work</p>

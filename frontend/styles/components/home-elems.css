@@ -75,7 +75,73 @@
     margin: 48px 15px 36px;
 }
 
+.background-ellipse-green {
+    position: absolute;
+    top: 500px;
+    left: 29px;
+    width: 422px;
+    height: 562px;
+    flex-shrink: 0;
+    border-radius: 562px;
+    background: rgba(49, 217, 60, 0.42);
+    filter: blur(255px);
+    z-index: 1;
+}
+
+.background-ellipse-blue {
+    position: absolute;
+    top: 1180px;
+    right: 181px;
+    width: 355px;
+    height: 472px;
+    flex-shrink: 0;
+    border-radius: 472px;
+    background: rgba(91, 104, 223, 0.73);
+    filter: blur(255px);
+    z-index: 1;
+}
+
+.background-ellipse-light-blue {
+    position: absolute;
+    top: 1980px;
+    left: -38px;
+    width: 560px;
+    height: 662px;
+    flex-shrink: 0;
+    border-radius: 662px;
+    background: rgba(91, 104, 223, 0.28);
+    filter: blur(255px);
+    z-index: 1;
+}
+
 @media (min-width: 720px) {
+    .background-ellipse-green {
+        top: 102px;
+        left: 275px;
+        width: 370px;
+        height: 482px;
+        border-radius: 482px;
+        filter: blur(148px);
+    }
+
+    .background-ellipse-blue {
+        top: 485px;
+        right: 302px;
+        width: 435px;
+        height: 567px;
+        border-radius: 567px;
+        filter: blur(148px);
+    }
+
+    .background-ellipse-light-blue {
+        top: 1468px;
+        left: 215px;
+        width: 490px;
+        height: 567px;
+        border-radius: 567px;
+        filter: blur(148px);
+    }
+
     .content-photo {
         display: flex;
         flex-direction: row;
@@ -130,6 +196,33 @@
 }
 
 @media (min-width: 1440px) {
+    .background-ellipse-green {
+        top: 128px;
+        left: 574px;
+        width: 637px;
+        height: 831px;
+        border-radius: 831px;
+        filter: blur(255px);
+    }
+
+    .background-ellipse-blue {
+        top: 787px;
+        right: 618px;
+        width: 750px;
+        height: 980px;
+        border-radius: 980px;
+        filter: blur(255px);
+    }
+
+    .background-ellipse-light-blue {
+        top: 2483px;
+        left: 472px;
+        width: 845px;
+        height: 979px;
+        border-radius: 979px;
+        filter: blur(255px);
+    }
+
     .content-photo {
         margin: 195px 75px auto;
         gap: 30px;
@@ -194,6 +287,33 @@
 }
 
 @media (min-width: 1920px) {
+    .background-ellipse-green {
+        top: 127px;
+        left: 765px;
+        width: 849px;
+        height: 822px;
+        border-radius: 849px;
+        filter: blur(255px);
+    }
+
+    .background-ellipse-blue {
+        top: 778px;
+        right: 823px;
+        width: 1000px;
+        height: 970px;
+        border-radius: 1000px;
+        filter: blur(255px);
+    }
+
+    .background-ellipse-light-blue {
+        top: 2455px;
+        left: 630px;
+        width: 1127px;
+        height: 968px;
+        border-radius: 1127px;
+        filter: blur(255px);
+    }
+
     .content-photo {
         margin: 195px 140px auto;
         gap: unset;
