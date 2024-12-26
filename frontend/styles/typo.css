@@ -73,6 +73,7 @@ h2 {
     line-height: normal;
     font-size: 12px;
     color: var(--Error);
+    margin: 0;
 }
 
 .body-small:hover a {
@@ -94,6 +95,10 @@ h2 {
 
 .green {
     color: var(--Primary);
+}
+
+.white {
+    color: white;
 }
 
 @media (min-width: 720px) {

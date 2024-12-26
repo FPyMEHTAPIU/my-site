@@ -6,7 +6,7 @@
     align-items: flex-start;
     align-self: center;
     gap: 24px;
-    margin: 0 15px 24px;
+    margin: 0 15px;
 }
 
 .greeting {

@@ -37,6 +37,20 @@ const InputForm = (
         )
     }
 
+    const Checkbox = () => {
+        return (
+            <div className="checkbox-container">
+                <div className="checkbox">
+                    <input name="Confirmation" type="checkbox" required/>
+                </div>
+                <p className="error-text white">
+                    By clicking "Submit", you give me permission to store your data and contact you.
+                    Your information will never be shared with others.
+                </p>
+            </div>
+        )
+    }
+
     const InputContainer = () => {
         return (
             <form action="https://api.web3forms.com/submit" method="POST" className='input-container'>
@@ -63,6 +77,7 @@ const InputForm = (
                 {ErrorMessage(messageError)}
 
                 <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+                {Checkbox()}
                 {/*<input name="Confirmation" type="checkbox" required/>*/}
                 <button
                     className="button-primary"
