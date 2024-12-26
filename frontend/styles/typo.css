@@ -66,6 +66,15 @@ h2 {
     margin: 0;
 }
 
+.error-text {
+    font-family: "Roboto Mono", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 12px;
+    color: var(--Error);
+}
+
 .body-small:hover a {
     cursor: pointer;
     color: var(--Primary);

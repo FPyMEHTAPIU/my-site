@@ -37,6 +37,18 @@ textarea:focus, textarea:hover {
     outline: none;
 }
 
+.input-error {
+    border: 1px solid var(--Input-stroke-red);
+}
+
+.error-message-block {
+    margin-top: -16px;
+    display: flex;
+    height: 32px;
+    align-items: center;
+    gap: 8px;
+}
+
 ::placeholder {
     text-align: left;
     vertical-align: top;

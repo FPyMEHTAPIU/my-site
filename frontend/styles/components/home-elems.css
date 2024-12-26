@@ -46,6 +46,7 @@
     flex-shrink: 0;
     animation: scroll-left 2s linear infinite;
     white-space: nowrap;
+    max-width: 100%;
 }
 
 @keyframes scroll-left {
@@ -89,6 +90,12 @@
     margin: 48px 15px 36px;
 }
 
+.background-ellipse-green,
+.background-ellipse-blue,
+.background-ellipse-light-blue {
+    /*max-width: max-content;*/
+}
+
 .background-ellipse-green {
     position: absolute;
     top: 500px;
@@ -100,6 +107,7 @@
     background: rgba(49, 217, 60, 0.42);
     filter: blur(255px);
     z-index: 1;
+    overflow: hidden;
 }
 
 .background-ellipse-blue {
@@ -113,6 +121,7 @@
     background: rgba(91, 104, 223, 0.73);
     filter: blur(255px);
     z-index: 1;
+    overflow: hidden;
 }
 
 .background-ellipse-light-blue {
@@ -126,6 +135,7 @@
     background: rgba(91, 104, 223, 0.28);
     filter: blur(255px);
     z-index: 1;
+    overflow: hidden;
 }
 
 @media (min-width: 720px) {
@@ -154,6 +164,12 @@
         height: 567px;
         border-radius: 567px;
         filter: blur(148px);
+    }
+
+    .background-ellipse-green,
+    .background-ellipse-blue,
+    .background-ellipse-light-blue {
+        max-width: unset;
     }
 
     .content-photo {
