@@ -78,12 +78,11 @@ const InputForm = (
 
                 <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
                 {Checkbox()}
-                {/*<input name="Confirmation" type="checkbox" required/>*/}
                 <button
                     className="button-primary"
                     style={
                         {
-                            width: isMobile || isTablet ? '100%' : 550,
+                            width: '100%',
                             justifySelf: 'stretch'
                         }
                     }

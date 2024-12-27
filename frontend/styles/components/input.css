@@ -114,9 +114,9 @@ textarea:focus, textarea:hover {
     display: block;
     width: 16px;
     height: 16px;
-    border-radius: inherit; /* Наследование углов */
-    transform: scale(0); /* Скрытие в начальном состоянии */
-    transition: transform 0.2s ease-in-out; /* Анимация появления */
+    border-radius: inherit;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
 }
 
 .checkbox input:checked {
@@ -150,6 +150,10 @@ textarea:focus, textarea:hover {
         min-width: unset;
         align-items: unset;
     }
+
+    .checkbox input:checked::after {
+        left: 55%;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -164,14 +168,12 @@ textarea:focus, textarea:hover {
     }
 
     input {
-        width: 550px;
         display: flex;
         height: 64px;
         padding: 16px;
         align-items: flex-start;
         gap: 10px;
         flex-shrink: 0;
-        align-self: center;
     }
 
     input, textarea {
@@ -198,5 +200,9 @@ textarea:focus, textarea:hover {
     .error {
         align-self: stretch;
         border: 1px solid var(--Input-stroke-red);
+    }
+
+    .checkbox input:checked::after {
+        left: 55%;
     }
 }
