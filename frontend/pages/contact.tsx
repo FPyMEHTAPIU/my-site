@@ -1,15 +1,19 @@
 import InputForm from "@/components/input";
 import calculateContainerSize from "@/components/calculateContainerSize";
+import {useState} from "react";
+import useOverlay from "@/components/overlay";
 
 const Contact = () => {
-    const {isMobile, isTablet} = calculateContainerSize();
-    const {InputBlock} = InputForm(isMobile, isTablet);
+    const {isMobile, isTablet, isDesktop1440} = calculateContainerSize();
+    const [isOverlay, setIsOverlay] = useState<boolean>(false);
+    const {InputBlock} = InputForm(isMobile, isTablet, isDesktop1440, setIsOverlay, false);
+    const {SubmitOverlay} = useOverlay(setIsOverlay, isDesktop1440, false);
 
     return (
         <div style={{marginTop: isMobile ? "revert-layer" : isTablet ? 138 : 239}}>
             {InputBlock()}
+            {isOverlay && SubmitOverlay()}
         </div>
-
     )
 }
 

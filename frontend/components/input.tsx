@@ -1,14 +1,19 @@
 import React, {useState} from "react";
+import useOverlay from "@/components/overlay";
 
 const errorMessage:string = 'This field is required!';
 
 const InputForm = (
     isMobile: boolean,
-    isTablet: boolean
+    isTablet: boolean,
+    isDesktop1440:boolean,
+    setIsOverlay: (isOverlay: boolean) => void,
+    hideElements: boolean
 ) => {
     const [nameError, setNameError] = useState('');
     const [emailError, setEmailError] = useState('');
     const [messageError, setMessageError] = useState('');
+    const {ShowOverlay} = useOverlay(setIsOverlay, isDesktop1440, hideElements);
 
     const checkValidity = (
         e:React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -53,7 +58,9 @@ const InputForm = (
 
     const InputContainer = () => {
         return (
-            <form action="https://api.web3forms.com/submit" method="POST" className='input-container'>
+            <form action="https://api.web3forms.com/submit" method="POST" className='input-container'
+                onSubmit={(e) => ShowOverlay(e)}
+            >
                 <input type="hidden" name="access_key" value="ACCESS_KEY"/> {/*TODO: change ACCESS_KEY*/}
 
                 <input name="Name" type="text" placeholder="Name" required
@@ -75,8 +82,6 @@ const InputForm = (
                     onBlur={(e) => checkValidity(e, setMessageError)}
                 />
                 {ErrorMessage(messageError)}
-
-                <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
                 {Checkbox()}
                 <button
                     className="button-primary"

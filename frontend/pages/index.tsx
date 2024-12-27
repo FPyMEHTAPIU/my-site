@@ -1,16 +1,19 @@
-import React, {useRef, useEffect} from "react";
+import React, {useRef, useEffect, useState} from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import InputForm from "@/components/input";
+import useOverlay from "@/components/overlay";
 
 const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
     'C', 'C++', 'C#'];
 
 const Index = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {InputBlock} = InputForm(isMobile, isTablet);
+    const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
+    const [isOverlay, setIsOverlay] = useState<boolean>(false);
+    const {InputBlock} = InputForm(isMobile, isTablet, isDesktop1440, setIsOverlay, true);
+    const {SubmitOverlay} = useOverlay(setIsOverlay, isDesktop1440, true);
 
     const GreetingBlock = () => {
         return (
@@ -132,6 +135,7 @@ const Index = () => {
                 </a>
                 : <></>}
             {InputBlock()}
+            {isOverlay && SubmitOverlay()}
         </main>
     );
 };

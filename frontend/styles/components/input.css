@@ -1,7 +1,6 @@
 .input-container {
     display: flex;
     width: 100%;
-    min-width: 345px;
     padding: 24px 15px;
     flex-direction: column;
     align-items: flex-start;

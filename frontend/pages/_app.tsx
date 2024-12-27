@@ -17,8 +17,8 @@ import '@/styles/components/controls.css'
 import '@/styles/components/footer.css'
 import '@/styles/components/header.css'
 import '@/styles/components/input.css'
-
 import '@/styles/components/home-elems.css'
+import '@/styles/components/overlay.css'
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <HeadData />
-            <Header />
+            {router.pathname !== '/404' && <Header />}
             <Component {...pageProps} />
             {router.pathname !== '/404' && <Footer />}
         </>
