@@ -313,7 +313,7 @@
     }
 
     .get-in-touch {
-        width: auto;
+        width: 630px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -322,9 +322,7 @@
     }
 
     .letter-block img {
-        width: 457px;
-        height: 332px;
-        flex-shrink: 0;
+        flex: 1 0 0;
     }
 }
 

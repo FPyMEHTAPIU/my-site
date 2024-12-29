@@ -139,7 +139,7 @@ const InputForm = (
                 <div className="input-block">
                     <div className="letter-block">
                         <div className="get-in-touch">
-                            <h1 style={!isTablet ? {width: 520} : {}}>Get In Touch</h1>
+                            <h1>Get In Touch</h1>
                             <p className="body-default">
                                 Orci varius natoque penatibus et magnis.
                             </p>
