@@ -56,12 +56,38 @@ const InputForm = (
         )
     }
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+        const json = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch("/api/submitForm", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(json),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                ShowOverlay(e);
+            } else {
+                console.error("Error:", data);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        }
+    };
+
     const InputContainer = () => {
         return (
             <form action="https://api.web3forms.com/submit" method="POST" className='input-container'
-                onSubmit={(e) => ShowOverlay(e)}
+                onSubmit={handleSubmit}
             >
-                <input type="hidden" name="access_key" value="ACCESS_KEY"/> {/*TODO: change ACCESS_KEY*/}
 
                 <input name="Name" type="text" placeholder="Name" required
                        onChange={() => setNameError('')}
