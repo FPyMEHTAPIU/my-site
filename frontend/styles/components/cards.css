@@ -134,6 +134,13 @@
     transition: height 0.3s ease, transform 0.3s ease;
 }
 
+.horizontal-image {
+    display: flex;
+    flex: 1 0;
+    align-self: flex-start;
+    margin: 0;
+}
+
 .horizontal-card-container.video-container {
     width: calc(100vw - var(--scrollbar-width) - 30px);
     place-self: stretch;
@@ -196,7 +203,7 @@
 
     .swiper.horizontal-card-container, .horizontal-card-container {
         display: flex;
-        width: calc(100vw - var(--scrollbar-width) - 226px);
+        width: calc(100vw - var(--scrollbar-width) - 266px);
         margin: auto 113px 24px;
         justify-content: center;
         align-items: center;

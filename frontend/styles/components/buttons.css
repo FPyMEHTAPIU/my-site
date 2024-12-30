@@ -85,7 +85,7 @@
 
 .button-secondary {
     display: flex;
-    width: 345px;
+    min-width: 345px;
     padding: 20px 24px;
     justify-content: center;
     align-items: center;
@@ -150,6 +150,12 @@
     border-radius: 50px;
     border: 1px solid var(--Medium);
     background: var(--Dark);
+}
+
+@media (min-width: 720px) {
+    .button-secondary {
+        width: 345px;
+    }
 }
 
 @media (min-width: 1440px) {

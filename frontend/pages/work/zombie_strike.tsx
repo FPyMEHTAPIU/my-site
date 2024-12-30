@@ -22,9 +22,8 @@ const Zombie_Strike = () => {
             </div>
             <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
-                    <img className="horizontal-card" src={'/projects/zombie_strike/zombie_strike.png'} alt="image"
-                         style={{width: isMobile ? 345 : isTablet ? 545 : 860 , alignSelf: 'flex-start', margin: 0,
-                        top: 0, aspectRatio: 0.5}}
+                    <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.png'}
+                         alt="image"
                     />
                 </div>
             </div>
