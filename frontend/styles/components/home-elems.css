@@ -90,12 +90,6 @@
     margin: 48px 15px 36px;
 }
 
-.background-ellipse-green,
-.background-ellipse-blue,
-.background-ellipse-light-blue {
-    /*max-width: max-content;*/
-}
-
 .background-ellipse-green {
     position: absolute;
     top: 500px;

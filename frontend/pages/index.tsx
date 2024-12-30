@@ -24,11 +24,10 @@ const Index = () => {
                         Hi there! I'm Nick!
                     </p>
                 </div>
-                <h1>A Full-Stack Developer</h1>
+                <h1>A Software Engineer</h1>
                 <p className="body-default">
-                    with experience in mobile app
-                    development with React Native and software development using
-                    C/C++.
+                    with experience in web development using TypeScript and React, mobile app development
+                    with React Native, and software development using C and C++.
                 </p>
                 <p className="body-default">
                     At my free time I play the guitar, recording videos and play computer games.
@@ -43,11 +42,10 @@ const Index = () => {
                                 Hi there! I'm Nick!
                             </p>
                         </div>
-                        <h1>A Full-Stack Developer</h1>
+                        <h1>A Software Engineer</h1>
                         <p className="body-default">
-                            with experience in mobile app
-                            development with React Native and software development using
-                            C/C++.
+                            with experience in web development using TypeScript and React, mobile app development
+                            with React Native, and software development using C and C++.
                         </p>
                         <p className="body-default">
                             At my free time I play the guitar, recording videos and play computer games.

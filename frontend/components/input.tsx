@@ -131,7 +131,7 @@ const InputForm = (
                 <div className="get-in-touch">
                     <h1>Get In Touch</h1>
                     <p className="body-default" style={{textAlign: 'center'}}>
-                        Orci varius natoque penatibus et magnis.
+                        Searching for the last piece to perfect your team? Let’s chat — I might be the one!
                     </p>
                     {InputContainer()}
                 </div>
@@ -141,7 +141,7 @@ const InputForm = (
                         <div className="get-in-touch">
                             <h1>Get In Touch</h1>
                             <p className="body-default">
-                                Orci varius natoque penatibus et magnis.
+                                Searching for the last piece to perfect your team? Let’s chat — I might be the one!
                             </p>
                         </div>
                         <img src="/letter.svg" alt="letter"/>

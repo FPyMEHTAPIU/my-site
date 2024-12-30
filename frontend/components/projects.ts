@@ -11,7 +11,7 @@ const projects:ProjectCardData[] = [
     {
         projectName: 'Hero Fan',
         projectPhoto: '/HF.png',
-        projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js', 'PostgreSQL'],
+        projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js'],
         projectLink: './work/hero_fan',
         projectType: 'Web',
         projectDescription: 'A full-stack (Marvel) Hero Fan webpage.'
