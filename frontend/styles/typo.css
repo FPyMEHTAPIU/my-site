@@ -22,7 +22,7 @@
     text-transform: capitalize;
     align-self: center;
     display: flex;
-    margin: 0 auto;
+    margin: 150px auto 0;
 }
 
 h1 {
@@ -110,8 +110,8 @@ h2 {
 
 @media (min-width: 1440px) {
     .not-found {
-        margin: 135px auto;
-        font-size: 450px;
+        margin: -60px auto;
+        font-size: 400px;
     }
 
     h1 {
