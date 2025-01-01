@@ -55,8 +55,14 @@
 @media (min-width: 1440px) {
     .oops-block {
         padding: 40px;
-        margin: -70px 310px auto;
+        margin: -80px 310px auto;
         gap: 36px;
         border-radius: 30px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .oops-block {
+        margin: -250px 550px auto;
     }
 }

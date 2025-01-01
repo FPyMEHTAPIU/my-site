@@ -130,3 +130,17 @@ h2 {
         font-size: 32px;
     }
 }
+
+@media (min-width: 1440px) {
+    .not-found {
+        margin: -50px auto;
+        font-size: 400px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .not-found {
+        margin: 175px 550px auto;
+        font-size: 450px;
+    }
+}
