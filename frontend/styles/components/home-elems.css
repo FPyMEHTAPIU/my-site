@@ -350,12 +350,11 @@
 
     .content-photo {
         margin: 195px 140px auto;
-        gap: unset;
+        gap: 100px;
         justify-content: space-between;
     }
 
     .content-container {
-        min-width: 805px;
         margin-left: 0;
         flex: unset;
     }

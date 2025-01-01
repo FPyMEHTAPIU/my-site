@@ -26,11 +26,11 @@ const Index = () => {
                 </div>
                 <h1>A Software Engineer</h1>
                 <p className="body-default">
-                    with experience in web development using TypeScript and React, mobile app development
-                    with React Native, and software development using C and C++.
+                    with experience in web development using TypeScript and&nbsp;React, mobile app development
+                    with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
                 </p>
                 <p className="body-default">
-                    At my free time I play the guitar, recording videos and play computer games.
+                    At my free time I play the guitar, recording videos and&nbsp;play computer games.
                 </p>
                 <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
             </div>
@@ -44,11 +44,11 @@ const Index = () => {
                         </div>
                         <h1>A Software Engineer</h1>
                         <p className="body-default">
-                            with experience in web development using TypeScript and React, mobile app development
-                            with React Native, and software development using C and C++.
+                            with experience in web development using TypeScript and&nbsp;React, mobile app development
+                            with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
                         </p>
                         <p className="body-default">
-                            At my free time I play the guitar, recording videos and play computer games.
+                            At my free time I play the guitar, recording videos and&nbsp;play computer games.
                         </p>
                     </div>
                     <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
