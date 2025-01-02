@@ -36,7 +36,7 @@ const InputForm = (
         return (
             nameError ?
                 <div className="error-message-block">
-                    <img src="/icons/error16.svg" alt="error"/>
+                    <img src="/icons/error16.svg" alt="error" style={{alignSelf: 'center'}}/>
                     <p className="error-text">{nameError}</p>
                 </div> : <></>
         )
@@ -102,7 +102,6 @@ const InputForm = (
                 <textarea
                     name="Message"
                     placeholder="Message"
-                    style={{height: isMobile || !isTablet ? 357 : 157}}
                     required
                     onChange={() => setMessageError('')}
                     onBlur={(e) => checkValidity(e, setMessageError)}

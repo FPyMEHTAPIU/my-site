@@ -110,31 +110,28 @@ h2 {
 
 @media (min-width: 1440px) {
     .not-found {
-        margin: -60px auto;
+        margin: -50px auto;
         font-size: 400px;
     }
 
     h1 {
-        font-size: 96px;
+        font-size: 64px;
     }
 
     h2 {
-        font-size: 48px;
+        font-size: 40px;
     }
 
     .body-small {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .body-default {
-        font-size: 32px;
+        font-size: 24px;
     }
-}
 
-@media (min-width: 1440px) {
-    .not-found {
-        margin: -50px auto;
-        font-size: 400px;
+    .error-text {
+        font-size: 17px;
     }
 }
 

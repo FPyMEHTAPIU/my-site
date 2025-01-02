@@ -27,19 +27,19 @@ const Footer = () => {
             <div className="social-block">
                 <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin48.svg"}
+                        src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
                         alt="linkedin"
                     />
                 </a>
                 <a href="mailto:kolya59264@gmail.com" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail48.svg"}
+                        src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
                         alt="gmail"
                     />
                 </a>
                 <a href="https://github.com/FPyMEHTAPIU" target="_blank">
                     <img
-                        src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github48.svg"}
+                        src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
                         alt="github"
                     />
                 </a>
@@ -93,12 +93,12 @@ const Footer = () => {
                 {SocialLinks()}
             </div>
             <p
-                className={ isMobile ? "body-small" : "body-default" }
+                className="body-small"
                 style={{marginBottom: 40}}>
                 Designed by&nbsp;
                 <a
                     href="https://www.linkedin.com/in/naumovadesign/"
-                    className={ isMobile ? "body-small" : "body-default" }
+                    className="body-small"
                     style={{textDecoration: 'underline'
                 }}
                     target="_blank"

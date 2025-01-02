@@ -29,6 +29,10 @@ input, textarea {
     color: white;
 }
 
+textarea {
+    height: 171px;
+}
+
 input:focus, input:hover,
 textarea:focus, textarea:hover {
     color: var(--Light);
@@ -76,13 +80,15 @@ textarea:focus, textarea:hover {
 .checkbox-container {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
+    gap: 16px;
     align-self: stretch;
 }
 
 .checkbox {
+    height: 30px;
+    justify-content: center;
     display: flex;
-    padding: 0 8px 11px 0;
+    padding: 0;
     flex-direction: column;
     align-items: center;
 }
@@ -158,12 +164,15 @@ textarea:focus, textarea:hover {
 @media (min-width: 1440px) {
     .input-container {
         display: flex;
-        height: 727px;
+        height: unset;
         padding: 40px;
         flex-direction: column;
         justify-items: center;
         gap: 24px;
-        width: fit-content;
+        min-width: 570px;
+        align-items: flex-start;
+        flex: 1 0 0;
+        align-self: stretch;
     }
 
     input {
@@ -176,16 +185,26 @@ textarea:focus, textarea:hover {
     }
 
     input, textarea {
-        font-size: 24px;
+        font-size: 20px;
+    }
+
+    textarea {
+        min-height: 162px;
+        height: 100%;
     }
 
     ::placeholder {
         font-family: "Roboto Mono", sans-serif;
-        font-size: 24px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         color: var(--Medium);
+    }
+
+    .checkbox input {
+        width: 24px;
+        height: 24px;
     }
 
     .error-container {

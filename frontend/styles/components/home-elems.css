@@ -234,26 +234,26 @@
     }
 
     .background-ellipse-blue {
-        top: 787px;
+        top: 500px;
         right: 618px;
         width: 750px;
-        height: 980px;
-        border-radius: 980px;
+        height: 757px;
+        border-radius: 757px;
         filter: blur(255px);
     }
 
     .background-ellipse-light-blue {
-        top: 2483px;
+        top: 1850px;
         left: 472px;
         width: 845px;
-        height: 979px;
-        border-radius: 979px;
+        height: 757px;
+        border-radius: 757px;
         filter: blur(255px);
     }
 
     .content-photo {
-        margin: 195px 75px auto;
-        gap: 30px;
+        margin: 172px 135px auto;
+        gap: 130px;
     }
 
     .content-container {
@@ -261,11 +261,12 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 24px;
-        flex: 1 0 0;
+        margin: 0;
     }
 
     .greeting {
         padding: 16px 40px;
+        margin-bottom: 12px;
     }
 
     #my-photo {
@@ -275,13 +276,13 @@
 
     .skills-block-home {
         max-width: 1920px;
-        margin: auto 75px 104px;
+        margin: auto 135px 84px;
         gap: 24px;
     }
 
     #infinite-line {
         padding: 17px 74px;
-        margin: 104px 0;
+        margin: 84px 0;
         gap: 74px;
     }
 
@@ -292,31 +293,36 @@
     }
 
     .projects-link {
-        margin: auto 75px 40px;
+        margin: auto 135px 24px;
     }
 
     .input-block {
         gap: 30px;
-        margin: auto 75px 104px;
+        margin: 0 135px 84px;
     }
 
     .letter-block {
-        align-items: flex-start;
-        flex: 1 0 0;
-        width: 630px;
-    }
-
-    .get-in-touch {
-        width: 630px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         align-items: flex-start;
-        gap: 40px;
+        flex: 1 0 0;
         align-self: stretch;
     }
 
+    .get-in-touch {
+        min-width: 570px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+        width: fit-content;
+    }
+
     .letter-block img {
-        flex: 1 0 0;
+        width: 70%;
+        height: auto;
     }
 }
 

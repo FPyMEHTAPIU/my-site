@@ -106,16 +106,16 @@
 
     .arrow-round {
         padding: 24px;
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 
     .arrow-round.left {
-        margin-left: 75px;
+        margin-left: 135px;
     }
 
     .arrow-round.right {
-        margin-right: 75px;
+        margin-right: 135px;
     }
 }
 

@@ -99,7 +99,7 @@ const Index = () => {
             <FillMarquee />
             <h1 style={{
                 alignSelf: "center",
-                marginBottom: containerWidth < 1290 ? 24 : 40
+                marginBottom: 24
             }}>
                 My Skills
             </h1>
@@ -114,7 +114,8 @@ const Index = () => {
                         My Projects
                     </h1>
                     <a className="button-small" href='./work' style={{width: 'auto', gap: 16}}>
-                        <p className="body-small black">All projects</p>
+                        <p className={isTablet ? "body-small black" : "body-default black"}>
+                            All projects</p>
                         <img
                             src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}
                             alt="arrow right"
