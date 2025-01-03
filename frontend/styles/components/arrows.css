@@ -110,6 +110,12 @@
         height: 70px;
     }
 
+    .scroll-button {
+        position: fixed;
+        bottom: 120px;
+        right: 35px;
+    }
+
     .arrow-round.left {
         margin-left: 135px;
     }

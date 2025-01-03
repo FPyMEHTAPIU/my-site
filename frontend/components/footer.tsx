@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
-import Methods from "@/components/methods";
 import {useRouter} from "next/router";
+import calculateContainerSize from "@/components/calculateContainerSize";
 
 const Footer = () => {
-    const ListenResize:any = Methods();
-    const [isMobile, setIsMobile] = useState(false);
-    const [isTablet, setIsTablet] = useState(false);
-    const [windowWidth, setWindowWidth] = useState(0);
+    const {isMobile, isTablet} = calculateContainerSize();
     const router = useRouter();
     const [page, setPage] = useState<string>('');
 
@@ -15,12 +12,6 @@ const Footer = () => {
             setPage(router.pathname as string);
         }
     }, [router.isReady, router.pathname]);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined')
-            setWindowWidth(window.innerWidth);
-        ListenResize(setIsMobile, setIsTablet);
-    }, [windowWidth]);
 
     const SocialLinks = () => {
         return (

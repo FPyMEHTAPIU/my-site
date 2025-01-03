@@ -2,6 +2,7 @@ import { AppProps } from "next/app";
 import HeadData from "@/components/Metadata/head";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ScrollButton from "@/components/scroll-button";
 import {useRouter} from "next/router";
 
 import '@/styles/colors.css'
@@ -32,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <HeadData />
             {router.pathname !== '/404' && <Header />}
             <Component {...pageProps} />
+            {router.pathname !== '/404' && <ScrollButton />}
             {router.pathname !== '/404' && <Footer />}
         </>
     );
