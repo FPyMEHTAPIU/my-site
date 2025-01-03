@@ -28,15 +28,15 @@ const SMTH = () => {
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
                     <img className="horizontal-card horizontal-image" src={'/projects/smth/slides.png'} alt="image"/>
                 </div>
-                {!isMobile && (
-                    <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                       style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
-                    >
-                        <p className="body-small black">See on GitHub</p>
-                        <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                    </a>
-                )}
             </div>
+            {!isMobile && (
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

@@ -13,7 +13,7 @@ const Bee_Runner = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 0}}>
                 <h1>Bee Runner</h1>
                 <p className="body-default">
                     In this amusing game, your goal is to escape from a giant bee. Your journey won't be easy as
@@ -22,7 +22,7 @@ const Bee_Runner = () => {
                 </p>
                 {FillSkills(projects[5].projectSkills, containerWidth, true)}
             </div>
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 0}}>
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
                     <img className="horizontal-card horizontal-image"
                          src={'/projects/bee_runner/bee_runner.png'} alt="image"
@@ -31,15 +31,15 @@ const Bee_Runner = () => {
                 <p className="body-default">
                 This project created for the Games Job Fair Spring 2024 LITE - Unity Engine Programming Challenge.
                 </p>
-            </div>
             <a href="https://fpymehtapiu.itch.io/bee-runner" className="button-secondary" target="_blank"
-               style={{margin: isMobile ? '0 15px' : (isTablet ? '0 133px' : '0 295px')}}
+               style={{margin: isMobile ? '0 15px' : (isTablet ? '0 133px' : 0)}}
             >
                 <p className="body-default">Play here!</p>
                 <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>
             </a>
+            </div>
             {/*CONTENT*/}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 0}}>
                 <h2>controls</h2>
                 <ul>
                     <li className="list-dots"><p className="body-default">Jump: Spacebar</p></li>
@@ -165,15 +165,15 @@ const Bee_Runner = () => {
                         </p></li>
                     </ul>
                 </div>
-                {!isMobile && (
-                    <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                       style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
-                    >
-                        <p className="body-small black">See on GitHub</p>
-                        <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                    </a>
-                )}
             </div>
+            {!isMobile && (
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

@@ -168,7 +168,7 @@ const FdF = () => {
                     </div>
                 </div>
             </div>
-            <div className="horizontal-card-container" style={{marginBottom: 0}}>
+            <div className="horizontal-card-container" style={{margin: '-16px auto 0'}}>
                 {imageSlideHorizontal('/projects/fdf/moving.gif')}
             </div>
             <div className="work-content-block last-block">
@@ -188,15 +188,15 @@ const FdF = () => {
                         all allocated memory is cleaned up.
                     </p>
                 </div>
+            </div>
             {!isMobile && (
-                <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                    style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
                 >
                     <p className="body-small black">See on GitHub</p>
                     <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
                 </a>
             )}
-            </div>
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

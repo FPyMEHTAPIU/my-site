@@ -30,7 +30,7 @@ const link:string = 'https://github.com/FPyMEHTAPIU/push_swap'
 
 const push_swap = () => {
     const {SwiperDefault, SwiperImageDesktopVertical} = SwiperContainer();
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
+    const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const swiperRef = useRef(null);
     const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
     const {imageSlideVertical} = imageSlides();
@@ -122,7 +122,7 @@ const push_swap = () => {
                     numbers and choose the lowest value, saving the index of that pair.
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef, 'first')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef)
@@ -138,7 +138,7 @@ const push_swap = () => {
                     Then I run the small_sort function for the remaining 3 numbers in stack 'a' (last pic).
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef, 'second')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef)}
@@ -153,7 +153,7 @@ const push_swap = () => {
                     At the end, I free all remaining memory.
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef, 'third')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef)}
@@ -199,15 +199,15 @@ const push_swap = () => {
                             style={{height: 'auto'}} alt="image"/>
                     </div>
                 </div>
-                {!isMobile && (
-                    <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                       style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
-                    >
-                        <p className="body-small black">See on GitHub</p>
-                        <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                    </a>
-                )}
             </div>
+            {!isMobile && (
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

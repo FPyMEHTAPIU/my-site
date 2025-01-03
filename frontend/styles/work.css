@@ -69,14 +69,14 @@
     }
 
     .work-content-block {
-        margin: auto 113px;
+        margin: 0 113px;
         padding: 0 20px;
     }
 
     .github-block {
         bottom: unset;
         padding: unset;
-        margin: 138px 15px 16px;
+        margin: 138px 15px 0;
         border-radius: unset;
         position: unset;
         z-index: unset;
@@ -91,19 +91,25 @@
     }
 
     .github-block {
-        margin: 239px 75px 44px;
+        margin: 213px 135px 0;
     }
 
     .projects-filter {
-        margin: 196px auto 40px;
-        width: 1290px;
+        margin: 196px 135px 40px;
+        width: 1170px;
+        gap: 36px;
+        align-self: center;
     }
 
     .work-content-block {
         gap: 24px;
-        margin: 0 185px 44px;
-        padding: 0 110px;
-        width: calc(100vw - var(--scrollbar-width) - 370px);
+        margin: 0 335px;
+        padding: 0;
+        align-self: stretch;
+    }
+
+    .work-sub-block {
+        gap: 16px;
     }
 }
 

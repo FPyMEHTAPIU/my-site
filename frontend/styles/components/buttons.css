@@ -156,11 +156,20 @@
     .button-secondary {
         width: 345px;
     }
+
+    .last-button {
+        margin: 0 133px 48px;
+        width: fit-content;
+    }
 }
 
 @media (min-width: 1440px) {
     .menu-item {
         padding: 10px 30px;
+    }
+
+    .last-button {
+        margin: 0 335px 84px;
     }
 
     .text-button {

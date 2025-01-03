@@ -236,6 +236,16 @@
         height: 275px !important;
         align-self: unset;
     }
+
+    .horizontal-card-container.video-container {
+        margin: 0 133px;
+        width: calc(100vw - var(--scrollbar-width) - 266px);
+    }
+
+    /* TODO: fix video container */
+    .horizontal-card.video-container {
+        min-height: 275px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -259,10 +269,10 @@
     }
 
     .work-card-container {
-        width: 1290px;
-        grid-template-columns: repeat(auto-fill, minmax(410px, 3fr));
+        width: 1170px;
+        grid-template-columns: repeat(auto-fill, minmax(370px, 3fr));
         grid-gap: 30px;
-        margin-bottom: 104px;
+        margin: 0 135px 104px;
     }
 
     .project-photo {
@@ -270,38 +280,41 @@
     }
 
     .work-photo {
-        height: 280px;
+        height: 320px;
     }
 
     .work-card {
-        height: 660px;
-        width: 410px;
+        height: 624px;
+        width: 370px;
     }
 
     .swiper.vertical-card-container, .vertical-card-container {
         display: flex;
-        width: calc(100vw - var(--scrollbar-width) - 370px);
-        padding: 0 110px;
+        width: calc(100vw - var(--scrollbar-width) - 470px);
+        padding: 0 100px;
         align-items: center;
-        margin: 0 185px;
-        height: 1086px;
+        align-self: stretch;
+        margin: 0 235px;
+        height: 784px;
     }
 
     .swiper-slide.vertical-card, .vertical-card {
-        height: 1086px;
+        height: 784px;
         border-radius: 24px;
-        min-width: 410px;
-        width: calc((100vw - var(--scrollbar-width) - 590px - 30px) / 2) !important;
+        min-width: unset;
+        width: 370px !important;
     }
 
     .swiper-slide-prev.vertical-card, .swiper-slide-next.vertical-card,
     .swiper-slide-prev.vertical-card img, .swiper-slide-next.vertical-card img {
-        height: 1086px !important;
+        height: 784px !important;
         align-self: unset;
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
-        width: calc(100vw - var(--scrollbar-width) - 370px);
+        margin: 0 235px 40px;
+        width: 100%;
+        align-self: stretch;
     }
 
     .tabs-block {
@@ -325,7 +338,12 @@
     }
 
     .horizontal-card img {
-        margin: 0 110px;
+        margin: 0 100px;
+    }
+
+    .horizontal-card-container.video-container {
+        margin: 0 335px;
+        width: calc(100vw - var(--scrollbar-width) - 670px);;
     }
 }
 

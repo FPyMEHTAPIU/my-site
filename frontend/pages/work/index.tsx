@@ -6,7 +6,7 @@ const WorkCard = (project:ProjectCardData) => {
     const FillSkills = () => {
         return project.projectSkills.map((skill:string) => (
             <div className="skill project-skill">
-                <p className="body-small">{skill}</p>
+                <p className="body-small" style={{fontSize: 16}}>{skill}</p>
             </div>
         ))
     }

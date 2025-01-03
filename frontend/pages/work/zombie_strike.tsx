@@ -13,28 +13,28 @@ const Zombie_Strike = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block">
                 <h1>Zombie Strike</h1>
                 <p className="body-default">
                     This is a game with an auto-shooter mechanic where you just need to move, aim, and survive.
                 </p>
                 {FillSkills(projects[6].projectSkills, containerWidth, true)}
             </div>
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block">
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
                     <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.png'}
                          alt="image"
                     />
                 </div>
-            </div>
             <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary" target="_blank"
-               style={{margin: isMobile ? '0 15px' : (isTablet ? '0 133px' : '0 295px')}}
+               style={{margin: isMobile ? '0 15px' : (isTablet ? '0 133px' : 0)}}
             >
                 <p className="body-default">Play here!</p>
                 <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>
             </a>
+            </div>
             {/*CONTENT*/}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block">
                 <h2>controls</h2>
                 <ul>
                     <li className="list-dots"><p className="body-default">
@@ -141,15 +141,15 @@ const Zombie_Strike = () => {
                         All was created by myself with Groovepad except for the grab experience sound.
                     </p>
                 </div>
-                {!isMobile && (
-                    <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                       style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
-                    >
-                        <p className="body-small black">See on GitHub</p>
-                        <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                    </a>
-                )}
             </div>
+            {!isMobile && (
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

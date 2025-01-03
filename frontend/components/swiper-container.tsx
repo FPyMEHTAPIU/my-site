@@ -142,8 +142,9 @@ const SwiperContainer = () => {
 
         return (
             <Swiper
-                slidesPerView={2}
+                slidesPerView={'auto'}
                 spaceBetween={isTablet ? 20 : 30}
+                centerInsufficientSlides={true}
                 onSlideChange={(swiper) => setSlideIndex(
                     swiper, setActiveIndex, projects, setIsFirstSlide, setIsLastSlide
                 )}

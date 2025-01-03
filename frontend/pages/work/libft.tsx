@@ -13,7 +13,7 @@ const libft = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 0}}>
                 <h1>libft</h1>
                 <p className="body-default">
                     You must redo a set of functions from the libc. Your functions will have the same prototypes
@@ -58,15 +58,15 @@ const libft = () => {
                         ft_free_strs function frees a memory that was allocated.
                     </p></li>
                 </ul>
-                {!isMobile && (
-                    <a className={isTablet ? "button-small" : "button-primary"} href={link} target="_blank"
-                       style={{margin: isTablet ? '36px 0 48px' : '44px 0 104px'}}
-                    >
-                        <p className="body-small black">See on GitHub</p>
-                        <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                    </a>
-                )}
             </div>
+            {!isMobile && (
+                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
+                   href={link} target="_blank"
+                >
+                    <p className="body-small black">See on GitHub</p>
+                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
+                </a>
+            )}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )
