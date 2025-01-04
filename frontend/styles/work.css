@@ -4,10 +4,11 @@
 
 .projects-filter {
     display: inline-flex;
-    align-items: flex-start;
-    gap: 24px; /* could be 16px ? */
-    margin-bottom: 24px;
-    align-self: center;
+    align-items: stretch;
+    justify-self: stretch;
+    margin: 0 15px 24px;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 .back-none {
@@ -18,8 +19,7 @@
 .work-content-block {
     margin: auto 15px 12px;
     display: flex;
-    min-width: 345px;
-    align-self: flex-start;
+    align-self: stretch;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
