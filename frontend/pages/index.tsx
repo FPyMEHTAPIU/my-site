@@ -125,7 +125,7 @@ const Index = () => {
             }
             {Cards()}
             {isMobile ?
-                <a className="button-primary" style={{alignSelf: "center"}} href='./work'>
+                <a className="button-small" style={{justifySelf: "stretch", margin: '0 15px'}} href='./work'>
                     <p className="body-small black">All projects</p>
                     <img
                         src={isMobile || isTablet ? './arrows/arrow_right_black16.svg' : './arrows/arrow_right_black24.svg'}

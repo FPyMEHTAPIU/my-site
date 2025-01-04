@@ -80,6 +80,7 @@ const SwiperContainer = () => {
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper
                     }}
+                    parallax={true}
                 >
                     {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide)}
                     {projects.map((project: any) => (

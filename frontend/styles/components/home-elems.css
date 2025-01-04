@@ -1,10 +1,8 @@
 .content-container {
     display: flex;
-    width: fit-content;
-    min-width: 345px;
     flex-direction: column;
     align-items: flex-start;
-    align-self: center;
+    align-self: stretch;
     gap: 24px;
     margin: 0 15px;
 }
@@ -21,8 +19,6 @@
 }
 
 #my-photo {
-    min-width: 345px;
-    min-height: 428px;
     width: 100%;
     flex-shrink: 0;
     border-radius: 16px;
@@ -59,8 +55,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    align-self: center;
-    min-width: 345px;
+    align-self: stretch;
     margin: auto 15px 48px;
     align-content: center;
     flex-wrap: wrap;
@@ -83,7 +78,6 @@
 
 .get-in-touch {
     display: flex;
-    min-width: 345px;
     flex-direction: column;
     align-items: center;
     gap: 16px;

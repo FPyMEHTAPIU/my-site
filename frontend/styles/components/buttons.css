@@ -65,10 +65,8 @@
 
 .button-primary {
     display: flex;
-    width: 345px;
     padding: 20px 24px;
     justify-content: center;
-    align-items: center;
     gap: 16px;
     border-radius: 8px;
     border: none;
