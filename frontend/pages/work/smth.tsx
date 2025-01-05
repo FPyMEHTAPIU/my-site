@@ -26,7 +26,9 @@ const SMTH = () => {
             {/*CONTENT*/}
             <div className="work-content-block last-block">
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
-                    <img className="horizontal-card horizontal-image" src={'/projects/smth/slides.png'} alt="image"/>
+                    <img className="horizontal-card horizontal-image" style={{margin: 0}}
+                         src={'/projects/smth/slides.png'} alt="image"
+                    />
                 </div>
             </div>
             {!isMobile && (

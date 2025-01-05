@@ -63,12 +63,16 @@
     align-self: stretch;
 }
 
+.after-slide {
+    margin-top: -36px;
+}
+
 @media (min-width: 720px) {
     .projects-filter {
         position: relative;
         justify-self: flex-start;
         align-self: flex-start;
-        margin: 105px auto 24px;
+        margin: 137px auto 24px;
         width: 690px;
     }
 
@@ -80,12 +84,16 @@
     .github-block {
         bottom: unset;
         padding: unset;
-        margin: 138px 15px 0;
+        margin: 137px 15px 16px;
         border-radius: unset;
         position: unset;
         z-index: unset;
         background: unset;
         width: unset;
+    }
+
+    .first-content-block {
+        margin-top: 16px;
     }
 }
 

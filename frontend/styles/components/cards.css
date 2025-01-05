@@ -215,6 +215,8 @@
 
     .project-photo {
         height: 288px;
+        min-height: unset;
+        flex: unset;
     }
 
     .swiper-slide-prev .project-card img, .swiper-slide-next .project-card img {
@@ -229,6 +231,10 @@
         grid-row-gap: 20px;
         margin-bottom: 48px;
         align-self: center;
+    }
+
+    .work-card {
+        height: 533px;
     }
 
     .swiper.vertical-card-container, .vertical-card-container {
@@ -246,8 +252,8 @@
 
     .swiper.horizontal-card-container, .horizontal-card-container {
         display: flex;
-        width: calc(100vw - var(--scrollbar-width) - 266px);
-        margin: auto 113px 24px;
+        width: calc(100vw - var(--scrollbar-width) - 226px);
+        margin: 0 113px;
         justify-content: center;
         align-items: center;
         position: relative;
@@ -260,19 +266,19 @@
     }
 
     .swiper-slide.horizontal-card, .horizontal-card {
-        height: 275px;
         align-self: stretch;
-        width: 100%;
         margin: 0 auto;
-    }
-
-    .horizontal-card img {
-        margin: 0 20px;
+        display: flex;
+        height: 100%;
+        width: calc(100vw - var(--scrollbar-width) - 266px);
+        aspect-ratio: 3.45 / 2.3;
+        border-radius: 16px;
+        transition: height 0.3s ease, transform 0.3s ease;
     }
 
     .swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,
     .swiper-slide-prev.horizontal-card img, .swiper-slide-next.horizontal-card img {
-        height: 275px !important;
+        height: 100% !important;
         align-self: unset;
     }
 

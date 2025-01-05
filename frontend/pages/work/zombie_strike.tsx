@@ -26,8 +26,9 @@ const Zombie_Strike = () => {
                          alt="image"
                     />
                 </div>
-            <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary" target="_blank"
-               style={{margin: isMobile ? '0 15px' : (isTablet ? '0 133px' : 0)}}
+            <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary align-start"
+               target="_blank"
+               style={{justifyContent: 'center'}}
             >
                 <p className="body-default">Play here!</p>
                 <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>

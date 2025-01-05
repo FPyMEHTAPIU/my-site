@@ -31,7 +31,8 @@ const Bee_Runner = () => {
                 <p className="body-default">
                 This project created for the Games Job Fair Spring 2024 LITE - Unity Engine Programming Challenge.
                 </p>
-            <a href="https://fpymehtapiu.itch.io/bee-runner" className="button-secondary" target="_blank">
+            <a href="https://fpymehtapiu.itch.io/bee-runner" className="button-secondary align-start"
+               style={{justifyContent: 'center'}} target="_blank">
                 <p className="body-default">Play here!</p>
                 <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>
             </a>

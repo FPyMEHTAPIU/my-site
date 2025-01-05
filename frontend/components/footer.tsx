@@ -39,8 +39,10 @@ const Footer = () => {
     };
 
     return (
-        <footer style={{marginBottom:
-                (isMobile && page !== '/work' && page.includes('work')) ? 116 : 'revert'}}>
+        <footer style={{
+            marginBottom: (isMobile && page !== '/work' && page.includes('work')) ? 116 : 'revert',
+            width: page === '/work' ? 690 : 'revert', justifySelf: page === '/work' ? 'center' : 'revert'
+        }}>
             <div className="footer-container">
                 {isMobile ?
                     <div className="links-container">

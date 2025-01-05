@@ -153,8 +153,13 @@ textarea:focus, textarea:hover {
 
 @media (min-width: 720px) {
     .input-container {
-        min-width: unset;
-        align-items: unset;
+        margin-top: unset;
+        height: unset;
+        justify-items: center;
+        min-width: 335px;
+        align-items: flex-start;
+        flex: 1 0;
+        align-self: stretch;
     }
 
     .checkbox input:checked::after {

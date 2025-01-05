@@ -179,25 +179,27 @@
         flex-direction: row;
         align-items: center;
         gap: 20px;
-        margin: 139px 15px auto;
+        margin: 137px 15px auto;
     }
 
     .greeting {
         margin-bottom: 8px;
     }
 
-    .content-container {
-        margin: auto;
+    #my-photo {
+        flex: 1 0 0;
+        align-self: stretch;
+        max-width: 264px;
+        max-height: 360px;
     }
 
-    #my-photo {
-        min-width: 335px;
-        min-height: 385px;
-        flex: 1 0;
+    #infinite-line {
+        margin: 48px 0;
     }
 
     .skills-block-home {
         margin: auto 75px 48px;
+        align-self: center;
     }
 
     .projects-link {
@@ -219,19 +221,23 @@
 
     .get-in-touch {
         align-items: start;
-        width: 335px;
         margin: 0;
-        justify-self: center;
     }
 
     .letter-block {
         display: flex;
-        height: auto;
         flex-direction: column;
-        align-items: stretch;
-        gap: 40px;
-        align-self: stretch;
         justify-content: space-between;
+        align-items: flex-start;
+        flex: 1 0 0;
+        align-self: stretch;
+    }
+
+    .letter-block img {
+        width: 80%;
+        height: auto;
+        max-height: 315px;
+        max-width: 430px;
     }
 }
 
@@ -313,15 +319,6 @@
         margin: 0 135px 84px;
     }
 
-    .letter-block {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex: 1 0 0;
-        align-self: stretch;
-    }
-
     .get-in-touch {
         min-width: 570px;
         display: flex;
@@ -333,8 +330,8 @@
     }
 
     .letter-block img {
-        width: 70%;
-        height: auto;
+        max-height: 400px;
+        max-width: 550px;
     }
 }
 

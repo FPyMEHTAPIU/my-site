@@ -154,12 +154,12 @@
 
 @media (min-width: 720px) {
     .button-secondary {
-        width: 345px;
+        width: 335px;
     }
 
     .last-button {
-        margin: 0 133px 48px;
-        width: fit-content;
+        margin: 16px 133px 48px;
+        width: 217px;
     }
 }
 
