@@ -81,15 +81,14 @@ textarea:focus, textarea:hover {
 .checkbox-container {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 8px;
     align-self: stretch;
 }
 
 .checkbox {
-    height: 30px;
     justify-content: center;
     display: flex;
-    padding: 0;
+    padding: 3px 0 11px;
     flex-direction: column;
     align-items: center;
 }
