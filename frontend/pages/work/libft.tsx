@@ -13,7 +13,7 @@ const libft = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 0}}>
+            <div className="work-content-block">
                 <h1>libft</h1>
                 <p className="body-default">
                     You must redo a set of functions from the libc. Your functions will have the same prototypes
@@ -24,7 +24,7 @@ const libft = () => {
                 {FillSkills(projects[4].projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
-            <div className="work-content-block">
+            <div className="work-content-block first-content-block">
                 <h2>libft library</h2>
                 <p className="body-default">
                     This project involves creating my own library with representations of standard functions

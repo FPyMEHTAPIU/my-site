@@ -8,8 +8,8 @@ import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
 
 const buttonsZoomRotate:string[] = [
-    'Zooming',
-    'Height Scaling',
+    'zooming',
+    'height scaling',
     'x-axis',
     'y-axis',
     'z-axis'
@@ -63,7 +63,7 @@ const FdF = () => {
                 {FillSkills(projects[2].projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
-            <div className="work-content-block">
+            <div className="work-content-block first-content-block">
                 <h2>realization</h2>
                 <div className="work-sub-block">
                     <p className="body-default green">1.Input Validation</p>
@@ -168,7 +168,7 @@ const FdF = () => {
                     </div>
                 </div>
             </div>
-            <div className="horizontal-card-container" style={{margin: '-16px auto 0'}}>
+            <div className="horizontal-card-container" style={{margin: '-8px auto 0'}}>
                 {imageSlideHorizontal('/projects/fdf/moving.gif')}
             </div>
             <div className="work-content-block last-block">

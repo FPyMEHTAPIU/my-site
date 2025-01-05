@@ -120,6 +120,7 @@ const SwiperContainer = () => {
                 scrollbar={{draggable: true}}
                 className="horizontal-card-container"
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
+                parallax={true}
             >
                 {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide)}
                 {projects.map((project: any) => (
@@ -157,6 +158,7 @@ const SwiperContainer = () => {
                 scrollbar={{draggable: true}}
                 className="vertical-card-container"
                 onSwiper={(swiper) => {swiperRef.current = swiper}}
+                parallax={true}
             >
                 {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide)}
                 {projects.map((project: any) => (

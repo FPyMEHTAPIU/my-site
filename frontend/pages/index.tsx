@@ -17,39 +17,46 @@ const Index = () => {
 
     const GreetingBlock = () => {
         return (
-            isMobile ?
-            <div className="content-container">
-                <div className="greeting">
-                    <p className="body-small black">
-                        Hi there! I'm Nick!
-                    </p>
-                </div>
-                <h1>A Software Engineer</h1>
-                <p className="body-default">
-                    with experience in web development using TypeScript and&nbsp;React, mobile app development
-                    with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
-                </p>
-                <p className="body-default">
-                    At my free time I play the guitar, recording videos and&nbsp;play computer games.
-                </p>
-                <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
-            </div>
-                :
+            // isMobile ?
+            // <div className="content-container">
+            //     <div className="greeting">
+            //         <p className="body-small black">
+            //             Hi there! I'm Nick!
+            //         </p>
+            //     </div>
+            //     <h1>A Software Engineer</h1>
+            //     <p className="body-default">
+            //         with experience in web development using TypeScript and&nbsp;React, mobile app development
+            //         with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
+            //     </p>
+            //     <p className="body-default">
+            //         At my free time I play the guitar, recording videos and&nbsp;play computer games.
+            //     </p>
+            //     <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
+            // </div>
+            //     :
                 <div className="content-photo">
+                    {isMobile ? <div className="greeting">
+                        <p className="body-default black">
+                            Hi there! I'm Nick!
+                        </p>
+                    </div> : <></>}
                     <div className="content-container">
-                        <div className="greeting">
+                        {!isMobile ? <div className="greeting">
                             <p className="body-default black">
                                 Hi there! I'm Nick!
                             </p>
-                        </div>
+                        </div> : <></>}
                         <h1>A Software Engineer</h1>
-                        <p className="body-default">
-                            with experience in web development using TypeScript and&nbsp;React, mobile app development
-                            with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
-                        </p>
-                        <p className="body-default">
-                            At my free time I play the guitar, recording videos and&nbsp;play computer games.
-                        </p>
+                        <div className="text-container">
+                            <p className="body-default">
+                                with experience in web development using TypeScript and&nbsp;React, mobile app development
+                                with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
+                            </p>
+                            <p className="body-default">
+                                At my free time I play the guitar, recording videos and&nbsp;play computer games.
+                            </p>
+                        </div>
                     </div>
                     <img id="my-photo" src="/My%20photo.jpg" alt="my photo"/>
                 </div>

@@ -24,7 +24,7 @@ const HeroFan = () => {
             </div>
             {/*CONTENT*/}
             <div className="horizontal-card-container video-container">
-                <div className="horizontal-card video-container" style={{padding: 0, position: 'relative'}}>
+                <div className="horizontal-card video-container">
                     <iframe
                         src="https://player.vimeo.com/video/1030456870?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                         allow="fullscreen; picture-in-picture; clipboard-write"
@@ -33,7 +33,7 @@ const HeroFan = () => {
                 </div>
                 <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
-            <div className="work-content-block">
+            <div className="work-content-block first-content-block">
                 <h2>Technologies Used</h2>
                 <ul>
                     <li className="list-dots green"><p className="body-default">

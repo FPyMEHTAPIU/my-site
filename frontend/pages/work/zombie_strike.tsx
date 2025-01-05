@@ -21,7 +21,7 @@ const Zombie_Strike = () => {
                 {FillSkills(projects[6].projectSkills, containerWidth, true)}
             </div>
             <div className="work-content-block">
-                <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
+                <div className="horizontal-card-container">
                     <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.png'}
                          alt="image"
                     />
@@ -34,7 +34,7 @@ const Zombie_Strike = () => {
             </a>
             </div>
             {/*CONTENT*/}
-            <div className="work-content-block">
+            <div className="work-content-block first-content-block">
                 <h2>controls</h2>
                 <ul>
                     <li className="list-dots"><p className="body-default">

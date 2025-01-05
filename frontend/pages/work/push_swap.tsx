@@ -39,7 +39,7 @@ const push_swap = () => {
         <main className="main-gap">
             {/*HEADER*/}
             {!isMobile && TabletDesktopGithubBlock()}
-            <div className="work-content-block" style={{marginBottom: isMobile || isTablet ? 12 : 44}}>
+            <div className="work-content-block">
                 <h1>push_swap</h1>
                 <p className="body-default">
                     Write a program in C called push_swap which calculates and displays on the standard
@@ -49,7 +49,7 @@ const push_swap = () => {
                 {FillSkills(projects[3].projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
-            <div className="work-content-block">
+            <div className="work-content-block first-content-block">
                 <h2>mandatory part</h2>
                 <p className="body-default">
                     In this project, I implemented stack sorting logic using a temporary stack 'b'.
@@ -185,18 +185,18 @@ const push_swap = () => {
                 </p>
                 <div className="work-sub-block">
                     <p className="body-default green">100 numbers</p>
-                    <div className="horizontal-card-container" style={{margin: 0, width: 'auto'}}>
+                    <div className="horizontal-card-container">
                         <img
-                            className="horizontal-card" src="/projects/push_swap/test_100.jpg"
-                            style={{height: 'auto'}} alt="image"/>
+                            className="horizontal-card grade-img" src="/projects/push_swap/test_100.jpg"
+                            alt="image"/>
                     </div>
                 </div>
                 <div className="work-sub-block">
                     <p className="body-default green">500 numbers</p>
-                    <div className="horizontal-card-container" style={{margin: 0, width: 'auto'}}>
+                    <div className="horizontal-card-container">
                         <img
-                            className="horizontal-card" src="/projects/push_swap/test_500.jpg"
-                            style={{height: 'auto'}} alt="image"/>
+                            className="horizontal-card grade-img" src="/projects/push_swap/test_500.jpg"
+                            style={{padding: '18px 16px'}} alt="image"/>
                     </div>
                 </div>
             </div>
