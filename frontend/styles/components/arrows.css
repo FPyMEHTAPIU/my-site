@@ -39,6 +39,26 @@
         background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 67.66%, #0D0D0D 116.63%);
     }
 
+    .gradient-vertical-block {
+        position: absolute;
+        display: flex;
+        z-index: 5;
+        pointer-events: none;
+        width: 217px;
+        height: 460px;
+        flex-shrink: 0;
+    }
+
+    .gradient-vertical-block.right {
+        right: 113px !important;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 38.12%, #161616 116.63%);
+    }
+
+    .gradient-vertical-block.left {
+        left: 113px !important;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.00) 38.12%, #161616 116.63%);
+    }
+
     .arrow-round:hover {
         background: var(--Gradient);
     }
@@ -94,6 +114,11 @@
         border-radius: 50px;
         border: 1px solid var(--Medium);
         background: var(--Dark-1);
+        overflow: visible;
+    }
+
+    .arrow-round:disabled {
+        visibility: hidden;
     }
 }
 

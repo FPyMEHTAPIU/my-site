@@ -26,15 +26,11 @@ const SwiperContainer = () => {
     const setSlideIndex = (
         swiper:any,
         setActiveIndex:any,
-        projects:any,
         setIsFirstSlide:any,
         setIsLastSlide:any
     ) => {
         if (setActiveIndex !== null)
             setActiveIndex(swiper.activeIndex);
-
-        console.log(swiper.isBeginning)
-        console.log(swiper.isEnd)
         setIsFirstSlide(swiper.isBeginning);
         setIsLastSlide(swiper.isEnd);
     }
@@ -82,7 +78,7 @@ const SwiperContainer = () => {
                     }}
                     parallax={true}
                 >
-                    {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide)}
+                    {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide, false, "")}
                     {projects.map((project: any) => (
                         Card(project)
                     ))}
@@ -110,7 +106,7 @@ const SwiperContainer = () => {
                 centeredSlides={true}
                 centerInsufficientSlides={true}
                 onSlideChange={(swiper) => setSlideIndex(
-                    swiper, setActiveIndex, projects, setIsFirstSlide, setIsLastSlide
+                    swiper, setActiveIndex, setIsFirstSlide, setIsLastSlide
                 )}
                 modules={[Navigation, Scrollbar]}
                 navigation={{
@@ -122,7 +118,7 @@ const SwiperContainer = () => {
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 parallax={true}
             >
-                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide)}
+                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, false, "")}
                 {projects.map((project: any) => (
                     Card(project)
                 ))}
@@ -136,35 +132,44 @@ const SwiperContainer = () => {
         Card:any,
         projects:any,
         setActiveIndex:any,
-        swiperRef:any
+        swiperRef:any,
+        isImgGradient:boolean,
+        arrowClass: string
     ) =>
     {
         const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
         const [isLastSlide, setIsLastSlide] = useState<boolean>(false);
 
         return (
-            <Swiper
-                slidesPerView={'auto'}
-                spaceBetween={isTablet ? 20 : 30}
-                centerInsufficientSlides={true}
-                onSlideChange={(swiper) => setSlideIndex(
-                    swiper, setActiveIndex, projects, setIsFirstSlide, setIsLastSlide
-                )}
-                modules={[Navigation, Scrollbar]}
-                navigation={{
-                    prevEl: '.arrow-round.left.no-margin',
-                    nextEl: '.arrow-round.right.no-margin'
-                }}
-                scrollbar={{draggable: true}}
-                className="vertical-card-container"
-                onSwiper={(swiper) => {swiperRef.current = swiper}}
-                parallax={true}
-            >
-                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide)}
-                {projects.map((project: any) => (
-                    Card(project)
-                ))}
-            </Swiper>
+            <div className="vertical-control-block">
+                <Swiper
+                    slidesPerView={'auto'}
+                    spaceBetween={isTablet ? 20 : 30}
+                    onSliderMove={(swiper) => setSlideIndex(
+                        swiper, setActiveIndex, setIsFirstSlide, setIsLastSlide
+                    )}
+                    onSlideChange={(swiper) => setSlideIndex(
+                        swiper, setActiveIndex, setIsFirstSlide, setIsLastSlide
+                    )}
+                    modules={[Navigation, Scrollbar]}
+                    navigation={{
+                        prevEl: arrowClass === 'first' ? '' :
+                            `.arrow-round.left.no-margin.${arrowClass}`,
+                        nextEl: arrowClass === 'first' ? '' :
+                            `.arrow-round.right.no-margin.${arrowClass}`
+                    }}
+                    scrollbar={{draggable: true}}
+                    className="vertical-card-container"
+                    onSwiper={(swiper) => {swiperRef.current = swiper}}
+                    parallax={true}
+                >
+                    {projects.map((project: any) => (
+                        Card(project)
+                    ))}
+                </Swiper>
+                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, isImgGradient, arrowClass)}
+            </div>
+
         )
     }
 

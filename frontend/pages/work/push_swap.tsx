@@ -125,7 +125,7 @@ const push_swap = () => {
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef, 'first')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap1, null, swiperRef)
+                    imagesPushSwap1, null, swiperRef, false, 'first')
             }
             <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
@@ -141,7 +141,7 @@ const push_swap = () => {
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef, 'second')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap2, null, swiperRef)}
+                    imagesPushSwap2, null, swiperRef, true, 'second')}
             <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
                     Finally, I push numbers from stack 'b' to stack 'a' to their suitable places.
@@ -156,9 +156,9 @@ const push_swap = () => {
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef, 'third')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap3, null, swiperRef)}
+                    imagesPushSwap3, null, swiperRef, true, 'third')}
             {/*BONUS PART*/}
-            <div className="work-content-block" style={{marginTop: -36}}>
+            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <h2>bonus part</h2>
                 <p className="body-default">
                     The bonus part requires implementing the checker_OS program. This program receives a list
@@ -185,19 +185,17 @@ const push_swap = () => {
                 </p>
                 <div className="work-sub-block">
                     <p className="body-default green">100 numbers</p>
-                    <div className="horizontal-card-container">
-                        <img
-                            className="horizontal-card grade-img" src="/projects/push_swap/test_100.jpg"
-                            alt="image"/>
-                    </div>
+                    <img
+                        className="horizontal-card grade-img" src="/projects/push_swap/test_100.jpg"
+                        alt="image"
+                    />
                 </div>
                 <div className="work-sub-block">
                     <p className="body-default green">500 numbers</p>
-                    <div className="horizontal-card-container">
-                        <img
-                            className="horizontal-card grade-img" src="/projects/push_swap/test_500.jpg"
-                            style={{padding: '18px 16px'}} alt="image"/>
-                    </div>
+                    <img
+                        className="horizontal-card grade-img" src="/projects/push_swap/test_500.jpg"
+                        style={{padding: '18px 16px'}} alt="image"
+                    />
                 </div>
             </div>
             {!isMobile && (
