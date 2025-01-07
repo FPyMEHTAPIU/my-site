@@ -199,6 +199,10 @@
         align-items: center;
     }
 
+    .swiper.cards-control-block {
+        padding: 0;
+    }
+
     .swiper-slide:last-child {
         margin-right: 15px;
     }

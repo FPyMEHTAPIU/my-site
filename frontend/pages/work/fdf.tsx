@@ -132,7 +132,7 @@ const FdF = () => {
                 : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
             }
-            <div className="work-content-block after-slide">
+            <div className="work-content-block">
                 <div className="work-sub-block">
                     <p className="body-default green">7.2D Projection Conversion</p>
                     <p className="body-default">
@@ -151,7 +151,7 @@ const FdF = () => {
                 imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
             : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
                     imagesProjections, setActiveIndexProjections, swipeRefProjections)}
-            <div className="work-content-block after-slide">
+            <div className="work-content-block">
                 <div className="work-sub-block">
                     <p className="body-default green">8.Centering and Moving Points</p>
                     <p className="body-default">

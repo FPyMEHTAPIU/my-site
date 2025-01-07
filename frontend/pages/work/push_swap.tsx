@@ -127,7 +127,7 @@ const push_swap = () => {
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap1, null, swiperRef, false, 'remove')
             }
-            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
+            <div className="work-content-block">
                 <p className="body-default">
                     After that, I perform the actual actions and push a number from stack 'a' to stack 'b'.
                     As I mentioned, I repeat these actions until stack 'a' has a size of 3. When the size of
@@ -142,7 +142,7 @@ const push_swap = () => {
                     imagesPushSwap2, null, swiperRef, 'vertical-second')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap2, null, swiperRef, true, 'arrow-second')}
-            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
+            <div className="work-content-block">
                 <p className="body-default">
                     Finally, I push numbers from stack 'b' to stack 'a' to their suitable places.
                     They must be pushed above the lowest number in stack 'a' that is greater than a number from
@@ -158,7 +158,7 @@ const push_swap = () => {
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
                     imagesPushSwap3, null, swiperRef, true, 'arrow-third')}
             {/*BONUS PART*/}
-            <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
+            <div className="work-content-block">
                 <h2>bonus part</h2>
                 <p className="body-default">
                     The bonus part requires implementing the checker_OS program. This program receives a list
