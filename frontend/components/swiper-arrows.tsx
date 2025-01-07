@@ -28,6 +28,7 @@ const AddArrows = (
                                 isTablet ? "/arrows/arrow_left_white24.svg" :
                                     "/arrows/arrow_left_white32.svg"}
                             alt="arrow left"
+                            loading="lazy"
                             className="arrow"
                         />
                     </button>
@@ -50,6 +51,7 @@ const AddArrows = (
                                         isTablet ? "/arrows/arrow_left_white24.svg" :
                                             "/arrows/arrow_left_white32.svg"}
                                     alt="arrow left"
+                                    loading="lazy"
                                     className="arrow"
                                 />
                             </button>
@@ -65,6 +67,7 @@ const AddArrows = (
                                     isTablet ? "/arrows/arrow_left_white24.svg" :
                                         "/arrows/arrow_left_white32.svg"}
                                 alt="arrow left"
+                                loading="lazy"
                                 className="arrow"
                             />
                         </button>
@@ -85,6 +88,7 @@ const AddArrows = (
                                 isTablet ? "/arrows/arrow_right_white24.svg" :
                                     "/arrows/arrow_right_white32.svg"}
                             alt="arrow right"
+                            loading="lazy"
                             className="arrow"
                         />
                     </button>
@@ -104,6 +108,7 @@ const AddArrows = (
                                         isTablet ? "/arrows/arrow_right_white24.svg" :
                                             "/arrows/arrow_right_white32.svg"}
                                     alt="arrow right"
+                                    loading="lazy"
                                     className="arrow"
                                 />
                             </button>
@@ -119,6 +124,7 @@ const AddArrows = (
                                     isTablet ? "/arrows/arrow_right_white24.svg" :
                                         "/arrows/arrow_right_white32.svg"}
                                 alt="arrow right"
+                                loading="lazy"
                                 className="arrow"
                             />
                         </button>

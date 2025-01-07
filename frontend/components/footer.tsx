@@ -19,18 +19,21 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank">
                     <img
                         src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
+                        loading="lazy"
                         alt="linkedin"
                     />
                 </a>
                 <a href="mailto:kolya59264@gmail.com" target="_blank">
                     <img
                         src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
+                        loading="lazy"
                         alt="gmail"
                     />
                 </a>
                 <a href="https://github.com/FPyMEHTAPIU" target="_blank">
                     <img
                         src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
+                        loading="lazy"
                         alt="github"
                     />
                 </a>
@@ -41,7 +44,8 @@ const Footer = () => {
     return (
         <footer style={{
             marginBottom: (isMobile && page !== '/work' && page.includes('work')) ? 116 : 'revert',
-            width: page === '/work' ? 690 : 'revert', justifySelf: page === '/work' ? 'center' : 'revert'
+            width: !isMobile && page === '/work' ? 690 : 'revert-layer',
+            justifySelf: !isMobile && page === '/work' ? 'center' : 'revert'
         }}>
             <div className="footer-container">
                 {isMobile ?
@@ -78,6 +82,7 @@ const Footer = () => {
                             <img
                                 className="download-icon"
                                 src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}
+                                loading="lazy"
                                 alt="download"
                             />
                         </a>

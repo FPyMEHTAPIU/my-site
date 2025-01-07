@@ -46,7 +46,7 @@ const FdF = () => {
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
     const swipeRefZoom = useRef(null);
     const swipeRefProjections = useRef(null);
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
     const {imageSlideHorizontal} = imageSlides();
 
     return (
@@ -189,14 +189,7 @@ const FdF = () => {
                     </p>
                 </div>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

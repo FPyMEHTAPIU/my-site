@@ -53,7 +53,7 @@ const useOverlay = (
                         <p className={isDesktop1440 ?'body-default black' : 'body-small black' }>
                             Back to Homepage
                         </p>
-                        <img src="/arrows/arrow_right_black24.svg" alt="arrow"/>
+                        <img src="/arrows/arrow_right_black24.svg" loading="lazy" alt="arrow"/>
                     </a>
                 </div>
             </div>

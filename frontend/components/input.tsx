@@ -36,7 +36,7 @@ const InputForm = (
         return (
             nameError ?
                 <div className="error-message-block">
-                    <img src="/icons/error16.svg" alt="error" style={{alignSelf: 'center'}}/>
+                    <img src="/icons/error16.svg" alt="error" loading="lazy" style={{alignSelf: 'center'}}/>
                     <p className="error-text">{nameError}</p>
                 </div> : <></>
         )
@@ -143,7 +143,7 @@ const InputForm = (
                                 Searching for the last piece to perfect your team? Let’s chat — I might be the one!
                             </p>
                         </div>
-                        <img src="/letter.svg" alt="letter"/>
+                        <img src="/letter.svg" loading="lazy" alt="letter"/>
                     </div>
                     {InputContainer()}
                 </div>

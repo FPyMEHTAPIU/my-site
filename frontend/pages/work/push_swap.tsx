@@ -32,7 +32,7 @@ const push_swap = () => {
     const {SwiperDefault, SwiperImageDesktopVertical} = SwiperContainer();
     const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const swiperRef = useRef(null);
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
     const {imageSlideVertical} = imageSlides();
 
     return (
@@ -187,25 +187,18 @@ const push_swap = () => {
                     <p className="body-default green">100 numbers</p>
                     <img
                         className="horizontal-card grade-img" src="/projects/push_swap/test_100.jpg"
-                        alt="image"
+                        loading="lazy" alt="image"
                     />
                 </div>
                 <div className="work-sub-block">
                     <p className="body-default green">500 numbers</p>
                     <img
                         className="horizontal-card grade-img" src="/projects/push_swap/test_500.jpg"
-                        style={{padding: '18px 16px'}} alt="image"
+                        style={{padding: '18px 16px'}} loading="lazy" alt="image"
                     />
                 </div>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

@@ -12,7 +12,7 @@ const Card = (
     return (
         <SwiperSlide className="project-card">
             <a href={project.projectLink} className="project-card">
-                <img className="project-photo" src={project.projectPhoto} alt="project photo"/>
+                <img className="project-photo" src={project.projectPhoto} loading="lazy" alt="project photo"/>
                 <div className="content-block">
                     <h2>{project.projectName}</h2>
                     <div className="skills-block">

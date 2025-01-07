@@ -22,7 +22,7 @@ const page404 = () => {
                 </p>
                 <a href="/" className="button-small">
                     <p className="body-default black">Back to Homepage</p>
-                    <img src="/arrows/arrow_right_black24.svg" alt="arrow right"/>
+                    <img src="/arrows/arrow_right_black24.svg" loading="lazy" alt="arrow right"/>
                 </a>
             </div>
         </main>

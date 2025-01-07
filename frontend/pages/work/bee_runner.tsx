@@ -6,8 +6,8 @@ import projects from "@/components/projects";
 const link:string = 'https://github.com/FPyMEHTAPIU/bee_runner'
 
 const Bee_Runner = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {containerWidth, isMobile} = calculateContainerSize();
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
 
     return (
         <main className="main-gap">
@@ -26,6 +26,7 @@ const Bee_Runner = () => {
                 <div className="horizontal-card-container">
                     <img className="horizontal-card horizontal-image"
                          src={'/projects/bee_runner/bee_runner.png'} alt="image"
+                         loading="lazy"
                     />
                 </div>
                 <p className="body-default">
@@ -34,7 +35,7 @@ const Bee_Runner = () => {
             <a href="https://fpymehtapiu.itch.io/bee-runner" className="button-secondary align-start"
                style={{justifyContent: 'center'}} target="_blank">
                 <p className="body-default">Play here!</p>
-                <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>
+                <img src="/arrows/arrow_right_white24.svg" alt="arrow right" loading="lazy"/>
             </a>
             </div>
             {/*CONTENT*/}
@@ -165,14 +166,7 @@ const Bee_Runner = () => {
                     </ul>
                 </div>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

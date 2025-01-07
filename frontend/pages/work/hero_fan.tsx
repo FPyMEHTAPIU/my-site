@@ -6,8 +6,8 @@ import GitHubBlock from "@/components/work/github-block";
 const link:string = 'https://github.com/FPyMEHTAPIU/hero_fan'
 
 const HeroFan = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {containerWidth, isMobile} = calculateContainerSize();
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
 
 
     return (
@@ -28,6 +28,7 @@ const HeroFan = () => {
                     <iframe
                         src="https://player.vimeo.com/video/1030456870?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
                         allow="fullscreen; picture-in-picture; clipboard-write"
+                        loading="lazy"
                         style={{width: '100%', height: '100%', border: 'none'}}
                         title="Hero Fan Demo"></iframe>
                 </div>
@@ -127,14 +128,7 @@ const HeroFan = () => {
                     In the future, a data update logic will be added to periodically refresh the data.
                 </p>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

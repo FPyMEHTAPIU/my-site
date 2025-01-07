@@ -32,6 +32,7 @@ const ScrollButton = () => {
                 <img
                     src="/arrows/arrow_up_white32.svg"
                     alt="arrow up"
+                    loading="lazy"
                     className="arrow"
                 />
             </button>

@@ -6,8 +6,8 @@ import projects from "@/components/projects";
 const link:string = 'https://github.com/FPyMEHTAPIU/Zombie-Strike'
 
 const Zombie_Strike = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {containerWidth, isMobile} = calculateContainerSize();
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
 
     return (
         <main className="main-gap">
@@ -23,7 +23,7 @@ const Zombie_Strike = () => {
             <div className="work-content-block">
                 <div className="horizontal-card-container">
                     <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.png'}
-                         alt="image"
+                         loading="lazy" alt="image"
                     />
                 </div>
             <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary align-start"
@@ -31,7 +31,7 @@ const Zombie_Strike = () => {
                style={{justifyContent: 'center'}}
             >
                 <p className="body-default">Play here!</p>
-                <img src="/arrows/arrow_right_white24.svg" alt="arrow right"/>
+                <img src="/arrows/arrow_right_white24.svg" loading="lazy" alt="arrow right"/>
             </a>
             </div>
             {/*CONTENT*/}
@@ -143,14 +143,7 @@ const Zombie_Strike = () => {
                     </p>
                 </div>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

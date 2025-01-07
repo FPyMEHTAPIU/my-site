@@ -6,8 +6,8 @@ import GitHubBlock from "@/components/work/github-block";
 const link:string = 'https://github.com/Linkshegelianer/react-native-aava'
 
 const SMTH = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {containerWidth, isMobile} = calculateContainerSize();
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
 
     return (
         <main className="main-gap">
@@ -27,18 +27,11 @@ const SMTH = () => {
             <div className="work-content-block last-block">
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
                     <img className="horizontal-card horizontal-image" style={{margin: 0}}
-                         src={'/projects/smth/slides.png'} alt="image"
+                         src={'/projects/smth/slides.png'} loading="lazy" alt="image"
                     />
                 </div>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )

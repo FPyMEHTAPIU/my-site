@@ -6,8 +6,8 @@ import projects from "@/components/projects";
 const link:string = 'https://github.com/FPyMEHTAPIU/libft_updated'
 
 const libft = () => {
-    const {containerWidth, isMobile, isTablet} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock} = GitHubBlock(link);
+    const {containerWidth, isMobile} = calculateContainerSize();
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
 
     return (
         <main className="main-gap">
@@ -59,14 +59,7 @@ const libft = () => {
                     </p></li>
                 </ul>
             </div>
-            {!isMobile && (
-                <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-                   href={link} target="_blank"
-                >
-                    <p className="body-small black">See on GitHub</p>
-                    <img src="/arrows/arrow_right_black16.svg" alt="arrow-right"/>
-                </a>
-            )}
+            {!isMobile && GitHubButton(link)}
             {isMobile ? MobileGithubBlock() : <></>}
         </main>
     )
