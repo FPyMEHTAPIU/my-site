@@ -78,6 +78,7 @@ footer {
     footer {
         gap: 24px;
         margin: auto 135px;
+        min-width: 1170px;
     }
 
     .footer-container {
@@ -105,5 +106,6 @@ footer {
     footer {
         gap: 40px;
         margin: auto 140px;
+        min-width: 1570px;
     }
 }

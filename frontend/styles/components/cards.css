@@ -327,8 +327,12 @@
     }
 
     .swiper-slide-prev, .swiper-slide-next,
-    .swiper-slide-prev .project-card, .swiper-slide-next .project-card{
+    .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
         height: 546px !important;
+    }
+
+    .swiper-slide-prev .project-card img, .swiper-slide-next .project-card img {
+        height: 320px !important;
     }
 
     .content-block {
@@ -421,15 +425,10 @@
     }
 
     .work-card-container {
-        width: 1640px;
-        grid-template-columns: repeat(auto-fill, minmax(526px, 3fr));
+        width: 1570px;
+        grid-template-columns: repeat(auto-fill, minmax(370px, 4fr));
         grid-gap: 30px;
         margin: auto 140px 104px;
-    }
-
-    .work-card {
-        height: 846px;
-        width: 528px;
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
@@ -438,9 +437,5 @@
 
     .horizontal-card img {
         margin: 0 140px;
-    }
-
-    .work-photo {
-        height: 480px;
     }
 }

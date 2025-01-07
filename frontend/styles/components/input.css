@@ -207,6 +207,10 @@ textarea:focus, textarea:hover {
         color: var(--Medium);
     }
 
+    .checkbox {
+        padding: 3px 8px 11px 0;
+    }
+
     .checkbox input {
         width: 24px;
         height: 24px;
@@ -227,5 +231,11 @@ textarea:focus, textarea:hover {
 
     .checkbox input:checked::after {
         left: 55%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .checkbox input:checked::after {
+        left: 60%;
     }
 }

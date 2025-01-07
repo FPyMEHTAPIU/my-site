@@ -5,7 +5,7 @@ import calculateContainerSize from "@/components/calculateContainerSize";
 import InputForm from "@/components/input";
 import useOverlay from "@/components/overlay";
 
-const skills:string[] = ['JavaScript', 'TypeScript', 'React.js',
+const skills:string[] = ['TypeScript', 'JavaScript', 'React.js',
     'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
     'C', 'C++', 'C#'];
 

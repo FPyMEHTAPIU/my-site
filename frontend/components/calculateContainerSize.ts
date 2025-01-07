@@ -19,13 +19,7 @@ const calculateContainerSize = () => {
             setIsMobile(width < 720);
             setIsTablet(width >= 720 && width < 1440);
             setIsDesktop1440(width >= 1440 && width < 1920);
-            document.documentElement.style.setProperty('--scrollbar-width', `${getScrollbarWidth()}px`)
         };
-
-        const getScrollbarWidth = () =>  {
-            const documentWidth = document.documentElement.clientWidth
-            return Math.abs(window.innerWidth - documentWidth)
-        }
 
         updateDimensions();
         window.addEventListener('resize', updateDimensions);

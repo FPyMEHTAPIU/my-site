@@ -14,8 +14,29 @@
 
     --Gradient: linear-gradient(90deg, rgba(35, 39, 35, 0.80) 0%, rgba(27, 52, 28, 0.80) 100%);
     --Scrollbar: #224925;
-    --scrollbar-width: normal;
+    --scrollbar-width: 8px;
 
     --Input-stroke-green: rgba(49, 217, 60, 0.28);
     --Input-stroke-red: rgba(184, 55, 49, 0.28);
+}
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--Scrollbar);
+    border-radius: 100px;
+    height: 33px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Primary);
+    border-radius: 100px;
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --scrollbar-width: 12px;
+    }
 }
