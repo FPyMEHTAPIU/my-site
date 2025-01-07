@@ -310,7 +310,6 @@
         width: calc(100vw - var(--scrollbar-width) - 266px);
     }
 
-    /* TODO: fix video container */
     .horizontal-card.video-container {
         min-height: 275px;
     }
@@ -446,10 +445,23 @@
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
-        width: calc(100vw - var(--scrollbar-width) - 558px);
+        width: calc(100vw - var(--scrollbar-width) - 890px);
+        margin: 0 445px;
     }
 
     .horizontal-card img {
-        margin: 0 140px;
+        width: calc(100vw - var(--scrollbar-width) - 950px);
+        margin: 0 auto;
+        aspect-ratio: 9.7 / 6.5;
+    }
+
+    .swiper.vertical-card-container, .vertical-card-container {
+        width: calc(100vw - var(--scrollbar-width) - 890px);
+        margin: 0 445px;
+    }
+
+    .horizontal-card-container.video-container {
+        margin: 0 475px;
+        width: calc(100vw - var(--scrollbar-width) - 950px);
     }
 }

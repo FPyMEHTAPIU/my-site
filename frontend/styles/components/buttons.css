@@ -226,3 +226,9 @@
         padding: 8px 16px;
     }
 }
+
+@media (min-width: 1920px) {
+    .last-button {
+        margin: 0 475px 84px;
+    }
+}

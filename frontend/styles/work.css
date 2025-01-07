@@ -127,10 +127,6 @@
 }
 
 @media (min-width: 1920px) {
-    .main-gap {
-        gap: 84px;
-    }
-
     .github-block {
         margin: 239px 140px 0;
     }
@@ -142,9 +138,9 @@
 
     .work-content-block {
         gap: 40px;
-        margin: 0 279px;
-        padding: 0 140px;
-        width: calc(100vw - var(--scrollbar-width) - 558px);
+        margin: 0 445px;
+        padding: 0 30px;
+        width: calc(100vw - var(--scrollbar-width) - 890px);
     }
 
     .work-sub-block {

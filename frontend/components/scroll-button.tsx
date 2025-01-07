@@ -3,7 +3,7 @@ import calculateContainerSize from "@/components/calculateContainerSize";
 
 const ScrollButton = () => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
-    const {isDesktop1440} = calculateContainerSize();
+    const {isMobile, isTablet} = calculateContainerSize();
 
     const ScrollToTop = () =>
     {
@@ -25,7 +25,7 @@ const ScrollButton = () => {
     }, [])
 
     return (
-        isDesktop1440 ?
+        !isMobile && !isTablet ?
             <button className="arrow-round scroll-button" onClick={(ScrollToTop)}
                 style={{visibility: isVisible ? "visible" : "hidden"}}
             >
