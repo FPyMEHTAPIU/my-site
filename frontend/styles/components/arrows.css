@@ -131,7 +131,7 @@
 
     .gradient-vertical-block {
         width: 245px;
-        height: 784px;
+        height: 494px;
     }
 
     .gradient-vertical-block.right {
@@ -164,12 +164,16 @@
 }
 
 @media (min-width: 1920px) {
+    .gradient-vertical-block {
+        height: 618px;
+    }
+
     .gradient-vertical-block.right {
-        right: 415px !important;
+        right: 445px !important;
     }
 
     .gradient-vertical-block.left {
-        left: 415px !important;
+        left: 445px !important;
     }
 
     .scroll-button {
