@@ -2,6 +2,7 @@ import {Swiper} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import AddArrows from "@/components/swiper-arrows";
 import {useState} from "react";
+import {ProjectCardData} from "@/components/projects";
 
 const SwiperContainer = () => {
     const setPaginationIndex = (
@@ -14,7 +15,6 @@ const SwiperContainer = () => {
             return ;
         setActiveIndex(swiper.activeIndex);
         setIsFirstSlide(swiper.activeIndex === 0);
-
         const bullets = swiper.pagination.bullets;
         const totalBullets = bullets.length;
         const activeBulletIndex = Array.from(bullets).findIndex((bullet: any) =>
@@ -40,7 +40,7 @@ const SwiperContainer = () => {
         isTablet: boolean,
         isDesktop1440: boolean,
         Card:any,
-        projects:any,
+        projects:ProjectCardData[]|string[],
         setActiveIndex:any,
         swiperRef:any,
         paginationId:string
@@ -55,8 +55,8 @@ const SwiperContainer = () => {
                     slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
                         (isTablet ? 15 : (isDesktop1440 ? 135 : 140)) : 0
                     }
-                    centeredSlides={isMobile}
-                    centerInsufficientSlides={true}
+                    centeredSlides={isMobile && !paginationId.includes('vertical')}
+                    centerInsufficientSlides={!paginationId.includes('vertical')}
                     spaceBetween={isMobile ? 8 : (isTablet ? 20 : 30)}
                     onPaginationUpdate={(swiper) => setPaginationIndex(
                         swiper, setActiveIndex, setIsFirstSlide, setIsLastSlide
@@ -75,10 +75,13 @@ const SwiperContainer = () => {
                     className="cards-control-block"
                     onSwiper={(swiper) => {
                         swiperRef.current = swiper
+                        setTimeout(() => {
+                            swiper.update();
+                        }, 100);
                     }}
                     parallax={true}
                 >
-                    {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide, false, "")}
+                    {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide, false, '')}
                     {projects.map((project: any) => (
                         Card(project)
                     ))}
@@ -112,7 +115,7 @@ const SwiperContainer = () => {
                 navigation={{
                     prevEl: '.arrow-round.left.no-margin',
                     nextEl: '.arrow-round.right.no-margin'
-            }}
+                }}
                 scrollbar={{draggable: true}}
                 className="horizontal-card-container"
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -142,6 +145,7 @@ const SwiperContainer = () => {
 
         return (
             <div className="vertical-control-block">
+                <div className={"pagination-block " + arrowClass}></div>
                 <Swiper
                     slidesPerView={'auto'}
                     spaceBetween={isTablet ? 20 : 30}
@@ -160,16 +164,18 @@ const SwiperContainer = () => {
                     }}
                     scrollbar={{draggable: true}}
                     className="vertical-card-container"
-                    onSwiper={(swiper) => {swiperRef.current = swiper}}
+                    onSwiper={(swiper) => {
+                        swiperRef.current = swiper
+                    }}
                     parallax={true}
                 >
                     {projects.map((project: any) => (
                         Card(project)
                     ))}
                 </Swiper>
-                {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, isImgGradient, arrowClass)}
+                {arrowClass !== 'remove' &&
+                    AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, isImgGradient, arrowClass)}
             </div>
-
         )
     }
 

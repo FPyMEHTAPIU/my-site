@@ -123,9 +123,9 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap1, null, swiperRef, 'first')
+                    imagesPushSwap1, null, swiperRef, 'vertical-first')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap1, null, swiperRef, false, 'first')
+                    imagesPushSwap1, null, swiperRef, false, 'remove')
             }
             <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
@@ -139,9 +139,9 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap2, null, swiperRef, 'second')
+                    imagesPushSwap2, null, swiperRef, 'vertical-second')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap2, null, swiperRef, true, 'second')}
+                    imagesPushSwap2, null, swiperRef, true, 'arrow-second')}
             <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <p className="body-default">
                     Finally, I push numbers from stack 'b' to stack 'a' to their suitable places.
@@ -154,9 +154,9 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap3, null, swiperRef, 'third')
+                    imagesPushSwap3, null, swiperRef, 'vertical-third')
                 : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap3, null, swiperRef, true, 'third')}
+                    imagesPushSwap3, null, swiperRef, true, 'arrow-third')}
             {/*BONUS PART*/}
             <div className="work-content-block" style={{marginTop: isMobile ? -36 : 'revert-layer'}}>
                 <h2>bonus part</h2>
