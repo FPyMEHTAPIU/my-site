@@ -26,7 +26,7 @@
         z-index: 5;
         pointer-events: none;
         align-content: center;
-        width: calc(335px + 16px);
+        width: calc(335px + 15px);
     }
 
     .gradient-block.right {
@@ -129,6 +129,10 @@
         padding: 7px 0;
     }
 
+    .gradient-block {
+        width: calc(370px + 135px);
+    }
+
     .gradient-vertical-block {
         width: 245px;
         height: 494px;
@@ -164,6 +168,10 @@
 }
 
 @media (min-width: 1920px) {
+    .gradient-block {
+        width: calc(370px + 175px);
+    }
+
     .gradient-vertical-block {
         height: 618px;
     }

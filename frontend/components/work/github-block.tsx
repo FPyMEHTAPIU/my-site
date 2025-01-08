@@ -45,7 +45,7 @@ const GitHubBlock = (link:string) => {
             <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
                href={link} target="_blank"
             >
-                <p className="body-small black">See on GitHub</p>
+                <p className={isTablet ? "body-small black" : "body-default black"}>See on GitHub</p>
                 <img src="/arrows/arrow_right_black16.svg" loading="lazy" alt="arrow-right"/>
             </a>
         )

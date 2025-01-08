@@ -3,7 +3,7 @@ import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
 
-const link:string = 'https://github.com/FPyMEHTAPIU/hero_fan'
+const link:string = 'https://github.com/FPyMEHTAPIU/Hero-Fan'
 
 const HeroFan = () => {
     const {containerWidth, isMobile} = calculateContainerSize();

@@ -94,6 +94,10 @@
     background: var(--Secondary);
 }
 
+.button-secondary img {
+    scale: 0.67;
+}
+
 .button-primary:hover, .button-small:hover, .button-secondary:hover {
     cursor: pointer;
 }
@@ -206,6 +210,7 @@
         display: inline-flex;
         padding: 24px 40px;
         border-radius: 16px;
+        width: 370px;
     }
 
     .button-small {

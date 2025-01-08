@@ -46,10 +46,10 @@ textarea:focus, textarea:hover {
 }
 
 .error-message-block {
-    margin-top: -16px;
+    margin-top: -14px;
     display: flex;
     height: 24px;
-    align-items: flex-end;
+    align-items: center;
     gap: 8px;
 }
 
@@ -231,6 +231,7 @@ textarea:focus, textarea:hover {
 
     .checkbox input:checked::after {
         left: 55%;
+        top: 52%;
     }
 }
 

@@ -1,8 +1,10 @@
 import {useRouter} from "next/router";
 import React, {useEffect} from "react";
+import calculateContainerSize from "@/components/calculateContainerSize";
 
 const page404 = () => {
     const router = useRouter();
+    const {isMobile, isTablet} = calculateContainerSize();
 
     useEffect(() => {
         router.replace("/404");
@@ -16,9 +18,13 @@ const page404 = () => {
                 {'4{}4'}
             </p>
             <div className="oops-block" style={{textAlign: "center"}}>
-                <h2>Oops! Page Not Found</h2>
-                <p className="body-default">
-                    Something went wrong. Please check the URL or go back to the homepage.
+                {isMobile || isTablet ?
+                    <h1 style={{maxWidth: isMobile ? 262 : 'unset'}}>Oops! Page Not Found</h1>
+                    :
+                    <h2>Oops! Page Not Found</h2>
+                }
+                <p className="body-default" style={{maxWidth: isMobile ? 299 : (isTablet ? 421 : 528)}}>
+                    Something went wrong. Please&nbsp;check the URL or go back to the homepage.
                 </p>
                 <a href="/" className="button-small">
                     <p className="body-default black">Back to Homepage</p>

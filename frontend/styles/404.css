@@ -1,20 +1,21 @@
 .oops-block {
-    min-width: 345px;
     display: flex;
     padding: 20px;
     margin: -45px 15px 20px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: center;
     gap: 18px;
     border-radius: 16px;
     border: 1px solid var(--Medium);
     background: var(--Gradient);
     backdrop-filter: blur(10px);
+    max-width: 485px;
 }
 
 .background-ellipse-green.page404 {
-    top: 90px;
+    top: 40px;
     left: unset;
     right: 60px;
     width: 166px;
@@ -23,7 +24,8 @@
 }
 
 .background-ellipse-blue.page404 {
-    top: 625px;
+    top: unset;
+    bottom: -400px;
     left: 20px;
     width: 195px;
     height: 775px;
@@ -32,7 +34,11 @@
 
 @media (min-width: 720px) {
     .oops-block {
-        margin: -185px 150px 75px;
+        margin: 355px 64px 75px;
+        position: absolute;
+        display: flex;
+        align-self: center;
+        max-width: 660px;
     }
 
     .background-ellipse-green.page404 {
@@ -44,7 +50,7 @@
     }
 
     .background-ellipse-blue.page404 {
-        top: 325px;
+        bottom: -80px;
         left: 40px;
         width: 375px;
         height: 600px;
@@ -54,15 +60,48 @@
 
 @media (min-width: 1440px) {
     .oops-block {
-        padding: 40px;
-        margin: -80px 310px auto;
-        gap: 36px;
+        padding: 40px 80px;
+        gap: 24px;
         border-radius: 30px;
+        margin: 450px 376px 75px;
+        max-width: unset;
+    }
+
+    .background-ellipse-green.page404 {
+        top: 88px;
+        right: 230px;
+        width: 640px;
+        height: 650px;
+        border-radius: 650px;
+    }
+
+    .background-ellipse-blue.page404 {
+        bottom: -185px;
+        left: 75px;
+        width: 750px;
+        height: 765px;
+        border-radius: 765px;
     }
 }
 
 @media (min-width: 1920px) {
     .oops-block {
-        margin: -250px 550px auto;
+        margin: 575px 627px 75px;
+    }
+
+    .background-ellipse-green.page404 {
+        top: 120px;
+        right: 305px;
+        width: 850px;
+        height: 890px;
+        border-radius: 890px;
+    }
+
+    .background-ellipse-blue.page404 {
+        bottom: -250px;
+        left: 100px;
+        width: 1000px;
+        height: 1032px;
+        border-radius: 1032px;
     }
 }

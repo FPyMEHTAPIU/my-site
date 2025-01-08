@@ -182,6 +182,11 @@
         align-items: center;
         gap: 20px;
         margin: 137px 15px auto;
+        justify-content: space-between;
+    }
+
+    .content-container {
+        max-width: 800px;
     }
 
     .greeting {
@@ -273,7 +278,8 @@
 
     .content-photo {
         margin: 172px 135px auto;
-        gap: 130px;
+        justify-content: space-between;
+        gap: unset;
     }
 
     .content-container {
@@ -282,6 +288,7 @@
         align-items: flex-start;
         gap: 24px;
         margin: 0;
+        max-width: 800px;
     }
 
     .greeting {
