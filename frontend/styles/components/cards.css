@@ -106,8 +106,8 @@
 
 .swiper-slide.vertical-card, .vertical-card {
     display: flex;
-    max-height: 400px;
-    max-width: 300px;
+    max-width: 345px;
+    max-height: 457px;
     width: calc(100vw - var(--scrollbar-width) - 30px);
     aspect-ratio: 3.45 / 4.58;
     flex-shrink: 0;
@@ -261,10 +261,14 @@
     }
 
     .swiper-slide.vertical-card, .vertical-card {
-        width: 217px;
+        width: 213px;
         height: 460px;
         max-width: unset;
         max-height: unset;
+    }
+
+    .swiper-slide.vertical-card:last-child, .vertical-card:last-child {
+        margin-right: unset;
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
@@ -343,7 +347,7 @@
         width: 1170px;
         grid-template-columns: repeat(auto-fill, minmax(370px, 3fr));
         grid-gap: 30px;
-        margin: 0 135px 104px;
+        margin: 0 135px 84px;
     }
 
     .project-photo {
