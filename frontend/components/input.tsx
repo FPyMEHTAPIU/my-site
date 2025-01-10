@@ -5,7 +5,6 @@ const errorMessage:string = 'This field is required!';
 
 const InputForm = (
     isMobile: boolean,
-    isTablet: boolean,
     isDesktop1440:boolean,
     setIsOverlay: (isOverlay: boolean) => void,
     hideElements: boolean

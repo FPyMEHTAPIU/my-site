@@ -2,17 +2,17 @@ import {useState} from "react";
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 
-const WorkCard = (project:ProjectCardData) => {
+const WorkCard = (project:ProjectCardData, index:number) => {
     const FillSkills = () => {
-        return project.projectSkills.map((skill:string) => (
-            <div className="skill project-skill">
+        return project.projectSkills.map((skill:string, index:number) => (
+            <div className="skill project-skill" key={index}>
                 <p className="body-small" style={{fontSize: 16}}>{skill}</p>
             </div>
         ))
     }
 
     return (
-        <a href={project.projectLink} className="project-card work-card">
+        <a key={index} href={project.projectLink} className="project-card work-card">
             <img className="project-photo work-photo" src={project.projectPhoto}
                  loading="lazy" alt="project photo"/>
             <div className="content-block">
@@ -33,11 +33,11 @@ const WorkCards = (
     isGame:boolean
     ) => {
     return (
-        projects.map((project: ProjectCardData) => (
-            isAll ? WorkCard(project)
-                : isWeb ? (project.projectType === 'Web' ? WorkCard(project) : <></>)
-                    : isSoftware ? (project.projectType === 'Software' ? WorkCard(project) : <></>)
-                        : isGame ? (project.projectType === 'Game' ? WorkCard(project) : <></>)
+        projects.map((project: ProjectCardData, index:number) => (
+            isAll ? WorkCard(project, index)
+                : isWeb ? (project.projectType === 'Web' ? WorkCard(project, index) : <></>)
+                    : isSoftware ? (project.projectType === 'Software' ? WorkCard(project, index) : <></>)
+                        : isGame ? (project.projectType === 'Game' ? WorkCard(project, index) : <></>)
                             : <></>
         ))
     )
@@ -95,6 +95,7 @@ const Work = () => {
         const Filter = (filter:string, index:number) => {
             return (
                 <button
+                    key={index}
                     className={"text-button back-none"}
                     onClick={filter === 'All' ? clickAll
                         : filter === 'Web' ? clickWeb

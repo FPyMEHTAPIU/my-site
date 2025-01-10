@@ -12,7 +12,7 @@ const skills:string[] = ['TypeScript', 'JavaScript', 'React.js',
 const Index = () => {
     const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const [isOverlay, setIsOverlay] = useState<boolean>(false);
-    const {InputBlock} = InputForm(isMobile, isTablet, isDesktop1440, setIsOverlay, true);
+    const {InputBlock} = InputForm(isMobile, isDesktop1440, setIsOverlay, true);
     const {SubmitOverlay} = useOverlay(setIsOverlay, isDesktop1440, true);
 
     const GreetingBlock = () => {

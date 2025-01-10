@@ -6,7 +6,7 @@ import useOverlay from "@/components/overlay";
 const Contact = () => {
     const {isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const [isOverlay, setIsOverlay] = useState<boolean>(false);
-    const {InputBlock} = InputForm(isMobile, isTablet, isDesktop1440, setIsOverlay, false);
+    const {InputBlock} = InputForm(isMobile, isDesktop1440, setIsOverlay, false);
     const {SubmitOverlay} = useOverlay(setIsOverlay, isDesktop1440, false);
 
     return (

@@ -7,9 +7,9 @@ import {ProjectCardData} from "@/components/projects";
 const SwiperContainer = () => {
     const setPaginationIndex = (
         swiper:any,
-        setActiveIndex:any,
-        setIsFirstSlide:any,
-        setIsLastSlide:any
+        setActiveIndex: ((activeIndex:number) => void) | null,
+        setIsFirstSlide: (isFirstSlide:boolean) => void,
+        setIsLastSlide: (isLastSlide:boolean) => void
     ) => {
         if (setActiveIndex === null)
             return ;
@@ -25,9 +25,9 @@ const SwiperContainer = () => {
 
     const setSlideIndex = (
         swiper:any,
-        setActiveIndex:any,
-        setIsFirstSlide:any,
-        setIsLastSlide:any
+        setActiveIndex: ((activeIndex:number) => void) | null,
+        setIsFirstSlide: (isFirstSlide:boolean) => void,
+        setIsLastSlide: (isLastSlide:boolean) => void
     ) => {
         if (setActiveIndex !== null)
             setActiveIndex(swiper.activeIndex);
@@ -41,7 +41,7 @@ const SwiperContainer = () => {
         isDesktop1440: boolean,
         Card:any,
         projects:ProjectCardData[]|string[],
-        setActiveIndex:any,
+        setActiveIndex: ((activeIndex:number) => void) | null,
         swiperRef:any,
         paginationId:string
     ) => {
@@ -96,7 +96,7 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
-        setActiveIndex:any,
+        setActiveIndex: ((activeIndex:number) => void) | null,
         swiperRef:any
     ) =>
     {
@@ -134,7 +134,7 @@ const SwiperContainer = () => {
         isTablet: boolean,
         Card:any,
         projects:any,
-        setActiveIndex:any,
+        setActiveIndex: ((activeIndex:number) => void) | null,
         swiperRef:any,
         isImgGradient:boolean,
         arrowClass: string

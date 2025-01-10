@@ -1,7 +1,7 @@
 const FillImageButtons = (
     projectSkills:string[],
     activeIndex:number,
-    setActiveIndex:any,
+    setActiveIndex: (newIndex:number) => void,
     swiperRef:any
 ) => {
     const moveToSlide = (index:number) => {
