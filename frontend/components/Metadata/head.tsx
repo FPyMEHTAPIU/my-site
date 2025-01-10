@@ -9,7 +9,7 @@ const HeadData = () => {
             <meta name="keywords" content="Nick Saveliev, portfolio, Full-Stack,
             Full-Stack Developer, developer, programmer, software engineer, front-end,
             front-end developer"/>
-            <link rel="icon" href="/HF.svg"/>
+            <link rel="icon" href="/favicon.svg"/>
         </Head>
     )
 }
