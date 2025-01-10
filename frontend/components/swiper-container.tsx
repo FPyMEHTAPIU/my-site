@@ -53,7 +53,7 @@ const SwiperContainer = () => {
                 <Swiper
                     slidesPerView="auto"
                     slidesOffsetBefore={!isMobile && typeof window !== 'undefined' ?
-                        (isTablet ? 15 : (isDesktop1440 ? 135 : 140)) : 0
+                        (isTablet ? 15 : (isDesktop1440 ? 135 : 175)) : 0
                     }
                     centeredSlides={isMobile && !paginationId.includes('vertical')}
                     centerInsufficientSlides={!paginationId.includes('vertical')}

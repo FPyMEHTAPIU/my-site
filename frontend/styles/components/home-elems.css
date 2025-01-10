@@ -302,7 +302,7 @@
     }
 
     .skills-block-home {
-        max-width: 1920px;
+        max-width: 1100px;
         margin: auto 135px 84px;
         gap: 24px;
     }
@@ -373,7 +373,7 @@
     }
 
     .content-photo {
-        margin: 195px 140px auto;
+        margin: 213px 175px auto;
         gap: 100px;
         justify-content: space-between;
     }
@@ -384,16 +384,15 @@
     }
 
     .skills-block-home {
-        width: 1440px;
-        margin: auto 140px 104px;
+        margin: auto 175px 84px;
     }
 
     .projects-link {
-        margin: auto 140px 40px;
+        margin: auto 175px 40px;
     }
 
     .input-block {
-        margin: auto 140px 104px;
+        margin: 213px 175px 84px;
     }
 
     .input-margin-top {

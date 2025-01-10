@@ -14,8 +14,6 @@
 .overlay-block {
     margin: auto 15px;
     display: flex;
-    min-width: 345px;
-    height: 450px;
     align-self: center;
     padding: 40px;
     flex-direction: column;
@@ -36,15 +34,13 @@
     align-self: stretch;
 }
 
-@media (min-width: 720px) {
-    .overlay-block {
-        height: 365px;
-    }
+.overlay-content p {
+    max-width: 481px;
 }
 
 @media (min-width: 1440px) {
     .overlay-block {
-        height: 356px;
-        margin: auto 75px;
+        margin: auto 135px;
+        padding: 40px 130px;
     }
 }

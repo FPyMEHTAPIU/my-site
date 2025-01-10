@@ -26,7 +26,7 @@ const ScrollButton = () => {
 
     return (
         !isMobile && !isTablet ?
-            <button className="arrow-round scroll-button" onClick={(ScrollToTop)}
+            <button className="arrow-round scroll-button" id="scroll-button" onClick={(ScrollToTop)}
                 style={{visibility: isVisible ? "visible" : "hidden"}}
             >
                 <img

@@ -128,16 +128,15 @@
 
 @media (min-width: 1920px) {
     .github-block {
-        margin: 239px 140px 0;
+        margin: 213px 175px 0;
     }
 
     .projects-filter {
-        margin: 196px auto 40px;
+        margin: 213px auto 40px;
         width: 1570px;
     }
 
     .work-content-block {
-        gap: 40px;
         margin: 0 445px;
         padding: 0 30px;
         width: calc(100vw - var(--scrollbar-width) - 890px);

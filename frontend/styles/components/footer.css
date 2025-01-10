@@ -129,7 +129,7 @@ footer {
 @media (min-width: 1920px) {
     footer {
         gap: 40px;
-        margin: auto 140px;
+        margin: auto 175px;
         min-width: 1570px;
     }
 }

@@ -10,7 +10,7 @@ const Contact = () => {
     const {SubmitOverlay} = useOverlay(setIsOverlay, isDesktop1440, false);
 
     return (
-        <div style={{marginTop: isMobile ? "revert-layer" : isTablet ? 137 : 169,
+        <div style={{marginTop: isMobile ? "revert-layer" : isTablet ? 137 : isDesktop1440 ? 169 : 213,
             marginBottom: isDesktop1440 ? -44 : 0
         }}>
             {InputBlock()}

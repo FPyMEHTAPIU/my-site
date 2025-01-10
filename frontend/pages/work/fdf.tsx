@@ -168,7 +168,9 @@ const FdF = () => {
                     </div>
                 </div>
             </div>
-            <div className="horizontal-card-container" style={{margin: '-8px auto 0'}}>
+            <div className="horizontal-card-container"
+                 style={{margin: isMobile || isTablet ? '-8px auto 0' : '-16px auto 0'}}
+            >
                 {imageSlideHorizontal('/projects/fdf/moving.gif', 1)}
             </div>
             <div className="work-content-block last-block">
