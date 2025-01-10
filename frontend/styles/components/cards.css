@@ -268,7 +268,7 @@
     }
 
     .swiper-slide.vertical-card:last-child, .vertical-card:last-child {
-        margin-right: unset;
+        margin-right: unset !important;
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {

@@ -134,7 +134,7 @@ const InputForm = (
                     {InputContainer()}
                 </div>
                 :
-                <div className="input-block">
+                <div className="input-block input-margin-top">
                     <div className="letter-block">
                         <div className="get-in-touch">
                             <h1>Get In Touch</h1>

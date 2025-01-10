@@ -7,10 +7,11 @@ import {useRef, useState} from "react";
 import calculateContainerSize from "@/components/calculateContainerSize";
 
 const Card = (
-    project: ProjectCardData
+    project: ProjectCardData,
+    index: number
     ) => {
     return (
-        <SwiperSlide className="project-card">
+        <SwiperSlide className="project-card" key={index}>
             <a href={project.projectLink} className="project-card">
                 <img className="project-photo" src={project.projectPhoto} loading="lazy" alt="project photo"/>
                 <div className="content-block">

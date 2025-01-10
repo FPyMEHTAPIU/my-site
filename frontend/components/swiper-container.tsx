@@ -82,8 +82,8 @@ const SwiperContainer = () => {
                     parallax={true}
                 >
                     {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide, false, '')}
-                    {projects.map((project: any) => (
-                        Card(project)
+                    {projects.map((project: any, index:number) => (
+                        Card(project, index)
                     ))}
                 </Swiper>
                 <div className={"pagination-block " + paginationId}></div>
@@ -122,8 +122,8 @@ const SwiperContainer = () => {
                 parallax={true}
             >
                 {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, false, "")}
-                {projects.map((project: any) => (
-                    Card(project)
+                {projects.map((project: any, index:number) => (
+                    Card(project, index)
                 ))}
             </Swiper>
         )
@@ -169,8 +169,8 @@ const SwiperContainer = () => {
                     }}
                     parallax={true}
                 >
-                    {projects.map((project: any) => (
-                        Card(project)
+                    {projects.map((project: any, index: number) => (
+                        Card(project, index)
                     ))}
                 </Swiper>
                 {arrowClass !== 'remove' &&

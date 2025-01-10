@@ -169,7 +169,7 @@ const FdF = () => {
                 </div>
             </div>
             <div className="horizontal-card-container" style={{margin: '-8px auto 0'}}>
-                {imageSlideHorizontal('/projects/fdf/moving.gif')}
+                {imageSlideHorizontal('/projects/fdf/moving.gif', 1)}
             </div>
             <div className="work-content-block last-block">
                 <div className="work-sub-block">

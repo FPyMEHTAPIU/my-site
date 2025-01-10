@@ -55,3 +55,9 @@
         height: 24px;
     }
 }
+
+@media (min-width: 1920px) {
+    .pagination-block {
+        margin-bottom: 0;
+    }
+}

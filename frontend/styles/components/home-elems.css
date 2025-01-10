@@ -395,4 +395,8 @@
     .input-block {
         margin: auto 140px 104px;
     }
+
+    .input-margin-top {
+        margin-top: 84px;
+    }
 }
