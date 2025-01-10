@@ -16,21 +16,21 @@ const Footer = () => {
     const SocialLinks = () => {
         return (
             <div className="social-block">
-                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank">
+                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank" id="linkedin-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
                         loading="lazy"
                         alt="linkedin"
                     />
                 </a>
-                <a href="mailto:kolya59264@gmail.com" target="_blank">
+                <a href="mailto:kolya59264@gmail.com" target="_blank" id="gmail-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
                         loading="lazy"
                         alt="gmail"
                     />
                 </a>
-                <a href="https://github.com/FPyMEHTAPIU" target="_blank">
+                <a href="https://github.com/FPyMEHTAPIU" target="_blank" id="github-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
                         loading="lazy"
@@ -61,7 +61,7 @@ const Footer = () => {
                                 <p className="body-default">Contact</p>
                             </a>
                         </div>
-                        <a href="/" className="text-button">
+                        <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
                             <img className="download-icon" src="/icons/download16.svg" alt="download"/>
                         </a>
@@ -77,7 +77,7 @@ const Footer = () => {
                         <a href="/contact" className="text-button">
                             <p className="body-default">Contact</p>
                         </a>
-                        <a href="/" className="text-button">
+                        <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
                             <img
                                 className="download-icon"
