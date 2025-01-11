@@ -103,7 +103,7 @@ h2 {
 
 @media (min-width: 720px) {
     .not-found {
-        margin: 90px auto 565px;
+        margin: 0 auto 565px;
         font-size: 300px;
     }
 }

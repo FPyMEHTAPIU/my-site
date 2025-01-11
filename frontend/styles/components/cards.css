@@ -26,6 +26,14 @@
     transition: height 0.3s ease, transform 0.3s ease;
 }
 
+.swiper-slide.project-card:hover, .project-card:hover, .project-card a:hover {
+    background: var(--Gradient);
+}
+
+.swiper-slide.project-card:active, .project-card:active, .project-card a:active {
+    filter: brightness(0.9);
+}
+
 .swiper-slide-prev, .swiper-slide-next,
 .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
     height: 360px !important;
@@ -392,7 +400,7 @@
 
     .swiper.horizontal-card-container, .horizontal-card-container {
         margin: 0 305px;
-        width: calc(100vw - var(--scrollbar-width) - 610px);
+        width: calc(100vw - var(--scrollbar-width) - 670px);
         align-self: stretch;
     }
 
@@ -447,7 +455,7 @@
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
-        width: calc(100vw - var(--scrollbar-width) - 890px);
+        width: calc(100vw - var(--scrollbar-width) - 950px);
         margin: 0 445px;
     }
 

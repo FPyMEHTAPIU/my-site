@@ -43,4 +43,8 @@
         margin: auto 135px;
         padding: 40px 130px;
     }
+
+    .overlay-content p {
+        max-width: 600px;
+    }
 }
