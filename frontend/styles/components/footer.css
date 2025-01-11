@@ -44,22 +44,6 @@ footer {
     gap: 40px;
 }
 
-.text-button:hover .download-icon {
-    content: url("/icons/download16_green.svg");
-}
-
-#linkedin-icon:hover img {
-    content: url("/icons/linkedin24_green.svg");
-}
-
-#gmail-icon:hover img {
-    content: url("/icons/gmail24_green.svg");
-}
-
-#github-icon:hover img {
-    content: url("/icons/github24_green.svg");
-}
-
 @media (min-width: 720px) {
     .footer-container {
         padding: 40px;
