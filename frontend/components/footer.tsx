@@ -19,21 +19,18 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank" rel="noreferrer" id="linkedin-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
-                        loading="lazy"
                         alt="linkedin"
                     />
                 </a>
                 <a href="mailto:kolya59264@gmail.com" target="_blank" rel="noreferrer" id="gmail-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
-                        loading="lazy"
                         alt="gmail"
                     />
                 </a>
                 <a href="https://github.com/FPyMEHTAPIU" target="_blank" rel="noreferrer" id="github-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
-                        loading="lazy"
                         alt="github"
                     />
                 </a>
@@ -82,7 +79,6 @@ const Footer = () => {
                             <img
                                 className="download-icon"
                                 src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}
-                                loading="lazy"
                                 alt="download"
                             />
                         </a>
@@ -97,8 +93,7 @@ const Footer = () => {
                 <a
                     href="https://www.linkedin.com/in/naumovadesign/"
                     className="body-small"
-                    style={{textDecoration: 'underline'
-                }}
+                    style={{textDecoration: 'underline'}}
                     target="_blank" rel="noreferrer"
                 >
                     Iryna Naumova
