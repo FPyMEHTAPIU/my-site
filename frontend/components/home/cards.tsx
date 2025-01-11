@@ -1,4 +1,4 @@
-import { SwiperSlide } from 'swiper/react';
+import {SwiperRef, SwiperSlide} from 'swiper/react';
 import {ProjectCardData} from "@/components/projects";
 import projects from "@/components/projects";
 import FillCardSkills from "@/components/card-skills";
@@ -28,11 +28,11 @@ const Card = (
 const Cards = () => {
     const {SwiperDefault} = SwiperContainer();
     const {isMobile, isTablet, isDesktop1440} = calculateContainerSize();
-    const swiperRefMain = useRef(null);
+    const swiperRefMain = useRef<SwiperRef>(null);
     const [, setActiveIndex] = useState<number>(0);
 
     return (
-        SwiperDefault(isMobile, isTablet, isDesktop1440, Card, projects, setActiveIndex, swiperRefMain, 'main')
+        SwiperDefault(isMobile, isTablet, isDesktop1440, Card, null, projects, setActiveIndex, swiperRefMain, 'main')
     )
 }
 

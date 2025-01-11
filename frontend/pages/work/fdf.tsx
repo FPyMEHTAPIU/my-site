@@ -127,9 +127,9 @@ const FdF = () => {
                     {FillImageButtons(buttonsZoomRotate, activeIndexZoom, setActiveIndexZoom, swipeRefZoom)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideHorizontal,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, null, imageSlideHorizontal,
                 gifsZoomRotate, setActiveIndexZoom, swipeRefZoom, 'zoom')
-                : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
+                : SwiperImageDesktopHorizontal(isMobile, isTablet, null, imageSlideHorizontal,
                     gifsZoomRotate, setActiveIndexZoom, swipeRefZoom)
             }
             <div className="work-content-block">
@@ -147,9 +147,9 @@ const FdF = () => {
                         setActiveIndexProjections, swipeRefProjections)}
                 </div>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideHorizontal,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, null, imageSlideHorizontal,
                 imagesProjections, setActiveIndexProjections, swipeRefProjections, 'projections')
-            : SwiperImageDesktopHorizontal(isMobile, isTablet, imageSlideHorizontal,
+            : SwiperImageDesktopHorizontal(isMobile, isTablet, null, imageSlideHorizontal,
                     imagesProjections, setActiveIndexProjections, swipeRefProjections)}
             <div className="work-content-block">
                 <div className="work-sub-block">

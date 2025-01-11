@@ -1,12 +1,12 @@
-import {Swiper, SwiperRef} from "swiper/react";
+import {Swiper, SwiperRef, SwiperClass} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import AddArrows from "@/components/swiper-arrows";
-import React, {useState} from "react";
+import React, {RefObject, useState} from "react";
 import {ProjectCardData} from "@/components/projects";
 
 const SwiperContainer = () => {
     const setPaginationIndex = (
-        swiper:any,
+        swiper: SwiperClass,
         setActiveIndex: ((activeIndex:number) => void) | null,
         setIsFirstSlide: (isFirstSlide:boolean) => void,
         setIsLastSlide: (isLastSlide:boolean) => void
@@ -17,14 +17,25 @@ const SwiperContainer = () => {
         setIsFirstSlide(swiper.activeIndex === 0);
         const bullets = swiper.pagination.bullets;
         const totalBullets = bullets.length;
-        const activeBulletIndex = Array.from(bullets).findIndex((bullet: any) =>
-            bullet.classList.contains(swiper.params.pagination.bulletActiveClass));
+        const activeBulletIndex = Array.from(bullets).findIndex((bullet: HTMLElement) => {
+            const pagination = swiper.params.pagination;
+
+            if (pagination && typeof pagination !== 'boolean') {
+                const bulletActiveClass = pagination.bulletActiveClass;
+
+                if (bulletActiveClass) {
+                    return bullet.classList.contains(bulletActiveClass);
+                }
+            }
+
+            return false;
+        });
 
         setIsLastSlide(activeBulletIndex >= totalBullets - 1);
     }
 
     const setSlideIndex = (
-        swiper:any,
+        swiper: SwiperClass,
         setActiveIndex: ((activeIndex:number) => void) | null,
         setIsFirstSlide: (isFirstSlide:boolean) => void,
         setIsLastSlide: (isLastSlide:boolean) => void
@@ -35,15 +46,35 @@ const SwiperContainer = () => {
         setIsLastSlide(swiper.isEnd);
     }
 
+    const cardChooser = (
+        projects: ProjectCardData[] | string[],
+        projectCard: ((project: ProjectCardData, index: number) => React.JSX.Element) | null,
+        imageCard: ((img_src:string, index:number) => React.JSX.Element) | null,
+    ) => {
+        return (
+                projects && Array.isArray(projects) && projects.length > 0 ? (
+                projects.map((project, index) => {
+                    if (typeof project === 'string' && imageCard) {
+                        return imageCard(project, index);
+                    } else if (projectCard) {
+                        return projectCard(project as ProjectCardData, index);
+                    }
+                })
+            ) : (
+                <></>
+            )
+        )
+    };
+
     const SwiperDefault = (
         isMobile: boolean,
         isTablet: boolean,
         isDesktop1440: boolean,
-        Card: ((img_src:string, index:number) => React.JSX.Element)
-            | ((project: ProjectCardData, index: number) => React.JSX.Element),
-        projects:ProjectCardData[]|string[],
+        projectCard: ((project: ProjectCardData, index: number) => React.JSX.Element) | null,
+        imageCard: ((img_src:string, index:number) => React.JSX.Element) | null,
+        projects: ProjectCardData[] | string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
-        swiperRef:any,
+        swiperRef: RefObject<SwiperRef>,
         paginationId:string
     ) => {
         const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
@@ -74,18 +105,11 @@ const SwiperContainer = () => {
                     }}
                     scrollbar={{draggable: true}}
                     className="cards-control-block"
-                    onSwiper={(swiper) => {
-                        swiperRef.current = swiper
-                        setTimeout(() => {
-                            swiper.update();
-                        }, 100);
-                    }}
+                    ref={swiperRef}
                     parallax={true}
                 >
                     {AddArrows(isMobile, isTablet, false, isFirstSlide, isLastSlide, false, '')}
-                    {projects.map((project: any, index:number) => (
-                        Card(project, index)
-                    ))}
+                    {cardChooser(projects, projectCard, imageCard)}
                 </Swiper>
                 <div className={"pagination-block " + paginationId}></div>
             </div>
@@ -95,11 +119,11 @@ const SwiperContainer = () => {
     const SwiperImageDesktopHorizontal = (
         isMobile: boolean,
         isTablet: boolean,
-        Card: ((img_src:string, index:number) => React.JSX.Element)
-            | ((project: ProjectCardData, index: number) => React.JSX.Element),
-        projects:ProjectCardData[]|string[],
+        projectCard: ((project: ProjectCardData, index: number) => React.JSX.Element) | null,
+        imageCard: ((img_src:string, index:number) => React.JSX.Element) | null,
+        projects: ProjectCardData[] | string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
-        swiperRef:any
+        swiperRef: RefObject<SwiperRef>
     ) =>
     {
         const [isFirstSlide, setIsFirstSlide] = useState<boolean>(true);
@@ -120,13 +144,11 @@ const SwiperContainer = () => {
                 }}
                 scrollbar={{draggable: true}}
                 className="horizontal-card-container"
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
                 parallax={true}
+                ref={swiperRef}
             >
                 {AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, false, "")}
-                {projects.map((project: any, index:number) => (
-                    Card(project, index)
-                ))}
+                {cardChooser(projects, projectCard, imageCard)}
             </Swiper>
         )
     }
@@ -134,11 +156,11 @@ const SwiperContainer = () => {
     const SwiperImageDesktopVertical = (
         isMobile: boolean,
         isTablet: boolean,
-        Card: ((img_src:string, index:number) => React.JSX.Element)
-            | ((project: ProjectCardData, index: number) => React.JSX.Element),
-        projects:ProjectCardData[]|string[],
+        projectCard: ((project: ProjectCardData, index: number) => React.JSX.Element) | null,
+        imageCard: ((img_src:string, index:number) => React.JSX.Element) | null,
+        projects: ProjectCardData[] | string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
-        swiperRef: any,
+        swiperRef: RefObject<SwiperRef>,
         isImgGradient:boolean,
         arrowClass: string
     ) =>
@@ -167,14 +189,10 @@ const SwiperContainer = () => {
                     }}
                     scrollbar={{draggable: true}}
                     className="vertical-card-container"
-                    onSwiper={(swiper) => {
-                        swiperRef.current = swiper
-                    }}
+                    ref={swiperRef}
                     parallax={true}
                 >
-                    {projects.map((project: any, index: number) => (
-                        Card(project, index)
-                    ))}
+                    {cardChooser(projects, projectCard, imageCard)}
                 </Swiper>
                 {arrowClass !== 'remove' &&
                     AddArrows(isMobile, isTablet, true, isFirstSlide, isLastSlide, isImgGradient, arrowClass)}

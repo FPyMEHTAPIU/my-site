@@ -1,13 +1,16 @@
+import {RefObject} from "react";
+import {SwiperRef} from "swiper/react";
+
 const FillImageButtons = (
     projectSkills:string[],
     activeIndex:number,
     setActiveIndex: (newIndex:number) => void,
-    swiperRef:any
+    swiperRef:RefObject<SwiperRef>
 ) => {
     const moveToSlide = (index:number) => {
-        if (swiperRef.activeIndex !== index) {
+        if (swiperRef.current?.swiper?.activeIndex !== index) {
             setActiveIndex(index);
-            swiperRef.current.slideTo(index);
+            swiperRef.current?.swiper?.slideTo(index);
         }
     }
 

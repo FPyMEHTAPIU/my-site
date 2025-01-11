@@ -5,6 +5,7 @@ import SwiperContainer from "@/components/swiper-container";
 import {useRef} from "react";
 import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
+import {SwiperRef} from "swiper/react";
 
 const mobileImagesPushSwap1:string[] = [
     '/projects/push_swap/mobile/1.png',
@@ -51,7 +52,7 @@ const link:string = 'https://github.com/FPyMEHTAPIU/push_swap'
 const push_swap = () => {
     const {SwiperDefault, SwiperImageDesktopVertical} = SwiperContainer();
     const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
-    const swiperRef = useRef(null);
+    const swiperRef = useRef<SwiperRef>(null);
     const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
     const {imageSlideVertical} = imageSlides();
 
@@ -142,13 +143,13 @@ const push_swap = () => {
                     numbers and choose the lowest value, saving the index of that pair.
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, null, imageSlideVertical,
                     mobileImagesPushSwap1, null, swiperRef, 'vertical-first')
                 :
-                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                     tabletImagesPushSwap1, null, swiperRef, false, 'remove')
                     :
-                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                    SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                         mobileImagesPushSwap1, null, swiperRef, false, 'remove'))
             }
             <div className="work-content-block">
@@ -162,13 +163,13 @@ const push_swap = () => {
                     Then I run the small_sort function for the remaining 3 numbers in stack 'a' (last pic).
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, null, imageSlideVertical,
                     mobileImagesPushSwap2, null, swiperRef, 'vertical-second')
                 :
-                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                         tabletImagesPushSwap2, null, swiperRef, true, 'arrow-second')
                     :
-                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                    SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                         mobileImagesPushSwap2, null, swiperRef, true, 'arrow-second'))
             }
             <div className="work-content-block">
@@ -182,13 +183,13 @@ const push_swap = () => {
                     At the end, I free all remaining memory.
                 </p>
             </div>
-            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
+            {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, null, imageSlideVertical,
                     mobileImagesPushSwap3, null, swiperRef, 'vertical-third')
                 :
-                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                         tabletImagesPushSwap3, null, swiperRef, true, 'arrow-third')
                     :
-                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                    SwiperImageDesktopVertical(isMobile, isTablet, null, imageSlideVertical,
                         mobileImagesPushSwap3, null, swiperRef, true, 'arrow-third'))
             }
             {/*BONUS PART*/}
