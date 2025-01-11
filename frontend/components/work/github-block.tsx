@@ -10,7 +10,7 @@ const GitHubBlock = (link:string) => {
                     <a href="/work">
                         <img src="/arrows/arrow_left_white24.svg" loading="lazy" alt="back"/>
                     </a>
-                    <a className="button-small" href={link} target="_blank">
+                    <a className="button-small" href={link} target="_blank" rel="noreferrer">
                         <p className="body-small black">See on GitHub</p>
                         <img src="/arrows/arrow_right_black16.svg" loading="lazy" alt="arrow-right"/>
                     </a>
@@ -31,7 +31,7 @@ const GitHubBlock = (link:string) => {
                             alt="back"/>
                         <p className="body-default green">Back to all</p>
                     </a>
-                    <a className="button-small" href={link} target="_blank">
+                    <a className="button-small" href={link} target="_blank" rel="noreferrer">
                         <p className="body-small black">See on GitHub</p>
                         <img src="/arrows/arrow_right_black16.svg" loading="lazy" alt="arrow-right"/>
                     </a>
@@ -43,7 +43,7 @@ const GitHubBlock = (link:string) => {
     const GitHubButton = (link:string) => {
         return (
             <a className={isTablet ? "button-small last-button" : "button-primary last-button"}
-               href={link} target="_blank"
+               href={link} target="_blank" rel="noreferrer"
             >
                 <p className={isTablet ? "body-small black" : "body-default black"}>See on GitHub</p>
                 <img src="/arrows/arrow_right_black16.svg" loading="lazy" alt="arrow-right"/>

@@ -16,21 +16,21 @@ const Footer = () => {
     const SocialLinks = () => {
         return (
             <div className="social-block">
-                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank" id="linkedin-icon">
+                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank" rel="noreferrer" id="linkedin-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
                         loading="lazy"
                         alt="linkedin"
                     />
                 </a>
-                <a href="mailto:kolya59264@gmail.com" target="_blank" id="gmail-icon">
+                <a href="mailto:kolya59264@gmail.com" target="_blank" rel="noreferrer" id="gmail-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
                         loading="lazy"
                         alt="gmail"
                     />
                 </a>
-                <a href="https://github.com/FPyMEHTAPIU" target="_blank" id="github-icon">
+                <a href="https://github.com/FPyMEHTAPIU" target="_blank" rel="noreferrer" id="github-icon">
                     <img
                         src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
                         loading="lazy"
@@ -99,7 +99,7 @@ const Footer = () => {
                     className="body-small"
                     style={{textDecoration: 'underline'
                 }}
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                 >
                     Iryna Naumova
                 </a>

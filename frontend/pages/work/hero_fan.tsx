@@ -123,7 +123,7 @@ const HeroFan = () => {
             <div className="work-content-block last-block">
                 <h2>Data Source</h2>
                 <p className="body-default">
-                    This website fetches data from the <span className="green">Marvel API</span>,
+                    This website fetches data from the <span className="green">Marvel API</span>,
                     stores it in the database, and works with the database for faster performance.
                     In the future, a data update logic will be added to periodically refresh the data.
                 </p>

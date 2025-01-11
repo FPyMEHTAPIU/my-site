@@ -1,7 +1,9 @@
+import React from "react";
 import {SwiperSlide} from "swiper/react";
 
 const imageSlides = () => {
-    const imageSlideHorizontal = (img_src:string, index:number) => {
+    const imageSlideHorizontal =
+        (img_src:string, index:number): React.JSX.Element => {
         return (
             <SwiperSlide key={index} className="horizontal-card">
                 <img className="horizontal-card" src={img_src} loading="lazy" alt="image" />
@@ -9,7 +11,8 @@ const imageSlides = () => {
         )
     }
 
-    const imageSlideVertical = (img_src:string, index:number) => {
+    const imageSlideVertical =
+        (img_src:string, index:number): React.JSX.Element => {
         return (
             <SwiperSlide key={index} className="vertical-card">
                 <img className="vertical-card" src={img_src} loading="lazy" alt="image" />

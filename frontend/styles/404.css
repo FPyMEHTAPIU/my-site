@@ -63,7 +63,7 @@
         padding: 40px 80px;
         gap: 24px;
         border-radius: 30px;
-        margin: 450px 376px 75px;
+        margin: 350px 376px 75px;
         max-width: unset;
     }
 
@@ -86,7 +86,7 @@
 
 @media (min-width: 1920px) {
     .oops-block {
-        margin: 575px 627px 75px;
+        margin: 475px 627px 75px;
     }
 
     .background-ellipse-green.page404 {

@@ -1,7 +1,7 @@
-import {Swiper} from "swiper/react";
+import {Swiper, SwiperRef} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
 import AddArrows from "@/components/swiper-arrows";
-import {useState} from "react";
+import React, {useState} from "react";
 import {ProjectCardData} from "@/components/projects";
 
 const SwiperContainer = () => {
@@ -39,7 +39,8 @@ const SwiperContainer = () => {
         isMobile: boolean,
         isTablet: boolean,
         isDesktop1440: boolean,
-        Card:any,
+        Card: ((img_src:string, index:number) => React.JSX.Element)
+            | ((project: ProjectCardData, index: number) => React.JSX.Element),
         projects:ProjectCardData[]|string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
         swiperRef:any,
@@ -94,8 +95,9 @@ const SwiperContainer = () => {
     const SwiperImageDesktopHorizontal = (
         isMobile: boolean,
         isTablet: boolean,
-        Card:any,
-        projects:any,
+        Card: ((img_src:string, index:number) => React.JSX.Element)
+            | ((project: ProjectCardData, index: number) => React.JSX.Element),
+        projects:ProjectCardData[]|string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
         swiperRef:any
     ) =>
@@ -132,10 +134,11 @@ const SwiperContainer = () => {
     const SwiperImageDesktopVertical = (
         isMobile: boolean,
         isTablet: boolean,
-        Card:any,
-        projects:any,
+        Card: ((img_src:string, index:number) => React.JSX.Element)
+            | ((project: ProjectCardData, index: number) => React.JSX.Element),
+        projects:ProjectCardData[]|string[],
         setActiveIndex: ((activeIndex:number) => void) | null,
-        swiperRef:any,
+        swiperRef: any,
         isImgGradient:boolean,
         arrowClass: string
     ) =>

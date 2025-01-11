@@ -16,8 +16,8 @@ const SMTH = () => {
             <div className="work-content-block">
                 <h1>SMTH</h1>
                 <p className="body-default">
-                    Swipe Me To Hire (SMTH) -  a mobile app designed  to make job
-                    searching  and hiring stress-free. Developed by the talented team 'Rock Bottom'
+                    Swipe Me To Hire (SMTH) - a mobile app designed to make job
+                    searching and hiring stress-free. Developed by the talented team 'Rock Bottom'
                     for <span className="green">Aava Lääkärikeskus at Junction 2024</span>,
                     held November 8-10 in Helsinki.
                 </p>

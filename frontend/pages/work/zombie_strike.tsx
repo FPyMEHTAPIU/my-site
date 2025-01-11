@@ -25,7 +25,7 @@ const Zombie_Strike = () => {
                      loading="lazy" alt="image"
                 />
                 <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary align-start"
-                   target="_blank"
+                   target="_blank" rel="noreferrer"
                    style={{justifyContent: 'center'}}
             >
                 <p className="body-default">Play here!</p>

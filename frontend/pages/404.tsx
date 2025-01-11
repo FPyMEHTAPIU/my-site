@@ -2,11 +2,11 @@ import {useRouter} from "next/router";
 import React, {useEffect} from "react";
 import calculateContainerSize from "@/components/calculateContainerSize";
 
-const page404 = () => {
+const Page404 = () => {
     const router = useRouter();
     const {isMobile, isTablet} = calculateContainerSize();
 
-    useEffect(() => {
+    useEffect(():void => {
         router.replace("/404");
     }, []);
 
@@ -32,9 +32,7 @@ const page404 = () => {
                 </a>
             </div>
         </main>
-
-
     )
 }
 
-export default page404;
+export default Page404;
