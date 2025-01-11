@@ -6,24 +6,44 @@ import {useRef} from "react";
 import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
 
-const imagesPushSwap1:string[] = [
-    '/projects/push_swap/1.png',
-    '/projects/push_swap/2.png'
+const mobileImagesPushSwap1:string[] = [
+    '/projects/push_swap/mobile/1.png',
+    '/projects/push_swap/mobile/2.png'
 ]
 
-const imagesPushSwap2:string[] = [
-    '/projects/push_swap/3.png',
-    '/projects/push_swap/4.png',
-    '/projects/push_swap/5.png',
-    '/projects/push_swap/6.png'
+const mobileImagesPushSwap2:string[] = [
+    '/projects/push_swap/mobile/3.png',
+    '/projects/push_swap/mobile/4.png',
+    '/projects/push_swap/mobile/5.png',
+    '/projects/push_swap/mobile/6.png'
 ]
 
-const imagesPushSwap3:string[] = [
-    '/projects/push_swap/7.png',
-    '/projects/push_swap/8.png',
-    '/projects/push_swap/9.png',
-    '/projects/push_swap/10.png',
-    '/projects/push_swap/11.png'
+const mobileImagesPushSwap3:string[] = [
+    '/projects/push_swap/mobile/7.png',
+    '/projects/push_swap/mobile/8.png',
+    '/projects/push_swap/mobile/9.png',
+    '/projects/push_swap/mobile/10.png',
+    '/projects/push_swap/mobile/11.png'
+]
+
+const tabletImagesPushSwap1:string[] = [
+    '/projects/push_swap/tablet/1.png',
+    '/projects/push_swap/tablet/2.png'
+]
+
+const tabletImagesPushSwap2:string[] = [
+    '/projects/push_swap/tablet/3.png',
+    '/projects/push_swap/tablet/4.png',
+    '/projects/push_swap/tablet/5.png',
+    '/projects/push_swap/tablet/6.png'
+]
+
+const tabletImagesPushSwap3:string[] = [
+    '/projects/push_swap/tablet/7.png',
+    '/projects/push_swap/tablet/8.png',
+    '/projects/push_swap/tablet/9.png',
+    '/projects/push_swap/tablet/10.png',
+    '/projects/push_swap/tablet/11.png'
 ]
 
 const link:string = 'https://github.com/FPyMEHTAPIU/push_swap'
@@ -123,9 +143,13 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap1, null, swiperRef, 'vertical-first')
-                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap1, null, swiperRef, false, 'remove')
+                    mobileImagesPushSwap1, null, swiperRef, 'vertical-first')
+                :
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                    tabletImagesPushSwap1, null, swiperRef, false, 'remove')
+                    :
+                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                        mobileImagesPushSwap1, null, swiperRef, false, 'remove'))
             }
             <div className="work-content-block">
                 <p className="body-default">
@@ -139,9 +163,14 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap2, null, swiperRef, 'vertical-second')
-                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap2, null, swiperRef, true, 'arrow-second')}
+                    mobileImagesPushSwap2, null, swiperRef, 'vertical-second')
+                :
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                        tabletImagesPushSwap2, null, swiperRef, true, 'arrow-second')
+                    :
+                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                        mobileImagesPushSwap2, null, swiperRef, true, 'arrow-second'))
+            }
             <div className="work-content-block">
                 <p className="body-default">
                     Finally, I push numbers from stack 'b' to stack 'a' to their suitable places.
@@ -154,9 +183,14 @@ const push_swap = () => {
                 </p>
             </div>
             {isMobile ? SwiperDefault(isMobile, isTablet, isDesktop1440, imageSlideVertical,
-                    imagesPushSwap3, null, swiperRef, 'vertical-third')
-                : SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
-                    imagesPushSwap3, null, swiperRef, true, 'arrow-third')}
+                    mobileImagesPushSwap3, null, swiperRef, 'vertical-third')
+                :
+                (isTablet ? SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                        tabletImagesPushSwap3, null, swiperRef, true, 'arrow-third')
+                    :
+                    SwiperImageDesktopVertical(isMobile, isTablet, imageSlideVertical,
+                        mobileImagesPushSwap3, null, swiperRef, true, 'arrow-third'))
+            }
             {/*BONUS PART*/}
             <div className="work-content-block">
                 <h2>bonus part</h2>

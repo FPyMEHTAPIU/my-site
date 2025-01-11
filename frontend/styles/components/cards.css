@@ -63,7 +63,6 @@
 .project-photo {
     align-self: stretch;
     border-radius: 16px;
-    background: lightgray 50% / cover no-repeat;
     box-shadow: 0 11px 25px 1px rgba(0, 0, 0, 0.13);
     aspect-ratio: 3.45 / 3;
     width: 100%;
@@ -268,7 +267,7 @@
     }
 
     .swiper-slide.vertical-card:last-child, .vertical-card:last-child {
-        margin-right: unset !important;
+        margin-right: 0 !important;
     }
 
     .swiper.horizontal-card-container, .horizontal-card-container {
