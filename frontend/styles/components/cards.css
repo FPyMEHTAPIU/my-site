@@ -8,10 +8,9 @@
 }
 
 .swiper.cards-control-block {
-    display: grid;
+    display: flex;
     max-width: 100%;
     width: 100%;
-    padding: 0 15px;
 }
 
 .swiper-slide.project-card, .project-card {
@@ -24,6 +23,12 @@
     border-radius: 24px;
     background: var(--Dark);
     transition: height 0.3s ease, transform 0.3s ease;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .swiper-slide.project-card, .project-card {
+        width: calc(100% - 30px);
+    }
 }
 
 .swiper-slide.project-card:hover, .project-card:hover, .project-card a:hover {
