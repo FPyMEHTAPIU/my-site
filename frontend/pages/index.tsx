@@ -36,7 +36,7 @@ const Index = () => {
                                 with React Native, and&nbsp;software development using C&nbsp;and&nbsp;C++.
                             </p>
                             <p className="body-default">
-                                At my free time I play the guitar, recording videos and&nbsp;play computer games.
+                                At my free time I play the guitar, record videos and&nbsp;play computer games.
                             </p>
                         </div>
                     </div>

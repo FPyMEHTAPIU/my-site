@@ -23,11 +23,19 @@
     border-radius: 24px;
     background: var(--Dark);
     transition: height 0.3s ease, transform 0.3s ease;
+    will-change: height, transform;
 }
 
 @supports (-webkit-touch-callout: none) {
     .swiper-slide.project-card, .project-card {
         width: calc(100% - 30px);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    .swiper-slide.horizontal-card {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -43,11 +51,13 @@
 .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
     height: 360px !important;
     transition: height 0.3s ease, transform 0.3s ease;
+    will-change: height, transform;
 }
 
 .swiper-slide-prev .project-card img, .swiper-slide-next .project-card img {
     height: 196px !important;
     transition: height 0.3s ease, transform 0.3s ease;
+    will-change: height, transform;
 }
 
 .swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,
@@ -56,6 +66,7 @@
     aspect-ratio: 3.45 / 2.3;
     align-self: center;
     transition: height 0.3s ease, transform 0.3s ease;
+    will-change: height, transform;
 }
 
 .work-card-container {
