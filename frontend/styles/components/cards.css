@@ -126,6 +126,10 @@
     border-radius: 16px;
 }
 
+.swiper-slide.vertical-card:last-child {
+    margin-right: 15px;
+}
+
 .swiper-slide.vertical-card.swiper-slide-next, .swiper-slide.vertical-card.swiper-slide-prev {
     height: unset !important;
 }
