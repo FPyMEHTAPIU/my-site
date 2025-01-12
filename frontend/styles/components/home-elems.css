@@ -107,8 +107,8 @@
     border-radius: 562px;
     background: rgba(49, 217, 60, 0.42);
     filter: blur(255px);
+    -webkit-backdrop-filter: blur(255px);
     z-index: 1;
-    overflow: hidden;
 }
 
 .background-ellipse-blue {
@@ -121,8 +121,8 @@
     border-radius: 472px;
     background: rgba(91, 104, 223, 0.73);
     filter: blur(255px);
+    -webkit-backdrop-filter: blur(255px);
     z-index: 1;
-    overflow: hidden;
 }
 
 .background-ellipse-light-blue {
@@ -135,8 +135,8 @@
     border-radius: 662px;
     background: rgba(91, 104, 223, 0.28);
     filter: blur(255px);
+    -webkit-backdrop-filter: blur(255px);
     z-index: 1;
-    overflow: hidden;
 }
 
 @media (min-width: 720px) {
@@ -148,6 +148,7 @@
         height: 482px;
         border-radius: 482px;
         filter: blur(148px);
+        -webkit-backdrop-filter: blur(148px);
     }
 
     .background-ellipse-blue {
@@ -158,6 +159,7 @@
         height: 567px;
         border-radius: 567px;
         filter: blur(148px);
+        -webkit-backdrop-filter: blur(148px);
     }
 
     .background-ellipse-light-blue {
@@ -167,6 +169,7 @@
         height: 567px;
         border-radius: 567px;
         filter: blur(148px);
+        -webkit-backdrop-filter: blur(148px);
     }
 
     .background-ellipse-green,
@@ -255,6 +258,7 @@
         height: 831px;
         border-radius: 831px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .background-ellipse-blue {
@@ -264,6 +268,7 @@
         height: 757px;
         border-radius: 757px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .background-ellipse-light-blue {
@@ -273,6 +278,7 @@
         height: 757px;
         border-radius: 757px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .content-photo {
@@ -351,6 +357,7 @@
         height: 822px;
         border-radius: 849px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .background-ellipse-blue {
@@ -360,6 +367,7 @@
         height: 970px;
         border-radius: 1000px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .background-ellipse-light-blue {
@@ -369,6 +377,7 @@
         height: 968px;
         border-radius: 1127px;
         filter: blur(255px);
+        -webkit-backdrop-filter: blur(255px);
     }
 
     .content-photo {
