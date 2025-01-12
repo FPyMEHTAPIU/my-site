@@ -24,6 +24,7 @@
     background: var(--Dark);
     transition: height 0.3s ease, transform 0.3s ease;
     will-change: height, transform;
+    padding: 0;
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -58,6 +59,7 @@
     height: 196px !important;
     transition: height 0.3s ease, transform 0.3s ease;
     will-change: height, transform;
+    object-fit: cover;
 }
 
 .swiper-slide-prev.horizontal-card, .swiper-slide-next.horizontal-card,
@@ -91,6 +93,7 @@
     aspect-ratio: 3.45 / 3;
     width: 100%;
     height: 266px;
+    object-fit: cover;
     object-position: top;
     transition: height 0.3s ease, transform 0.3s ease;
 }
