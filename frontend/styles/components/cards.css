@@ -491,7 +491,7 @@
 
     .horizontal-card-container.video-container {
         margin: 0 335px;
-        width: calc(100vw - var(--scrollbar-width) - 670px);;
+        width: calc(100vw - var(--scrollbar-width) - 670px);
     }
 
     .grade-img {
@@ -534,6 +534,10 @@
         width: calc(100vw - var(--scrollbar-width) - 950px);
         margin: 0 auto;
         aspect-ratio: 9.7 / 6.5;
+    }
+
+    .horizontal-card.video-container {
+        width: calc(100vw - var(--scrollbar-width) - 950px);
     }
 
     .swiper.vertical-card-container, .vertical-card-container {
