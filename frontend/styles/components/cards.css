@@ -37,9 +37,19 @@
 
 @supports (-webkit-touch-callout: none) {
     .swiper-slide.project-card, .project-card {
-        width: calc(100% - 30px);
+        width: calc(100vw - 30px);
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        -webkit-transition: height 0.3s ease, -webkit-transform 0.3s ease;
+    }
+
+    .swiper-slide-prev, .swiper-slide-next,
+    .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
+        -webkit-transition: height 0.3s ease, -webkit-transform 0.3s ease;
+    }
+
+    .swiper-slide-prev .project-card img, .swiper-slide-next .project-card img {
+        -webkit-transition: height 0.3s ease, -webkit-transform 0.3s ease;
     }
 
     .swiper-slide.horizontal-card {
@@ -48,7 +58,8 @@
     }
 
     .project-photo {
-        width: calc(100% - 30px);
+        width: calc(100vw - 30px);
+        -webkit-transition: height 0.3s ease, -webkit-transform 0.3s ease;
     }
 }
 
