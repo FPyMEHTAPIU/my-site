@@ -20,7 +20,7 @@ const HeadData = () => {
             applied them in my projects."/>
             <meta property="og:url" content="https://nicksaveliev.vercel.app/"/>
             <meta property="og:image"
-                  content="https://drive.google.com/uc?export=view&id=1mWBbygHJdihVxDQwsyu3Z6oa7v9Mmec5"
+                  content="https://github.com/FPyMEHTAPIU/my-site/blob/main/frontend/public/preview-image.png?raw=true"
             />
 
             <meta name="twitter:card" content="summary_large_image"/>
@@ -28,7 +28,7 @@ const HeadData = () => {
             <meta name="twitter:description" content="Here you can explore my skills and see how I’ve
             applied them in my projects."/>
             <meta name="twitter:image"
-                  content="https://drive.google.com/uc?export=view&id=1mWBbygHJdihVxDQwsyu3Z6oa7v9Mmec5"/>
+                  content="https://github.com/FPyMEHTAPIU/my-site/blob/main/frontend/public/preview-image.png?raw=true"/>
         </Head>
     )
 }
