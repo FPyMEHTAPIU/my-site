@@ -7,17 +7,17 @@ const HeadData = () => {
             <title>Nick Saveliev</title>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <meta name="keywords" content="Nick Saveliev, portfolio, Full-Stack,
-            Full-Stack Developer, developer, programmer, software engineer, front-end,
-            front-end developer"/>
+                Full-Stack Developer, developer, programmer, software engineer, front-end,
+                front-end developer"/>
             <meta name="description" content="Here you can explore my skills and see how
-            I’ve applied them in my projects."/>
+                I’ve applied them in my projects."/>
             <meta name="theme-color" content="#161616"/>
             <link rel="icon" href="/favicon.svg"/>
 
             <meta property="og:type" content="website"/>
             <meta property="og:title" content="Nick Saveliev's portfolio website"/>
             <meta property="og:description" content="Here you can explore my skills and see how I’ve
-            applied them in my projects."/>
+                applied them in my projects."/>
             <meta property="og:url" content="https://nicksaveliev.vercel.app/"/>
             <meta property="og:image"
                   content="https://github.com/FPyMEHTAPIU/my-site/blob/main/frontend/public/preview-image.png?raw=true"
@@ -26,9 +26,10 @@ const HeadData = () => {
             <meta name="twitter:card" content="summary_large_image"/>
             <meta name="twitter:title" content="Nick Saveliev's portfolio website"/>
             <meta name="twitter:description" content="Here you can explore my skills and see how I’ve
-            applied them in my projects."/>
+                applied them in my projects."/>
             <meta name="twitter:image"
                   content="https://github.com/FPyMEHTAPIU/my-site/blob/main/frontend/public/preview-image.png?raw=true"/>
+            <meta name="google-site-verification" content="DBsF0U0s9DnMSeuYuUHwqlQEIkiGus18o-lQt8vWVKY"/>
         </Head>
     )
 }
