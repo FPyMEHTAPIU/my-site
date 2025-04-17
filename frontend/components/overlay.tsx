@@ -1,5 +1,5 @@
 import {FormEvent} from "react";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const useOverlay = (
     setIsOverlay: (isOverlay: boolean) => void,

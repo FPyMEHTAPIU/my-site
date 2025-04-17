@@ -1,7 +1,7 @@
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
 import FillSkills from "@/components/home/main-skills";
-import getCurrentProject from "@/components/getCurrentProject";
+import getCurrentProject from "@/composables/getCurrentProject";
 
 const currentProject = getCurrentProject("Bee Runner");
 

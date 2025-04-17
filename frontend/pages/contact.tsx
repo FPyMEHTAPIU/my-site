@@ -1,5 +1,5 @@
 import InputForm from "@/components/input";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 import {useState} from "react";
 import useOverlay from "@/components/overlay";
 

@@ -1,6 +1,6 @@
 import {useState} from "react";
-import {ProjectCardData} from "@/components/projects";
-import projects from "@/components/projects";
+import {ProjectCardData} from "@/composables/projects";
+import projects from "@/composables/projects";
 
 const WorkCard = (project:ProjectCardData, index:number) => {
     const FillSkills = () => {

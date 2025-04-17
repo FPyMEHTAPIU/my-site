@@ -1,6 +1,6 @@
 import {useRouter} from "next/router";
 import React, {useEffect} from "react";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const Page404 = () => {
     const router = useRouter();

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const ScrollButton = () => {
     const [isVisible, setIsVisible] = useState<boolean>(false);

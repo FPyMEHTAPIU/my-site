@@ -1,4 +1,4 @@
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const GitHubBlock = (link:string) => {
     const {isTablet} = calculateContainerSize();

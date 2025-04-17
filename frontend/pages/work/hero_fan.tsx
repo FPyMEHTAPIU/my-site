@@ -1,7 +1,7 @@
 import FillSkills from "@/components/home/main-skills";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
-import getCurrentProject from "@/components/getCurrentProject";
+import getCurrentProject from "@/composables/getCurrentProject";
 
 const link:string = 'https://github.com/FPyMEHTAPIU/Hero-Fan'
 const currentProject = getCurrentProject("Hero Fan");

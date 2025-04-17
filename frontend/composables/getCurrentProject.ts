@@ -1,4 +1,4 @@
-import projects, {ProjectCardData} from "@/components/projects";
+import projects, {ProjectCardData} from "@/composables/projects";
 
 const getCurrentProject = (name: string): ProjectCardData => {
     return projects.find(project => project.projectName === name)

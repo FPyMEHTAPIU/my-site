@@ -1,10 +1,10 @@
 import {SwiperRef, SwiperSlide} from 'swiper/react';
-import {ProjectCardData} from "@/components/projects";
-import projects from "@/components/projects";
+import {ProjectCardData} from "@/composables/projects";
+import projects from "@/composables/projects";
 import FillCardSkills from "@/components/card-skills";
 import SwiperContainer from "@/components/swiper-container";
 import React, {useRef, useState} from "react";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const Card = (
     project: ProjectCardData,

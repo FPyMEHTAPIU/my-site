@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import {useRouter} from "next/router";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const Footer = () => {
     const {isMobile, isTablet} = calculateContainerSize();

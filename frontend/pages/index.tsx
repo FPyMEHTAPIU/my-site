@@ -1,7 +1,7 @@
 import React, {useRef, useEffect, useState} from "react";
 import Cards from "@/components/home/cards";
 import FillSkills from "@/components/home/main-skills";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 import InputForm from "@/components/input";
 import useOverlay from "@/components/overlay";
 

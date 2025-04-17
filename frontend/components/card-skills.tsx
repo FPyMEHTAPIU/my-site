@@ -1,4 +1,4 @@
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 
 const FillCardSkills = (projectSkills:string[]) => {
     const { isDesktop1440 } = calculateContainerSize();

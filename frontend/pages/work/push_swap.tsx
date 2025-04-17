@@ -1,11 +1,11 @@
 import FillSkills from "@/components/home/main-skills";
-import calculateContainerSize from "@/components/calculateContainerSize";
+import calculateContainerSize from "@/composables/calculateContainerSize";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef} from "react";
 import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
 import {SwiperRef} from "swiper/react";
-import getCurrentProject from "@/components/getCurrentProject";
+import getCurrentProject from "@/composables/getCurrentProject";
 
 const currentProject = getCurrentProject("push_swap");
 
