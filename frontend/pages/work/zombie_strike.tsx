@@ -21,7 +21,7 @@ const Zombie_Strike = () => {
                 {FillSkills(projects[6].projectSkills, containerWidth, true)}
             </div>
             <div className="work-content-block">
-                <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.png'}
+                <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.jpg'}
                      loading="lazy" alt="image"
                 />
                 <a href="https://isotopic.io/game/?game=Zombie_Strike" className="button-secondary align-start"

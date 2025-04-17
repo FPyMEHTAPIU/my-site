@@ -27,7 +27,7 @@ const SMTH = () => {
             <div className="work-content-block last-block">
                 <div className="horizontal-card-container" style={{margin: 0, alignSelf: 'flex-start'}}>
                     <img className="horizontal-card horizontal-image" style={{margin: 0}}
-                         src={'/projects/smth/slides.png'} loading="lazy" alt="image"
+                         src={'/projects/smth/slides.jpg'} loading="lazy" alt="image"
                     />
                 </div>
             </div>

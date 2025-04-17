@@ -9,8 +9,16 @@ export type ProjectCardData = {
 
 const projects:ProjectCardData[] = [
     {
+        projectName: 'A designer\'s website',
+        projectPhoto: '/Irina.jpg',
+        projectSkills: ['TypeScript', 'Vue.js', 'Nuxt', 'SCSS', 'Figma'],
+        projectLink: 'https://iryna-naumova.vercel.app/',
+        projectType: 'Web',
+        projectDescription: 'A UX/UI designer\s portfolio website.'
+    },
+    {
         projectName: 'Hero Fan',
-        projectPhoto: '/HF.png',
+        projectPhoto: '/HF.jpg',
         projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js'],
         projectLink: './work/hero_fan',
         projectType: 'Web',
@@ -18,7 +26,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'SMTH',
-        projectPhoto: '/SMTH.png',
+        projectPhoto: '/SMTH.jpg',
         projectSkills: ['TypeScript', 'React Native'],
         projectLink: './work/smth',
         projectType: 'Web',
@@ -34,7 +42,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'push_swap',
-        projectPhoto: '/push_swap.png',
+        projectPhoto: '/push_swap.jpg',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/push_swap',
         projectType: 'Software',
@@ -43,7 +51,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'libft',
-        projectPhoto: '/libft.png',
+        projectPhoto: '/libft.jpg',
         projectSkills: ['C', 'Makefile'],
         projectLink: './work/libft',
         projectType: 'Software',
@@ -60,7 +68,7 @@ const projects:ProjectCardData[] = [
     },
     {
         projectName: 'Zombie Strike',
-        projectPhoto: '/projects/zombie_strike/zombie_strike.png',
+        projectPhoto: '/projects/zombie_strike/zombie_strike.jpg',
         projectSkills: ['C++', 'Unreal Engine'],
         projectLink: './work/zombie_strike',
         projectType: 'Game',
