@@ -1,11 +1,13 @@
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef} from "react";
 import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
 import {SwiperRef} from "swiper/react";
+import getCurrentProject from "@/components/getCurrentProject";
+
+const currentProject = getCurrentProject("push_swap");
 
 const mobileImagesPushSwap1:string[] = [
     '/projects/push_swap/mobile/1.png',
@@ -67,7 +69,7 @@ const push_swap = () => {
                     output the smallest program, made of Push swap language instructions, that sorts the
                     integers received as arguments
                 </p>
-                {FillSkills(projects[3].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">

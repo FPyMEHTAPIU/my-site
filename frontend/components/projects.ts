@@ -9,7 +9,7 @@ export type ProjectCardData = {
 
 const projects:ProjectCardData[] = [
     {
-        projectName: 'A designer\'s website',
+        projectName: 'Portfolio website',
         projectPhoto: '/Irina.jpg',
         projectSkills: ['TypeScript', 'Vue.js', 'Nuxt', 'SCSS', 'Figma'],
         projectLink: 'https://iryna-naumova.vercel.app/',

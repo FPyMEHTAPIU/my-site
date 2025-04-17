@@ -1,9 +1,10 @@
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
+import getCurrentProject from "@/components/getCurrentProject";
 
 const link:string = 'https://github.com/FPyMEHTAPIU/libft_updated'
+const currentProject = getCurrentProject("libft");
 
 const libft = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
@@ -21,7 +22,7 @@ const libft = () => {
                     defined in their man. The only difference will be their names. They will begin with the
                     ’ft_’ prefix. For instance, strlen becomes ft_strlen.
                 </p>
-                {FillSkills(projects[4].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">

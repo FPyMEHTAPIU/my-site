@@ -1,9 +1,10 @@
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
+import getCurrentProject from "@/components/getCurrentProject";
 
 const link:string = 'https://github.com/FPyMEHTAPIU/Hero-Fan'
+const currentProject = getCurrentProject("Hero Fan");
 
 const HeroFan = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
@@ -20,7 +21,7 @@ const HeroFan = () => {
                     A full-stack (Marvel) Hero Fan webpage created for the Web Express Coding Challenge
                     at Hive Helsinki.
                 </p>
-                {FillSkills(projects[0].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="horizontal-card-container video-container">

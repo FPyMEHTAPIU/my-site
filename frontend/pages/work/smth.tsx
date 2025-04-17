@@ -1,9 +1,10 @@
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
+import getCurrentProject from "@/components/getCurrentProject";
 
 const link:string = 'https://github.com/Linkshegelianer/react-native-aava'
+const currentProject = getCurrentProject("SMTH");
 
 const SMTH = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
@@ -21,7 +22,7 @@ const SMTH = () => {
                     for <span className="green">Aava Lääkärikeskus at Junction 2024</span>,
                     held November 8-10 in Helsinki.
                 </p>
-                {FillSkills(projects[1].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block last-block">

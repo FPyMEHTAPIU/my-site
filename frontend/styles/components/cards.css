@@ -24,9 +24,11 @@
 .swiper-slide.project-card, .project-card {
     display: flex;
     width: calc(100vw - var(--scrollbar-width) - 30px);
-    height: 430px;
+    flex: 1 0;
+    height: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    justify-content: space-between;
     align-self: center;
     border-radius: 24px;
     background: var(--Dark);
@@ -73,13 +75,13 @@
 
 .swiper-slide-prev, .swiper-slide-next,
 .swiper-slide-prev .project-card, .swiper-slide-next .project-card {
-    height: 360px !important;
+    height: auto !important;
+    min-height: 90%;
     transition: height 0.3s ease, transform 0.3s ease;
     will-change: height, transform;
 }
 
 .swiper-slide-prev .project-card img, .swiper-slide-next .project-card img {
-    height: 196px !important;
     transition: height 0.3s ease, transform 0.3s ease;
     will-change: height, transform;
 }
@@ -114,15 +116,17 @@
     box-shadow: 0 11px 25px 1px rgba(0, 0, 0, 0.13);
     aspect-ratio: 3.45 / 3;
     width: calc(100vw - var(--scrollbar-width) - 30px);
-    height: 266px;
+    flex: 1 0;
+    height: 100%;
     object-position: top;
-    transition: height 0.3s ease, transform 0.3s ease;
+    transition: max-height 0.3s ease;
 }
 
 .work-photo {
     min-height: 300px;
     flex: 1 0 0;
     align-self: stretch;
+    transition: min-height 0.3s ease, transform 0.3s ease;
 }
 
 .content-block {

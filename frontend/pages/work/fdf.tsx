@@ -1,11 +1,13 @@
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
 import calculateContainerSize from "@/components/calculateContainerSize";
 import SwiperContainer from "@/components/swiper-container";
 import {useRef, useState} from "react";
 import FillImageButtons from "@/components/image-buttons";
 import GitHubBlock from "@/components/work/github-block";
 import imageSlides from "@/components/work/image-slides";
+import getCurrentProject from "@/components/getCurrentProject";
+
+const currentProject = getCurrentProject("FdF");
 
 const buttonsZoomRotate:string[] = [
     'zooming',
@@ -60,7 +62,7 @@ const FdF = () => {
                     of a 3D landscape by linking various points (x, y, z).
                     Create a 3D model from 2D map of numbers.
                 </p>
-                {FillSkills(projects[2].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">

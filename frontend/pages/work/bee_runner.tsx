@@ -1,7 +1,9 @@
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
+import getCurrentProject from "@/components/getCurrentProject";
+
+const currentProject = getCurrentProject("Bee Runner");
 
 const link:string = 'https://github.com/FPyMEHTAPIU/bee_runner'
 
@@ -20,7 +22,7 @@ const Bee_Runner = () => {
                     you'll encounter numerous obstacles and enemies. Only the best players will be able to unlock
                     the Chest of Dreams and claim the well-deserved reward!
                 </p>
-                {FillSkills(projects[5].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             <div className="work-content-block">
                 <img className="horizontal-card horizontal-image"

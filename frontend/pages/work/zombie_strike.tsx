@@ -1,9 +1,10 @@
 import calculateContainerSize from "@/components/calculateContainerSize";
 import GitHubBlock from "@/components/work/github-block";
 import FillSkills from "@/components/home/main-skills";
-import projects from "@/components/projects";
+import getCurrentProject from "@/components/getCurrentProject";
 
 const link:string = 'https://github.com/FPyMEHTAPIU/Zombie-Strike'
+const currentProject = getCurrentProject("Zombie Strike");
 
 const Zombie_Strike = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
@@ -18,7 +19,7 @@ const Zombie_Strike = () => {
                 <p className="body-default">
                     This is a game with an auto-shooter mechanic where you just need to move, aim, and survive.
                 </p>
-                {FillSkills(projects[6].projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.projectSkills, containerWidth, true)}
             </div>
             <div className="work-content-block">
                 <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.jpg'}
