@@ -11,7 +11,7 @@ const Card = (
     index: number
     ):React.JSX.Element => {
     return (
-        <SwiperSlide className="project-card" key={index}>
+        <SwiperSlide key={index}>
             <a href={project.projectLink} className="project-card">
                 <img className="project-photo" src={project.projectPhoto} loading="lazy" alt="project photo"/>
                 <div className="content-block">
