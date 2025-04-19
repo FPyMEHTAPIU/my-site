@@ -21,7 +21,7 @@ const HeroFan = () => {
                     A full-stack (Marvel) Hero Fan webpage created for the Web Express Coding Challenge
                     at Hive Helsinki.
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="horizontal-card-container video-container">

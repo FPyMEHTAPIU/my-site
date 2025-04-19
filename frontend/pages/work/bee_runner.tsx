@@ -22,7 +22,7 @@ const Bee_Runner = () => {
                     you'll encounter numerous obstacles and enemies. Only the best players will be able to unlock
                     the Chest of Dreams and claim the well-deserved reward!
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             <div className="work-content-block">
                 <img className="horizontal-card horizontal-image"

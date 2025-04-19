@@ -1,78 +1,85 @@
 export type ProjectCardData = {
-    projectName: string;
-    projectPhoto: string;
-    projectSkills: string[];
-    projectLink: string;
-    projectType: string;
-    projectDescription: string;
+    name: string;
+    photo: string;
+    skills: string[];
+    link: string;
+    type: string;
+    description: string;
+    location: 'internal' | 'external';
 }
 
 const projects:ProjectCardData[] = [
     {
-        projectName: 'Portfolio website',
-        projectPhoto: '/Irina.jpg',
-        projectSkills: ['TypeScript', 'Vue.js', 'Nuxt', 'SCSS', 'Figma'],
-        projectLink: 'https://iryna-naumova.vercel.app/',
-        projectType: 'Web',
-        projectDescription: 'A UX/UI designer\s portfolio website.'
+        name: 'Portfolio website',
+        photo: '/Irina.jpg',
+        skills: ['TypeScript', 'Vue.js', 'Nuxt', 'SCSS', 'Figma'],
+        link: 'https://iryna-naumova.vercel.app/',
+        type: 'Web',
+        description: 'A UX/UI designer\s portfolio website.',
+        location: 'external'
     },
     {
-        projectName: 'Hero Fan',
-        projectPhoto: '/HF.jpg',
-        projectSkills: ['JavaScript', 'React.js', 'Next.js', 'Node.js'],
-        projectLink: './work/hero_fan',
-        projectType: 'Web',
-        projectDescription: 'A full-stack (Marvel) Hero Fan webpage.'
+        name: 'Hero Fan',
+        photo: '/HF.jpg',
+        skills: ['JavaScript', 'React.js', 'Next.js', 'Node.js'],
+        link: './work/hero_fan',
+        type: 'Web',
+        description: 'A full-stack (Marvel) Hero Fan webpage.',
+        location: 'internal'
     },
     {
-        projectName: 'SMTH',
-        projectPhoto: '/SMTH.jpg',
-        projectSkills: ['TypeScript', 'React Native'],
-        projectLink: './work/smth',
-        projectType: 'Web',
-        projectDescription: 'A mobile app designed to make job searching and hiring stress-free.'
+        name: 'SMTH',
+        photo: '/SMTH.jpg',
+        skills: ['TypeScript', 'React Native'],
+        link: './work/smth',
+        type: 'Web',
+        description: 'A mobile app designed to make job searching and hiring stress-free.',
+        location: 'internal'
     },
     {
-        projectName: 'FdF',
-        projectPhoto: '/FdF.png',
-        projectSkills: ['C', 'Makefile', 'MLX42 Library'],
-        projectLink: './work/fdf',
-        projectType: 'Software',
-        projectDescription: 'A graphics project that represents a 2D map of numbers in 3D.'
+        name: 'FdF',
+        photo: '/FdF.png',
+        skills: ['C', 'Makefile', 'MLX42 Library'],
+        link: './work/fdf',
+        type: 'Software',
+        description: 'A graphics project that represents a 2D map of numbers in 3D.',
+        location: 'internal'
     },
     {
-        projectName: 'push_swap',
-        projectPhoto: '/push_swap.jpg',
-        projectSkills: ['C', 'Makefile'],
-        projectLink: './work/push_swap',
-        projectType: 'Software',
-        projectDescription: 'A sorting algorithm that sorts a stack using another ' +
-            'one with pre-calculation logic.'
+        name: 'push_swap',
+        photo: '/push_swap.jpg',
+        skills: ['C', 'Makefile'],
+        link: './work/push_swap',
+        type: 'Software',
+        description: 'A sorting algorithm that sorts a stack using another one with pre-calculation logic.',
+        location: 'internal'
     },
     {
-        projectName: 'libft',
-        projectPhoto: '/libft.jpg',
-        projectSkills: ['C', 'Makefile'],
-        projectLink: './work/libft',
-        projectType: 'Software',
-        projectDescription: 'A custom library that reimplements many standard ' +
-            'C functions, along with linked lists and more.'
+        name: 'libft',
+        photo: '/libft.jpg',
+        skills: ['C', 'Makefile'],
+        link: './work/libft',
+        type: 'Software',
+        description: 'A custom library that reimplements many standard C functions, along with linked lists and more.',
+        location: 'internal'
     },
     {
-        projectName: 'Bee Runner',
-        projectPhoto: '/projects/bee_runner/bee_runner.png',
-        projectSkills: ['C#', 'Unity'],
-        projectLink: './work/bee_runner',
-        projectType: 'Game',
-        projectDescription: 'An endless runner game created in Unity using C#.'
+        name: 'Bee Runner',
+        photo: '/projects/bee_runner/bee_runner.png',
+        skills: ['C#', 'Unity'],
+        link: './work/bee_runner',
+        type: 'Game',
+        description: 'An endless runner game created in Unity using C#.',
+        location: 'internal'
     },
     {
-        projectName: 'Zombie Strike',
-        projectPhoto: '/projects/zombie_strike/zombie_strike.jpg',
-        projectSkills: ['C++', 'Unreal Engine'],
-        projectLink: './work/zombie_strike',
-        projectType: 'Game',
-        projectDescription: 'A top-down auto-shooter game created in Unreal Engine 5 using C++.'
+        name: 'Zombie Strike',
+        photo: '/projects/zombie_strike/zombie_strike.jpg',
+        skills: ['C++', 'Unreal Engine'],
+        link: './work/zombie_strike',
+        type: 'Game',
+        description: 'A top-down auto-shooter game created in Unreal Engine 5 using C++.',
+        location: 'internal'
     },
 ]
 

@@ -22,7 +22,7 @@ const libft = () => {
                     defined in their man. The only difference will be their names. They will begin with the
                     ’ft_’ prefix. For instance, strlen becomes ft_strlen.
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">

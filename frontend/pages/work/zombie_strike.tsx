@@ -19,7 +19,7 @@ const Zombie_Strike = () => {
                 <p className="body-default">
                     This is a game with an auto-shooter mechanic where you just need to move, aim, and survive.
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             <div className="work-content-block">
                 <img className="horizontal-card horizontal-image" src={'/projects/zombie_strike/zombie_strike.jpg'}

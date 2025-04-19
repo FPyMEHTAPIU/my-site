@@ -69,7 +69,7 @@ const push_swap = () => {
                     output the smallest program, made of Push swap language instructions, that sorts the
                     integers received as arguments
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">

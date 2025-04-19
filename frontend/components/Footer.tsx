@@ -26,7 +26,7 @@ const socialIcons: SocialIconType[] = [
 ]
 
 const Footer = () => {
-    const {isMobile, isTablet} = calculateContainerSize();
+    const {isMobile} = calculateContainerSize();
     const router = useRouter();
     const [page, setPage] = useState<string>('');
 
@@ -72,7 +72,6 @@ const Footer = () => {
                         <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
                             <Download />
-                            {/*<img className="download-icon" src="/icons/download16.svg" alt="download"/>*/}
                         </a>
                     </div>
                     :
@@ -89,11 +88,6 @@ const Footer = () => {
                         <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
                             <Download />
-                            {/*<img*/}
-                            {/*    className="download-icon"*/}
-                            {/*    src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}*/}
-                            {/*    alt="download"*/}
-                            {/*/>*/}
                         </a>
                     </div>
                 }

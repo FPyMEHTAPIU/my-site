@@ -22,7 +22,7 @@ const SMTH = () => {
                     for <span className="green">Aava Lääkärikeskus at Junction 2024</span>,
                     held November 8-10 in Helsinki.
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block last-block">

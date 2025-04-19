@@ -4,7 +4,7 @@ import projects from "@/composables/projects";
 
 const WorkCard = (project:ProjectCardData, index:number) => {
     const FillSkills = () => {
-        return project.projectSkills.map((skill:string, index:number) => (
+        return project.skills.map((skill:string, index:number) => (
             <div className="skill project-skill" key={index}>
                 <p className="body-small" style={{fontSize: 16}}>{skill}</p>
             </div>
@@ -12,12 +12,12 @@ const WorkCard = (project:ProjectCardData, index:number) => {
     }
 
     return (
-        <a key={index} href={project.projectLink} className="project-card work-card">
-            <img className="project-photo work-photo" src={project.projectPhoto}
+        <a key={index} href={project.link} className="project-card work-card" target={project.location === "internal" ? "_blank" : ""}>
+            <img className="project-photo work-photo" src={project.photo}
                  loading="lazy" alt="project photo"/>
             <div className="content-block">
-                <h2>{project.projectName}</h2>
-                <p className="body-small">{project.projectDescription}</p>
+                <h2>{project.name}</h2>
+                <p className="body-small">{project.description}</p>
                 <div className="skills-block">
                     {FillSkills()}
                 </div>
@@ -35,9 +35,9 @@ const WorkCards = (
     return (
         projects.map((project: ProjectCardData, index:number) => (
             isAll ? WorkCard(project, index)
-                : isWeb ? (project.projectType === 'Web' ? WorkCard(project, index) : <></>)
-                    : isSoftware ? (project.projectType === 'Software' ? WorkCard(project, index) : <></>)
-                        : isGame ? (project.projectType === 'Game' ? WorkCard(project, index) : <></>)
+                : isWeb ? (project.type === 'Web' ? WorkCard(project, index) : <></>)
+                    : isSoftware ? (project.type === 'Software' ? WorkCard(project, index) : <></>)
+                        : isGame ? (project.type === 'Game' ? WorkCard(project, index) : <></>)
                             : <></>
         ))
     )

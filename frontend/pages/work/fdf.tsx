@@ -62,7 +62,7 @@ const FdF = () => {
                     of a 3D landscape by linking various points (x, y, z).
                     Create a 3D model from 2D map of numbers.
                 </p>
-                {FillSkills(currentProject.projectSkills, containerWidth, true)}
+                {FillSkills(currentProject.skills, containerWidth, true)}
             </div>
             {/*CONTENT*/}
             <div className="work-content-block first-content-block">
