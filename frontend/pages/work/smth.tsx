@@ -1,6 +1,6 @@
-import FillSkills from "@/components/home/main-skills";
+import FillSkills from "@/components/home/MainSkills";
 import calculateContainerSize from "@/composables/calculateContainerSize";
-import GitHubBlock from "@/components/work/github-block";
+import GithubBlock from "@/components/work/GithubBlock";
 import getCurrentProject from "@/composables/getCurrentProject";
 
 const link:string = 'https://github.com/Linkshegelianer/react-native-aava'
@@ -8,7 +8,7 @@ const currentProject = getCurrentProject("SMTH");
 
 const SMTH = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GithubBlock(link);
 
     return (
         <main className="main-gap">

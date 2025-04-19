@@ -1,7 +1,7 @@
-import InputForm from "@/components/input";
+import InputForm from "@/components/Input";
 import calculateContainerSize from "@/composables/calculateContainerSize";
 import {useState} from "react";
-import useOverlay from "@/components/overlay";
+import useOverlay from "@/components/Overlay";
 
 const Contact = () => {
     const {isMobile, isTablet, isDesktop1440} = calculateContainerSize();

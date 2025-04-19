@@ -1,6 +1,6 @@
 import calculateContainerSize from "@/composables/calculateContainerSize";
-import GitHubBlock from "@/components/work/github-block";
-import FillSkills from "@/components/home/main-skills";
+import GithubBlock from "@/components/work/GithubBlock";
+import FillSkills from "@/components/home/MainSkills";
 import getCurrentProject from "@/composables/getCurrentProject";
 
 const currentProject = getCurrentProject("Bee Runner");
@@ -9,7 +9,7 @@ const link:string = 'https://github.com/FPyMEHTAPIU/bee_runner'
 
 const Bee_Runner = () => {
     const {containerWidth, isMobile} = calculateContainerSize();
-    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GithubBlock(link);
 
     return (
         <main className="main-gap">

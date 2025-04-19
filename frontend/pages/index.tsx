@@ -1,13 +1,13 @@
 import React, {useRef, useEffect, useState} from "react";
-import Cards from "@/components/home/cards";
-import FillSkills from "@/components/home/main-skills";
+import Cards from "@/components/home/Cards";
+import FillSkills from "@/components/home/MainSkills";
 import calculateContainerSize from "@/composables/calculateContainerSize";
-import InputForm from "@/components/input";
-import useOverlay from "@/components/overlay";
+import InputForm from "@/components/Input";
+import useOverlay from "@/components/Overlay";
 
 const skills:string[] = ['TypeScript', 'JavaScript', 'React.js',
-    'React Native', 'Node.js', 'Next.js', 'CSS', 'HTML', 'PostgreSQL',
-    'C', 'C++', 'C#'];
+    'React Native', 'Node.js', 'Express', 'Next.js', 'Vue.js', 'Nuxt', 'SCSS', 'CSS', 'HTML', 'PostgreSQL',
+    'C', 'C++', 'C#', 'Jest'];
 
 const Index = () => {
     const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();

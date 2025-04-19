@@ -1,10 +1,10 @@
-import FillSkills from "@/components/home/main-skills";
+import FillSkills from "@/components/home/MainSkills";
 import calculateContainerSize from "@/composables/calculateContainerSize";
-import SwiperContainer from "@/components/swiper-container";
+import SwiperContainer from "@/components/SwiperContainer";
 import {useRef, useState} from "react";
-import FillImageButtons from "@/components/image-buttons";
-import GitHubBlock from "@/components/work/github-block";
-import imageSlides from "@/components/work/image-slides";
+import FillImageButtons from "@/components/ImageButtons";
+import GithubBlock from "@/components/work/GithubBlock";
+import imageSlides from "@/components/work/ImageSlides";
 import getCurrentProject from "@/composables/getCurrentProject";
 
 const currentProject = getCurrentProject("FdF");
@@ -48,7 +48,7 @@ const FdF = () => {
     const [activeIndexProjections, setActiveIndexProjections] = useState<number>(0);
     const swipeRefZoom = useRef(null);
     const swipeRefProjections = useRef(null);
-    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GithubBlock(link);
     const {imageSlideHorizontal} = imageSlides();
 
     return (

@@ -1,9 +1,9 @@
-import FillSkills from "@/components/home/main-skills";
+import FillSkills from "@/components/home/MainSkills";
 import calculateContainerSize from "@/composables/calculateContainerSize";
-import SwiperContainer from "@/components/swiper-container";
+import SwiperContainer from "@/components/SwiperContainer";
 import {useRef} from "react";
-import GitHubBlock from "@/components/work/github-block";
-import imageSlides from "@/components/work/image-slides";
+import GithubBlock from "@/components/work/GithubBlock";
+import imageSlides from "@/components/work/ImageSlides";
 import {SwiperRef} from "swiper/react";
 import getCurrentProject from "@/composables/getCurrentProject";
 
@@ -55,7 +55,7 @@ const push_swap = () => {
     const {SwiperDefault, SwiperImageDesktopVertical} = SwiperContainer();
     const {containerWidth, isMobile, isTablet, isDesktop1440} = calculateContainerSize();
     const swiperRef = useRef<SwiperRef>(null);
-    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GitHubBlock(link);
+    const {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton} = GithubBlock(link);
     const {imageSlideVertical} = imageSlides();
 
     return (

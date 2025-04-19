@@ -1,8 +1,8 @@
 import { AppProps } from "next/app";
 import HeadData from "@/components/Metadata/head";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import ScrollButton from "@/components/scroll-button";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollButton from "@/components/ScrollButton";
 import {useRouter} from "next/router";
 
 import '@/styles/colors.css'
@@ -20,6 +20,7 @@ import '@/styles/components/header.css'
 import '@/styles/components/input.css'
 import '@/styles/components/home-elems.css'
 import '@/styles/components/overlay.css'
+import '@/styles/components/icons.css'
 
 import 'swiper/css';
 import 'swiper/css/navigation';

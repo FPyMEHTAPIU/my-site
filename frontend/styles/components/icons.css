@@ -1,0 +1,17 @@
+.social-icon svg, .social-icon svg path {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 1440px) {
+    .social-icon svg, .social-icon svg path {
+        width: 36px;
+        height: 36px;
+    }
+
+    .social-icon:hover {
+        svg, svg path:first-child {
+            fill: var(--Primary);
+        }
+    }
+}
