@@ -38,10 +38,6 @@
     flex-direction: column;
 }
 
-.project-card:hover {
-    background: var(--Gradient);
-}
-
 .project-card:active {
     filter: brightness(0.9);
 }
@@ -206,6 +202,10 @@
 }
 
 @media (min-width: 720px) {
+    .project-card:hover {
+        background: var(--Gradient);
+    }
+
     .cards-control-block {
         position: relative;
         overflow: visible;

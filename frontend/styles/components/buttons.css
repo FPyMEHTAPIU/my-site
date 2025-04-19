@@ -18,19 +18,6 @@
     background: var(--Primary);
 }
 
-.menu-item:hover, .text-button:hover {
-    cursor: pointer;
-    color: var(--Primary);
-}
-
-.menu-item:hover p {
-    color: var(--Primary);
-}
-
-.menu-item-selected:hover p {
-    color: black;
-}
-
 .menu-item:active {
     -webkit-filter: brightness(0.8);
 }
@@ -47,10 +34,6 @@
     color: white;
     border-radius: 50px;
     text-decoration: none;
-}
-
-.text-button:hover p {
-    color: var(--Primary);
 }
 
 .tb-selected {
@@ -98,10 +81,6 @@
     scale: 0.67;
 }
 
-.button-primary:hover, .button-small:hover, .button-secondary:hover {
-    cursor: pointer;
-}
-
 .button-secondary:active {
     background: var(--Button-click-blue);
 }
@@ -116,14 +95,6 @@
     background: var(--Primary);
 }
 
-.button-small:hover, .button-primary:hover {
-    box-shadow: -1px 5px 14px 0 #0C5F11;
-}
-
-.button-secondary:hover {
-    box-shadow: -1px 5px 14px 0 #0C115F;
-}
-
 .tab {
     display: inline-flex;
     padding: 8px 16px;
@@ -133,12 +104,6 @@
     border-radius: 50px;
     border: 1px solid var(--Medium);
     background: var(--Dark-1);
-}
-
-.tab:hover {
-    background: var(--Primary);
-    cursor: pointer;
-    color: var(--Black)
 }
 
 .tab-selected {
@@ -157,6 +122,41 @@
 }
 
 @media (min-width: 720px) {
+    .menu-item:hover, .text-button:hover {
+        cursor: pointer;
+        color: var(--Primary);
+    }
+
+    .menu-item:hover p {
+        color: var(--Primary);
+    }
+
+    .menu-item-selected:hover p {
+        color: black;
+    }
+
+    .text-button:hover p {
+        color: var(--Primary);
+    }
+
+    .button-primary:hover, .button-small:hover, .button-secondary:hover {
+        cursor: pointer;
+    }
+
+    .button-small:hover, .button-primary:hover {
+        box-shadow: -1px 5px 14px 0 #0C5F11;
+    }
+
+    .button-secondary:hover {
+        box-shadow: -1px 5px 14px 0 #0C115F;
+    }
+
+    .tab:hover {
+        background: var(--Primary);
+        cursor: pointer;
+        color: var(--Black)
+    }
+
     .button-secondary {
         width: 335px;
     }

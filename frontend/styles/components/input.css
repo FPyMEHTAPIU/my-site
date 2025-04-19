@@ -109,11 +109,6 @@ textarea:focus, textarea:hover {
     background-color: var(--Dark-1);
 }
 
-.checkbox input:hover {
-    cursor: pointer;
-    background: var(--Gradient);
-}
-
 .checkbox input::before {
     content: "";
     display: block;
@@ -141,16 +136,21 @@ textarea:focus, textarea:hover {
     height: 8px;
 }
 
-.checkbox input:checked:hover {
-    background-color: var(--Primary);
-    filter: brightness(1.2);
-}
-
 .checkbox input:active {
     filter: brightness(0.8);
 }
 
 @media (min-width: 720px) {
+    .checkbox input:hover {
+        cursor: pointer;
+        background: var(--Gradient);
+    }
+
+    .checkbox input:checked:hover {
+        background-color: var(--Primary);
+        filter: brightness(1.2);
+    }
+
     .input-container {
         margin-top: unset;
         height: unset;

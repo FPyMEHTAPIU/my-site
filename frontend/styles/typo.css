@@ -76,11 +76,6 @@ h2 {
     margin: 0;
 }
 
-.body-small:hover a {
-    cursor: pointer;
-    color: var(--Primary);
-}
-
 .black {
     color: black;
 }
@@ -102,6 +97,11 @@ h2 {
 }
 
 @media (min-width: 720px) {
+    .body-small:hover a {
+        cursor: pointer;
+        color: var(--Primary);
+    }
+
     .not-found {
         margin: 0 auto 565px;
         font-size: 300px;
