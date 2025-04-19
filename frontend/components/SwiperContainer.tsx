@@ -1,6 +1,6 @@
 import {Swiper, SwiperRef, SwiperClass} from "swiper/react";
 import {Navigation, Pagination, Scrollbar} from "swiper/modules";
-import AddArrows from "@/components/swiper-arrows";
+import AddArrows from "@/components/SwiperArrows";
 import React, {RefObject, useState} from "react";
 import {ProjectCardData} from "@/composables/projects";
 

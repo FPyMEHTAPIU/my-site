@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import useOverlay from "@/components/overlay";
+import useOverlay from "@/components/Overlay";
 
 const errorMessage:string = 'This field is required!';
 

@@ -1,6 +1,29 @@
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import {useRouter} from "next/router";
 import calculateContainerSize from "@/composables/calculateContainerSize";
+import SocialIcon, {SocialIconType} from "@/public/icons/SocialIcon";
+import LinkedIn from "@/public/icons/LinkedIn";
+import Github from "@/public/icons/Github";
+import Gmail from "@/public/icons/Gmail";
+import Download from "@/public/icons/Download";
+
+const socialIcons: SocialIconType[] = [
+    {
+        children: LinkedIn,
+        name: "linkedin",
+        link: "https://www.linkedin.com/in/nicksaveliev/"
+    },
+    {
+        children: Gmail,
+        name: "gmail",
+        link: "mailto:kolya59264@gmail.com"
+    },
+    {
+        children: Github,
+        name: "github",
+        link: "https://github.com/FPyMEHTAPIU"
+    }
+]
 
 const Footer = () => {
     const {isMobile, isTablet} = calculateContainerSize();
@@ -16,24 +39,11 @@ const Footer = () => {
     const SocialLinks = () => {
         return (
             <div className="social-block">
-                <a href="https://www.linkedin.com/in/nicksaveliev/" target="_blank" rel="noreferrer" id="linkedin-icon">
-                    <img
-                        src={isMobile || isTablet ? "/icons/linkedin24.svg" : "/icons/linkedin36.svg"}
-                        alt="linkedin"
-                    />
-                </a>
-                <a href="mailto:kolya59264@gmail.com" target="_blank" rel="noreferrer" id="gmail-icon">
-                    <img
-                        src={isMobile || isTablet ? "/icons/gmail24.svg" : "/icons/gmail36.svg"}
-                        alt="gmail"
-                    />
-                </a>
-                <a href="https://github.com/FPyMEHTAPIU" target="_blank" rel="noreferrer" id="github-icon">
-                    <img
-                        src={isMobile || isTablet ? "/icons/github24.svg" : "/icons/github36.svg"}
-                        alt="github"
-                    />
-                </a>
+                {socialIcons.map((icon) =>
+                    <SocialIcon link={icon.link} name={icon.name} key={icon.name}>
+                        {icon.children}
+                    </SocialIcon>
+                )}
             </div>
         );
     };
@@ -58,9 +68,11 @@ const Footer = () => {
                                 <p className="body-default">Contact</p>
                             </a>
                         </div>
+                        {/*TODO: change CV*/}
                         <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
-                            <img className="download-icon" src="/icons/download16.svg" alt="download"/>
+                            <Download />
+                            {/*<img className="download-icon" src="/icons/download16.svg" alt="download"/>*/}
                         </a>
                     </div>
                     :
@@ -76,11 +88,12 @@ const Footer = () => {
                         </a>
                         <a href="/CV_Nick_Saveliev.pdf" className="text-button" download>
                             <p className="body-default">Download CV</p>
-                            <img
-                                className="download-icon"
-                                src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}
-                                alt="download"
-                            />
+                            <Download />
+                            {/*<img*/}
+                            {/*    className="download-icon"*/}
+                            {/*    src={ isTablet ? "/icons/download16.svg" : "/icons/download24.svg"}*/}
+                            {/*    alt="download"*/}
+                            {/*/>*/}
                         </a>
                     </div>
                 }

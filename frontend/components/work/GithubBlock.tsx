@@ -1,6 +1,6 @@
 import calculateContainerSize from "@/composables/calculateContainerSize";
 
-const GitHubBlock = (link:string) => {
+const GithubBlock = (link:string) => {
     const {isTablet} = calculateContainerSize();
 
     const MobileGithubBlock = () => {
@@ -54,4 +54,4 @@ const GitHubBlock = (link:string) => {
     return {MobileGithubBlock, TabletDesktopGithubBlock, GitHubButton}
 }
 
-export default GitHubBlock;
+export default GithubBlock;

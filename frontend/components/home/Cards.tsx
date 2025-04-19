@@ -1,8 +1,8 @@
 import {SwiperRef, SwiperSlide} from 'swiper/react';
 import {ProjectCardData} from "@/composables/projects";
 import projects from "@/composables/projects";
-import FillCardSkills from "@/components/card-skills";
-import SwiperContainer from "@/components/swiper-container";
+import FillCardSkills from "@/components/CardSkills";
+import SwiperContainer from "@/components/SwiperContainer";
 import React, {useRef, useState} from "react";
 import calculateContainerSize from "@/composables/calculateContainerSize";
 
