@@ -143,6 +143,20 @@ textarea:hover {
   filter: brightness(0.8);
 }
 
+#form-submit-button:disabled {
+  display: flex;
+  background: var(--Light);
+
+  p {
+    color: var(--Medium);
+  }
+
+  &:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
 @media (min-width: 720px) {
   .checkbox input:hover {
     cursor: pointer;
