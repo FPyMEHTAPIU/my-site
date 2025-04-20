@@ -12,7 +12,8 @@ const InputForm = (
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
-    const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
+  const [submitText, setSubmitText] = useState("Submit");
   const { ShowOverlay } = useOverlay(setIsOverlay, isDesktop1440, hideElements);
 
   const checkValidity = (
@@ -64,6 +65,7 @@ const InputForm = (
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setButtonDisabled(true);
+    setSubmitText("Sending...");
 
     const formData = new FormData(e.currentTarget);
     const json = Object.fromEntries(formData.entries());
@@ -84,9 +86,11 @@ const InputForm = (
         console.error("Error:", data);
       }
       setButtonDisabled(false);
+      setSubmitText("Submit");
     } catch (error) {
       console.error("Error submitting form:", error);
-      setButtonDisabled(false)
+      setButtonDisabled(false);
+      setSubmitText("Submit");
     }
   };
 
@@ -135,7 +139,7 @@ const InputForm = (
           type="submit"
           disabled={buttonDisabled}
         >
-          <p className="body-default black">Submit</p>
+          <p className="body-default black">{submitText}</p>
         </button>
       </form>
     );
