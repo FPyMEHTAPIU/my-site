@@ -1,148 +1,148 @@
 .main-gap {
-    gap: 24px;
+  gap: 24px;
 }
 
 .projects-filter {
-    display: inline-flex;
-    align-items: stretch;
-    justify-self: stretch;
-    margin: 0 15px 24px;
-    gap: 24px;
-    flex-wrap: wrap;
+  display: inline-flex;
+  align-items: stretch;
+  justify-self: stretch;
+  margin: 0 15px 24px;
+  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .back-none {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .work-content-block {
-    margin: 0 15px;
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  margin: 0 15px;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .first-content-block {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .work-sub-block {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: flex-start;
 }
 
 .last-block {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .github-block {
-    width: 100%;
-    display: flex;
-    padding: 24px 15px;
-    flex-direction: column;
-    align-items: center;
-    align-self: stretch;
-    position: fixed;
-    bottom: 0;
-    margin: 40px auto 0;
-    border-radius: 16px 16px 0 0;
-    z-index: 15;
-    background: var(--Dark);
+  width: 100%;
+  display: flex;
+  padding: 24px 15px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  position: fixed;
+  bottom: 0;
+  margin: 40px auto 0;
+  border-radius: 16px 16px 0 0;
+  z-index: 15;
+  background: var(--Dark);
 }
 
 .arrow-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 
 .after-slide {
-    margin-top: -36px;
+  margin-top: -36px;
 }
 
 @media (min-width: 720px) {
-    .projects-filter {
-        position: relative;
-        justify-self: flex-start;
-        align-self: flex-start;
-        margin: 137px auto 24px;
-        width: 690px;
-    }
+  .projects-filter {
+    position: relative;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin: 137px auto 24px;
+    width: 690px;
+  }
 
-    .work-content-block {
-        margin: 0 113px;
-        padding: 0 20px;
-    }
+  .work-content-block {
+    margin: 0 113px;
+    padding: 0 20px;
+  }
 
-    .github-block {
-        bottom: unset;
-        padding: unset;
-        margin: 137px 15px 16px;
-        border-radius: unset;
-        position: unset;
-        z-index: unset;
-        background: unset;
-        width: unset;
-    }
+  .github-block {
+    bottom: unset;
+    padding: unset;
+    margin: 137px 15px 16px;
+    border-radius: unset;
+    position: unset;
+    z-index: unset;
+    background: unset;
+    width: unset;
+  }
 
-    .first-content-block {
-        margin-top: 16px;
-    }
+  .first-content-block {
+    margin-top: 16px;
+  }
 }
 
 @media (min-width: 1440px) {
-    .main-gap {
-        gap: 40px;
-    }
+  .main-gap {
+    gap: 40px;
+  }
 
-    .github-block {
-        margin: 213px 135px 0;
-    }
+  .github-block {
+    margin: 213px 135px 0;
+  }
 
-    .projects-filter {
-        margin: 213px 135px 40px;
-        width: 1170px;
-        gap: 36px;
-        align-self: center;
-    }
+  .projects-filter {
+    margin: 213px 135px 40px;
+    width: 1170px;
+    gap: 36px;
+    align-self: center;
+  }
 
-    .work-content-block {
-        gap: 24px;
-        margin: 0 335px;
-        padding: 0;
-        align-self: stretch;
-    }
+  .work-content-block {
+    gap: 24px;
+    margin: 0 335px;
+    padding: 0;
+    align-self: stretch;
+  }
 
-    .work-sub-block {
-        gap: 16px;
-        width: 100%;
-    }
+  .work-sub-block {
+    gap: 16px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1920px) {
-    .github-block {
-        margin: 213px 175px 0;
-    }
+  .github-block {
+    margin: 213px 175px 0;
+  }
 
-    .projects-filter {
-        margin: 213px auto 40px;
-        width: 1570px;
-    }
+  .projects-filter {
+    margin: 213px auto 40px;
+    width: 1570px;
+  }
 
-    .work-content-block {
-        margin: 0 445px;
-        padding: 0 30px;
-        width: calc(100vw - var(--scrollbar-width) - 890px);
-    }
+  .work-content-block {
+    margin: 0 445px;
+    padding: 0 30px;
+    width: calc(100vw - var(--scrollbar-width) - 890px);
+  }
 
-    .work-sub-block {
-        gap: 16px;
-    }
+  .work-sub-block {
+    gap: 16px;
+  }
 }

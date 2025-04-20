@@ -1,143 +1,143 @@
 @font-face {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 400;
-    src: url("../public/fonts/RobotoMono-Regular.ttf") format("truetype");
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/RobotoMono-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Tomorrow';
-    font-style: normal;
-    font-weight: 500;
-    src: url("../public/fonts/Tomorrow-Medium.ttf") format("truetype");
+  font-family: "Tomorrow";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../public/fonts/Tomorrow-Medium.ttf") format("truetype");
 }
 
 .not-found {
-    color: var(--Primary);
-    font-family: "Tomorrow", sans-serif;
-    font-size: 150px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-    align-self: center;
-    display: flex;
-    margin: 150px auto 0;
+  color: var(--Primary);
+  font-family: "Tomorrow", sans-serif;
+  font-size: 150px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  align-self: center;
+  display: flex;
+  margin: 150px auto 0;
 }
 
 h1 {
-    color: var(--Primary);
-    font-family: "Tomorrow", sans-serif;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
-    margin: 0;
+  color: var(--Primary);
+  font-family: "Tomorrow", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0;
 }
 
 h2 {
-    color: var(--Primary);
-    font-family: "Tomorrow", sans-serif;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin: 0;
+  color: var(--Primary);
+  font-family: "Tomorrow", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
 }
 
 .body-default {
-    color: white;
-    font-family: "Roboto Mono", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
 }
 
 .body-small {
-    color: white;
-    font-family: "Roboto Mono", sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0;
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
 }
 
 .error-text {
-    font-family: "Roboto Mono", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    font-size: 12px;
-    color: var(--Error);
-    margin: 0;
+  font-family: "Roboto Mono", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  font-size: 12px;
+  color: var(--Error);
+  margin: 0;
 }
 
 .black {
-    color: black;
+  color: black;
 }
 
 .grey {
-    color: var(--Medium);
+  color: var(--Medium);
 }
 
 .list-dots {
-    color: white;
+  color: white;
 }
 
 .green {
-    color: var(--Primary);
+  color: var(--Primary);
 }
 
 .white {
-    color: white;
+  color: white;
 }
 
 @media (min-width: 720px) {
-    .body-small:hover a {
-        cursor: pointer;
-        color: var(--Primary);
-    }
+  .body-small:hover a {
+    cursor: pointer;
+    color: var(--Primary);
+  }
 
-    .not-found {
-        margin: 0 auto 565px;
-        font-size: 300px;
-    }
+  .not-found {
+    margin: 0 auto 565px;
+    font-size: 300px;
+  }
 }
 
 @media (min-width: 1440px) {
-    .not-found {
-        margin: 0 auto auto;
-        font-size: 400px;
-    }
+  .not-found {
+    margin: 0 auto auto;
+    font-size: 400px;
+  }
 
-    h1 {
-        font-size: 64px;
-    }
+  h1 {
+    font-size: 64px;
+  }
 
-    h2 {
-        font-size: 40px;
-    }
+  h2 {
+    font-size: 40px;
+  }
 
-    .body-small {
-        font-size: 20px;
-    }
+  .body-small {
+    font-size: 20px;
+  }
 
-    .body-default {
-        font-size: 24px;
-    }
+  .body-default {
+    font-size: 24px;
+  }
 
-    .error-text {
-        font-size: 17px;
-    }
+  .error-text {
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 1920px) {
-    .not-found {
-        margin: 75px 550px auto;
-        font-size: 450px;
-    }
+  .not-found {
+    margin: 75px 550px auto;
+    font-size: 450px;
+  }
 }
