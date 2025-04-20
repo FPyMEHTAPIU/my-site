@@ -12,12 +12,12 @@ const Card = (
     ):React.JSX.Element => {
     return (
         <SwiperSlide key={index}>
-            <a href={project.projectLink} className="project-card">
-                <img className="project-photo" src={project.projectPhoto} loading="lazy" alt="project photo"/>
+            <a href={project.link} className="project-card" target={project.location === "external" ? "_blank" : ""}>
+                <img className="project-photo" src={project.photo} loading="lazy" alt="project photo"/>
                 <div className="content-block">
-                    <h2>{project.projectName}</h2>
+                    <h2>{project.name}</h2>
                     <div className="skills-block">
-                        {FillCardSkills(project.projectSkills)}
+                        {FillCardSkills(project.skills)}
                     </div>
                 </div>
             </a>

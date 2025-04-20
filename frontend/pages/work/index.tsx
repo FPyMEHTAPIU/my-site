@@ -12,7 +12,7 @@ const WorkCard = (project:ProjectCardData, index:number) => {
     }
 
     return (
-        <a key={index} href={project.link} className="project-card work-card" target={project.location === "internal" ? "_blank" : ""}>
+        <a key={index} href={project.link} className="project-card work-card" target={project.location === "external" ? "_blank" : ""}>
             <img className="project-photo work-photo" src={project.photo}
                  loading="lazy" alt="project photo"/>
             <div className="content-block">

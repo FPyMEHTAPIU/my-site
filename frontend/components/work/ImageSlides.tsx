@@ -6,7 +6,7 @@ const imageSlides = () => {
         (img_src:string, index:number): React.JSX.Element => {
         return (
             <SwiperSlide key={index} className="horizontal-card">
-                <img className="horizontal-card" src={img_src} loading="lazy" alt="image" />
+                <img src={img_src} loading="lazy" alt="image" />
             </SwiperSlide>
         )
     }
@@ -15,7 +15,7 @@ const imageSlides = () => {
         (img_src:string, index:number): React.JSX.Element => {
         return (
             <SwiperSlide key={index} className="vertical-card">
-                <img className="vertical-card" src={img_src} loading="lazy" alt="image" />
+                <img src={img_src} loading="lazy" alt="image" />
             </SwiperSlide>
         )
     }

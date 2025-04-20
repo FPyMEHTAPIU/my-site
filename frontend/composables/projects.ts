@@ -15,7 +15,7 @@ const projects:ProjectCardData[] = [
         skills: ['TypeScript', 'Vue.js', 'Nuxt', 'SCSS', 'Figma'],
         link: 'https://iryna-naumova.vercel.app/',
         type: 'Web',
-        description: 'A UX/UI designer\s portfolio website.',
+        description: 'A UX/UI designer\'s portfolio website.',
         location: 'external'
     },
     {

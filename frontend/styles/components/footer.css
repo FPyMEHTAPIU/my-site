@@ -51,6 +51,12 @@ footer {
 }
 
 @media (min-width: 720px) {
+    .text-button:hover .download-icon {
+        path {
+            fill: var(--Primary);
+        }
+    }
+
     .footer-container {
         padding: 40px;
         justify-content: space-between;
@@ -97,12 +103,6 @@ footer {
     .download-icon {
         width: 24px;
         height: 24px;
-    }
-
-    .text-button:hover .download-icon {
-        path {
-            fill: var(--Primary);
-        }
     }
 
     .links-row {
