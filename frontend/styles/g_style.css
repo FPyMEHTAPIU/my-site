@@ -1,32 +1,31 @@
 * {
-    box-sizing: border-box;
-    z-index: 2;
+  box-sizing: border-box;
+  z-index: 2;
 }
 
 body {
-    margin: 0;
-    background-color: var(--Black);
-    
+  margin: 0;
+  background-color: var(--Black);
 }
 
 main {
-    justify-items: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  justify-items: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 ul {
-    margin: 0;
-    padding-left: 20px;
+  margin: 0;
+  padding-left: 20px;
 }

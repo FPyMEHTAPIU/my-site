@@ -1,63 +1,67 @@
 .pagination-block {
-    position: relative;
-    height: 15px;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin: 16px auto 0;
-    z-index: 5;
-    width: auto !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    transform: translateX(0) !important;
+  position: relative;
+  height: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px auto 0;
+  z-index: 5;
+  width: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  transform: translateX(0) !important;
 }
 
-.dot, .dot-filled-next-next, .dot-filled-prev-prev, .dot span {
-    width: 15px;
-    height: 15px;
-    padding: 0;
-    margin: 0;
-    background-color: #D9FFD0;
-    opacity: 0.3;
-    border: 0;
-    border-radius: 20px;
+.dot,
+.dot-filled-next-next,
+.dot-filled-prev-prev,
+.dot span {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: #d9ffd0;
+  opacity: 0.3;
+  border: 0;
+  border-radius: 20px;
 }
 
 .dot:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.dot-filled-next, .dot-filled-prev {
-    opacity: 0.7;
+.dot-filled-next,
+.dot-filled-prev {
+  opacity: 0.7;
 }
 
 .dot-filled {
-    background-color: var(--Primary);
-    opacity: 1;
+  background-color: var(--Primary);
+  opacity: 1;
 }
 
 @media (min-width: 720px) {
-    .pagination-block {
-        margin: 24px auto 48px;
-    }
+  .pagination-block {
+    margin: 24px auto 48px;
+  }
 }
 
 @media (min-width: 1440px) {
-    .pagination-block {
-        height: 24px;
-        gap: 24px;
-        flex-shrink: 0;
-        margin: 24px auto 84px;
-    }
+  .pagination-block {
+    height: 24px;
+    gap: 24px;
+    flex-shrink: 0;
+    margin: 24px auto 84px;
+  }
 
-    .dot {
-        width: 24px;
-        height: 24px;
-    }
+  .dot {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @media (min-width: 1920px) {
-    .pagination-block {
-        margin-bottom: 0;
-    }
+  .pagination-block {
+    margin-bottom: 0;
+  }
 }
