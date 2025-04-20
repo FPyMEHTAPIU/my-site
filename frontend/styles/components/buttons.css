@@ -56,15 +56,15 @@
   background: var(--Primary);
 }
 
-.button-primary:active,
-.button-small:active {
-  color: var(--Button-click-green);
-}
-
 .button-primary:disabled,
 .button-secondary:disabled,
 .button-small:disabled {
   background: var(--Light);
+  color: var(--Medium);
+
+  p {
+    color: var(--Medium);
+  }
 }
 
 .button-secondary {
@@ -82,10 +82,6 @@
 
 .button-secondary img {
   scale: 0.67;
-}
-
-.button-secondary:active {
-  background: var(--Button-click-blue);
 }
 
 .button-small {
@@ -154,8 +150,17 @@
     box-shadow: -1px 5px 14px 0 #0c5f11;
   }
 
+  .button-primary:active,
+  .button-small:active {
+    background: var(--Button-click-green);
+  }
+
   .button-secondary:hover {
     box-shadow: -1px 5px 14px 0 #0c115f;
+  }
+
+  .button-secondary:active {
+    background: var(--Button-click-blue);
   }
 
   .tab:hover {
